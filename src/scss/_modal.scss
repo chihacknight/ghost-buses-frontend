@@ -1,0 +1,30 @@
+.modal {
+  @include flex-center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+
+  &-container {
+    position: relative;
+    width: 85%;
+    max-height: 70vh;
+    max-width: 500px;
+    padding: 2em;
+    overflow-y: auto;
+    background-color: white;
+
+    .close-btn {
+        position: absolute;
+        right: 2em;
+        top: 2em;
+    }
+
+    h4 span {
+        color: $cta-red
+    }
+  }
+}

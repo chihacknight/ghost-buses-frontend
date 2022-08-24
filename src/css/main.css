@@ -48,7 +48,6 @@
     mix-blend-mode: lighten;
     fill: #fff;
   }
-
   @keyframes drop-in {
     100% {
       margin-top: 1em;
@@ -119,12 +118,10 @@ header {
     width: 200px;
     bottom: -30px;
   }
-
   .svg-container {
     animation: skyline 25s infinite;
     animation-timing-function: linear;
   }
-
   .bus-stop-container {
     animation: busStop 7s infinite;
     animation-timing-function: linear;
@@ -132,7 +129,6 @@ header {
   .bus-stop-container img {
     height: 90px;
   }
-
   @keyframes svgBus {
     40% {
       opacity: 75%;
@@ -475,8 +471,39 @@ aside .dot-nav .dot-line {
     width: 25%;
   }
 }
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.modal-container {
+  position: relative;
+  width: 85%;
+  max-height: 70vh;
+  max-width: 500px;
+  padding: 2em;
+  overflow-y: auto;
+  background-color: white;
+}
+.modal-container .close-btn {
+  position: absolute;
+  right: 2em;
+  top: 2em;
+}
+.modal-container h4 span {
+  color: rgb(211, 17, 69);
+}
+
 .map {
   padding: 2em 0;
+  position: relative;
 }
 
 #map {
@@ -485,6 +512,7 @@ aside .dot-nav .dot-line {
 
 .leaflet-container {
   height: 80vh;
+  z-index: 1;
 }
 
 footer {

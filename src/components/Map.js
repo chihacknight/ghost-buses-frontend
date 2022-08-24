@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
+import Modal from "./Modal";
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
 import resultsData from "../Routes/dummy_data.json";
 
@@ -15,11 +16,26 @@ export default function Map() {
     availableRoutes.includes(route.properties.route_id)
   );
 
+  function onClickBusRoute(feature) {
+    const results = resultsData.features.filter(
+      (data) => Number(data.route_id) === Number(feature.properties.route_id)
+    );
+    setSelectedRoute(results)
+  }
+
+  function closeModal() {
+    setSelectedRoute()
+  }
+
   function onEachFeature(feature, layer) {
     if (feature.properties) {
       const { route_long_name, route_id } = feature.properties;
       layer.bindTooltip(`${route_id}, ${route_long_name}`, {
         sticky: true,
+      });
+
+      layer.on({
+        click: () => onClickBusRoute(feature),
       });
     }
   }
@@ -35,6 +51,7 @@ export default function Map() {
         />
         Demo
       </label>
+      {selectedRoute && <Modal selectedRoute={selectedRoute} closeModal={closeModal}/>}
       <MapContainer
         center={[41.881832, -87.623177]}
         zoom={11}
