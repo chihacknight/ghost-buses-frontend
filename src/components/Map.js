@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import Modal from "./Modal";
@@ -8,6 +8,8 @@ import resultsData from "../Routes/dummy_data.json";
 export default function Map() {
   const [demo, setDemo] = useState(false);
   const [selectedRoute, setSelectedRoute] = useState();
+  const [searchTerm, setSearchTerm] = useState()
+  
   const availableRoutes = resultsData.features
     .map((route) => route.route_id)
     .filter((v, i, a) => a.indexOf(v) === i);
@@ -20,11 +22,11 @@ export default function Map() {
     const results = resultsData.features.filter(
       (data) => Number(data.route_id) === Number(feature.properties.route_id)
     );
-    setSelectedRoute(results)
+    setSelectedRoute(results);
   }
 
   function closeModal() {
-    setSelectedRoute()
+    setSelectedRoute();
   }
 
   function onEachFeature(feature, layer) {
@@ -51,7 +53,13 @@ export default function Map() {
         />
         Demo
       </label>
-      {selectedRoute && <Modal selectedRoute={selectedRoute} closeModal={closeModal}/>}
+      {selectedRoute && (
+        <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
+      )}
+      <div className="search-container">
+        <input type="text" placeholder="search"></input>
+      </div>
+
       <MapContainer
         center={[41.881832, -87.623177]}
         zoom={11}

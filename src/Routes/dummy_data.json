@@ -11,7 +11,8 @@
       "direction": "east",
 
       "weekday_acc": "85",
-      "weekend_acc": "58"
+      "weekend_acc": "79",
+      "scheduled_buses": "15"
     },
     {
       "id": "240",
@@ -21,8 +22,9 @@
       "weekday_ridership": "12,866",
       "service": ["southside"],
       "direction": "west",
-      "weekday_acc": "75",
-      "weekend_acc": "65"
+      "weekday_acc": "90",
+      "weekend_acc": "89",
+      "scheduled_buses": "19"
     },
     {
       "id": "261",
@@ -33,7 +35,8 @@
       "service": ["westside"],
       "direction": "west",
       "weekday_acc": "55",
-      "weekend_acc": "49"
+      "weekend_acc": "49",
+      "scheduled_buses": "23"
     },
     {
       "id": "262",
@@ -44,7 +47,8 @@
       "service": ["westside"],
       "direction": "east",
       "weekday_acc": "61",
-      "weekend_acc": "54"
+      "weekend_acc": "54",
+      "scheduled_buses": "27"
     },
     {
       "id": "248",
@@ -55,7 +59,8 @@
       "service": ["westside", "northside"],
       "direction": "west",
       "weekday_acc": "82",
-      "weekend_acc": "77"
+      "weekend_acc": "77",
+      "scheduled_buses": "12"
     },
     {
       "id": "246",
@@ -66,7 +71,8 @@
       "service": ["westside", "northside"],
       "direction": "east",
       "weekday_acc": "89",
-      "weekend_acc": "87"
+      "weekend_acc": "87",
+      "scheduled_buses": "15"
     },
 
     {
@@ -78,7 +84,8 @@
       "service": ["northside"],
       "direction": "north",
       "weekday_acc": "72",
-      "weekend_acc": "58"
+      "weekend_acc": "58",
+      "scheduled_buses": "22"
     },
     {
       "id": "253",
@@ -89,7 +96,8 @@
       "service": ["northside"],
       "direction": "south",
       "weekday_acc": "62",
-      "weekend_acc": "48"
+      "weekend_acc": "48",
+      "scheduled_buses": "19"
     },
     {
       "id": "249",
@@ -100,7 +108,8 @@
       "service": ["northside", "southside"],
       "direction": "south",
       "weekday_acc": "88",
-      "weekend_acc": "75"
+      "weekend_acc": "75",
+      "scheduled_buses": "15"
     },
     {
       "id": "250",
@@ -111,7 +120,8 @@
       "service": ["northside", "southside"],
       "direction": "north",
       "weekday_acc": "85",
-      "weekend_acc": "72"
+      "weekend_acc": "72",
+      "scheduled_buses": "15"
     },
     {
       "id": "243",
@@ -122,7 +132,8 @@
       "service": ["westside"],
       "direction": "south",
       "weekday_acc": "65",
-      "weekend_acc": "52"
+      "weekend_acc": "52",
+      "scheduled_buses": "31"
     },
     {
       "id": "247",
@@ -133,7 +144,8 @@
       "service": ["westside"],
       "direction": "north",
       "weekday_acc": "69",
-      "weekend_acc": "52"
+      "weekend_acc": "52",
+      "scheduled_buses": "25"
     },
     {
       "id": "126",
@@ -144,7 +156,8 @@
       "service": ["westside"],
       "direction": "south",
       "weekday_acc": "49",
-      "weekend_acc": "65"
+      "weekend_acc": "65",
+      "scheduled_buses": "19"
     },
     {
       "id": "144",
@@ -155,7 +168,8 @@
       "service": ["westside"],
       "direction": "north",
       "weekday_acc": "52",
-      "weekend_acc": "70"
+      "weekend_acc": "70",
+      "scheduled_buses": "20"
     },
     {
       "id": "142",
@@ -166,7 +180,8 @@
       "service": ["southside"],
       "direction": "south",
       "weekday_acc": "93",
-      "weekend_acc": "88"
+      "weekend_acc": "88",
+      "scheduled_buses": "27"
     },
     {
       "id": "146",
@@ -177,7 +192,8 @@
       "service": ["southside"],
       "direction": "north",
       "weekday_acc": "84",
-      "weekend_acc": "82"
+      "weekend_acc": "82",
+      "scheduled_buses": "29"
     },
     {
       "id": "235",
@@ -189,6 +205,8 @@
       "direction": "south",
       "weekday_acc": "78",
       "weekend_acc": "81"
+      ,
+      "scheduled_buses": "12"
     },
     {
       "id": "241",
@@ -199,7 +217,8 @@
       "service": ["northside", "southside"],
       "direction": "north",
       "weekday_acc": "76",
-      "weekend_acc": "75"
+      "weekend_acc": "75",
+      "scheduled_buses": "14"
     },
     {
       "id": "256",
@@ -210,7 +229,8 @@
       "service": ["westside"],
       "direction": "south",
       "weekday_acc": "66",
-      "weekend_acc": "54"
+      "weekend_acc": "54",
+      "scheduled_buses": "22"
     },
     {
       "id": "257",
@@ -221,7 +241,8 @@
       "service": ["westside"],
       "direction": "north",
       "weekday_acc": "68",
-      "weekend_acc": "49"
+      "weekend_acc": "49",
+      "scheduled_buses": "21"
     }
   ]
 }
