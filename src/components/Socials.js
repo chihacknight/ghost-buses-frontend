@@ -6,12 +6,12 @@ export default function Socials() {
     <div className="social-sidebar">
       <a href="https://twitter.com/chihacknight">
         <div className="social-icon twitter">
-          <i class="fa-brands fa-twitter"></i>
+          <i className="fa-brands fa-twitter"></i>
         </div>
       </a>
       <a  href="https://github.com/lauriemerrell/chn-ghost-buses">
         <div className="social-icon github">
-          <i class="fa-brands fa-github"></i>
+          <i className="fa-brands fa-github"></i>
         </div>
       </a>
       <a href="https://chihacknight.org/">
