@@ -12,10 +12,11 @@ export default function Modal({ selectedRoute, closeModal }) {
     2;
   const totalAcc = parseInt(weekdayAcc + weekendAcc) / 2;
   const acceptableStandard = 80;
-  const totalBuses = (parseInt(selectedRoute[0].scheduled_buses) +
-  parseInt(selectedRoute[1].scheduled_buses))
+  const totalBuses =
+    parseInt(selectedRoute[0].scheduled_buses) +
+    parseInt(selectedRoute[1].scheduled_buses);
 
-  console.log(totalBuses)
+  console.log(totalBuses);
 
   return (
     <div className="modal" onClick={closeModal}>

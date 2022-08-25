@@ -9,7 +9,6 @@ export default function BusRouteDetails({
   weekdayAcc,
   weekendAcc,
 }) {
-
   return (
     <div>
       <h3>
@@ -57,10 +56,30 @@ export default function BusRouteDetails({
       </ul>
       <h4>By the Numbers</h4>
       <div className="bargraph">
-        <BargraphBar datapoint={totalBuses} fullWidth={true} acceptableStandard={acceptableStandard} label="Total # of Scheduled Buses"/>
-        <BargraphBar datapoint={totalAcc} fullWidth={false} acceptableStandard={acceptableStandard} label="% of Total Scheduled Buses Running"/>
-        <BargraphBar datapoint={weekdayAcc} fullWidth={false} acceptableStandard={acceptableStandard} label="% of Scheduled Weekday Buses Running"/>
-        <BargraphBar datapoint={weekendAcc} fullWidth={false} acceptableStandard={acceptableStandard} label="% of Scheduled Weekend Buses Running"/>
+        <BargraphBar
+          datapoint={totalBuses}
+          fullWidth={true}
+          acceptableStandard={acceptableStandard}
+          label="Total # of Scheduled Buses"
+        />
+        <BargraphBar
+          datapoint={totalAcc}
+          fullWidth={false}
+          acceptableStandard={acceptableStandard}
+          label="% of Total Scheduled Buses Running"
+        />
+        <BargraphBar
+          datapoint={weekdayAcc}
+          fullWidth={false}
+          acceptableStandard={acceptableStandard}
+          label="% of Scheduled Weekday Buses Running"
+        />
+        <BargraphBar
+          datapoint={weekendAcc}
+          fullWidth={false}
+          acceptableStandard={acceptableStandard}
+          label="% of Scheduled Weekend Buses Running"
+        />
       </div>
       <p className="modal-footnote">
         * from CTA's May 2022{" "}
