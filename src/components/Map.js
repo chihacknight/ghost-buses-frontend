@@ -63,7 +63,15 @@ export default function Map() {
       String(route.properties.route_id) +
       route.properties.route_long_name.toLowerCase()
     ).includes(searchTerm);
-  });
+  }).filter(route => {
+    return !route.properties.direction.includes("South")
+ }).filter(route => {
+  return !route.properties.direction.includes("West")
+});
+
+  console.log(searchResults)
+  
+ 
 
   const searchResultsElements = searchResults.map((result) => (
     <div
