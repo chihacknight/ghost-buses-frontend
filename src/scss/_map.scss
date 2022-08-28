@@ -7,6 +7,12 @@
 #map { height: 80vh; }
 
 .leaflet-container {
+  position: relative;
 height: 80vh;
 z-index: 1;
+
+.leaflet-map-pane {
+  z-index: 1;
+}
+
 }
