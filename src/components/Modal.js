@@ -16,8 +16,6 @@ export default function Modal({ selectedRoute, closeModal }) {
     parseInt(selectedRoute[0].scheduled_buses) +
     parseInt(selectedRoute[1].scheduled_buses);
 
-    console.log(selectedRoute)
-
   return (
     <div className="modal" onClick={closeModal}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>

@@ -101,8 +101,6 @@ export default function Map() {
     }
   }
 
-  console.log();
-
   return (
     <div className="map padding-container">
       <h2>Map/Data</h2>
