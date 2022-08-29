@@ -1,6 +1,14 @@
-# Welcome to the Ghost Buses project.
+# Ghost Buses: Front End Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository expands on the UI of the current [Ghost Buses Frontend](https://github.com/chihacknight/ghost-buses-frontend) repository, adding basic search and filtering to the Map, and providing proof of concept by using mock transit data. To learn more about the project, see [here](https://github.com/chihacknight/ghost-buses-frontend).
+
+## Current Tech Stack
+
+- React for creating reusable components.
+- Leaflet / React-Leaflet for mapping
+- SCSS for styling
+
+
 
 ## Available Scripts
 
@@ -13,11 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
