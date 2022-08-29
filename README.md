@@ -1,4 +1,4 @@
-# Welcome to the Ghost Buses project.
+# Ghost Bus: Front End Demo.
 
 This repository expands on the UI of the current [Ghost Buses Frontend](https://github.com/chihacknight/ghost-buses-frontend) repository, adding basic search and filtering to the Map, and providing proof of concept by using mock transit data. To learn more about the project, see [here](https://github.com/chihacknight/ghost-buses-frontend).
 
