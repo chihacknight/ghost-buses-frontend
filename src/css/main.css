@@ -629,6 +629,7 @@ aside .dot-nav .dot-line {
   padding: 10px;
   background-color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 .filter-container .option-container {
   position: absolute;

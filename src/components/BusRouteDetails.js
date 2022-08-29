@@ -42,7 +42,7 @@ export default function BusRouteDetails({
           </span>{" "}
           of its scheduled buses
         </li>
-        {totalAcc > acceptableStandard ? (
+        {totalAcc >= acceptableStandard ? (
           <li className="high-acc">
             Overall, we consider service on this bus to be within an
             <span> acceptable margin</span>.
