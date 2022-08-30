@@ -9,7 +9,7 @@ export default function Socials() {
           <i className="fa-brands fa-twitter"></i>
         </div>
       </a>
-      <a  href="https://github.com/lauriemerrell/chn-ghost-buses">
+      <a href="https://github.com/lauriemerrell/chn-ghost-buses">
         <div className="social-icon github">
           <i className="fa-brands fa-github"></i>
         </div>

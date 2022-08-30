@@ -58,20 +58,21 @@ export default function Map() {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
-  const searchResults = demoMapRoutes.filter((route) => {
-    return (
-      String(route.properties.route_id) +
-      route.properties.route_long_name.toLowerCase()
-    ).includes(searchTerm);
-  }).filter(route => {
-    return !route.properties.direction.includes("South")
- }).filter(route => {
-  return !route.properties.direction.includes("West")
-});
+  const searchResults = demoMapRoutes
+    .filter((route) => {
+      return (
+        String(route.properties.route_id) +
+        route.properties.route_long_name.toLowerCase()
+      ).includes(searchTerm);
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("South");
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("West");
+    });
 
-  console.log(searchResults)
-  
- 
+  console.log(searchResults);
 
   const searchResultsElements = searchResults.map((result) => (
     <div
