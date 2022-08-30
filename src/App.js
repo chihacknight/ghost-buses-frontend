@@ -6,7 +6,7 @@ import Intro from "./components/Intro";
 import Footer from "./components/Footer";
 import Socials from "./components/Socials";
 
-const App = () => {
+function App() {
   return (
     <div className="App">
       <div className="container">

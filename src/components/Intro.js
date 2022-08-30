@@ -1,10 +1,10 @@
 import React from "react";
 import BlockQuote from "./BlockQuote";
 
-const Intro = () => {
+export default function Intro() {
   return (
     <div className="intro padding-container">
-      <h2>What is a Ghost Bus?</h2>
+        <h2>What is a Ghost Bus?</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. In arcu cursus
@@ -22,6 +22,4 @@ const Intro = () => {
       </p>
     </div>
   );
-};
-
-export default Intro;
+}

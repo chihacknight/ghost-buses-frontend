@@ -1,6 +1,6 @@
 import React from "react";
 
-const DetailContainer = ({ selected }) => {
+export default function DetailContainer({ selected }) {
   return (
     <div>
       {selected === "matters" && (
@@ -51,6 +51,13 @@ const DetailContainer = ({ selected }) => {
             tempeh sweet potato black bean burrito winter dessert springtime
             strawberry thyme Thai chickpea.
           </p>
+          <div className="data-vis">
+            <div className="graph">
+              <div className="graph-bar-red graph-bar"></div>
+              <div className="graph-bar-green graph-bar"></div>
+              <div className="graph-bar-purple graph-bar"></div>
+            </div>
+          </div>
           <p>
             Crust pizza fruit smash strawberry spinach salad summertime citrusy
             pasta tahini drizzle edamame hummus lentils falafel bites
@@ -84,5 +91,4 @@ const DetailContainer = ({ selected }) => {
       )}
     </div>
   );
-};
-export default DetailContainer;
+}

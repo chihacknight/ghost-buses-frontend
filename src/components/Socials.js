@@ -1,17 +1,17 @@
 import React from "react";
 import CHNsocial from "../assets/CHNsocial.png";
 
-const Socials = () => {
+export default function Socials() {
   return (
     <div className="social-sidebar">
       <a href="https://twitter.com/chihacknight">
         <div className="social-icon twitter">
-          <i className="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-twitter"></i>
         </div>
       </a>
-      <a href="https://github.com/lauriemerrell/chn-ghost-buses">
+      <a  href="https://github.com/lauriemerrell/chn-ghost-buses">
         <div className="social-icon github">
-          <i className="fa-brands fa-github"></i>
+          <i class="fa-brands fa-github"></i>
         </div>
       </a>
       <a href="https://chihacknight.org/">
@@ -21,6 +21,4 @@ const Socials = () => {
       </a>
     </div>
   );
-};
-
-export default Socials;
+}
