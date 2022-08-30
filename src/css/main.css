@@ -431,46 +431,6 @@ aside .dot-nav .dot-line {
     font-size: 1em;
   }
 }
-.graph {
-  width: 60%;
-  margin: 2em auto;
-  padding: 1em 1em 1em 0;
-  border-left: 1px solid #007BC4;
-  border-bottom: 1px solid #007BC4;
-}
-.graph-bar {
-  height: 20px;
-  width: 50px;
-  margin-top: 0.25em;
-}
-.graph-bar-red {
-  background-color: rgb(211, 17, 69);
-  animation: red-graph 2s forwards 0s;
-}
-.graph-bar-green {
-  background-color: green;
-  animation: green-graph 2s forwards 50ms;
-}
-.graph-bar-purple {
-  background-color: purple;
-  animation: purple-graph 2s forwards 70ms;
-}
-
-@keyframes red-graph {
-  100% {
-    width: 100%;
-  }
-}
-@keyframes green-graph {
-  100% {
-    width: 50%;
-  }
-}
-@keyframes purple-graph {
-  100% {
-    width: 25%;
-  }
-}
 .bargraph {
   padding: 0 1.5em;
   width: 85%;
