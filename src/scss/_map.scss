@@ -1,10 +1,18 @@
 .map {
-    padding: 2em 0;
-    
+  padding: 2em 0;
+  position: relative;
+  
 }
 
 #map { height: 80vh; }
-  
+
 .leaflet-container {
-  height: 80vh
+  position: relative;
+height: 80vh;
+z-index: 1;
+
+.leaflet-map-pane {
+  z-index: 1;
+}
+
 }

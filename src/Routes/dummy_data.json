@@ -1,0 +1,248 @@
+{
+  "name": "dummyResultsData",
+  "features": [
+    {
+      "id": "239",
+      "route_id": "79",
+      "route_short_name": "79",
+      "route_long_name": "79th",
+      "weekday_ridership": "12,866",
+      "service": ["southside"],
+      "direction": "east",
+
+      "weekday_acc": "85",
+      "weekend_acc": "79",
+      "scheduled_buses": "15"
+    },
+    {
+      "id": "240",
+      "route_id": "79",
+      "route_short_name": "79",
+      "route_long_name": "79th",
+      "weekday_ridership": "12,866",
+      "service": ["southside"],
+      "direction": "west",
+      "weekday_acc": "90",
+      "weekend_acc": "89",
+      "scheduled_buses": "19"
+    },
+    {
+      "id": "261",
+      "route_id": "66",
+      "route_short_name": "66",
+      "route_long_name": "Chicago",
+      "weekday_ridership": "12,277",
+      "service": ["westside"],
+      "direction": "west",
+      "weekday_acc": "55",
+      "weekend_acc": "49",
+      "scheduled_buses": "23"
+    },
+    {
+      "id": "262",
+      "route_id": "66",
+      "route_short_name": "66",
+      "route_long_name": "Chicago",
+      "weekday_ridership": "12,277",
+      "service": ["westside"],
+      "direction": "east",
+      "weekday_acc": "61",
+      "weekend_acc": "54",
+      "scheduled_buses": "27"
+    },
+    {
+      "id": "248",
+      "route_id": "77",
+      "route_short_name": "77",
+      "route_long_name": "Belmont",
+      "weekday_ridership": "12,012",
+      "service": ["westside", "northside"],
+      "direction": "west",
+      "weekday_acc": "82",
+      "weekend_acc": "77",
+      "scheduled_buses": "12"
+    },
+    {
+      "id": "246",
+      "route_id": "77",
+      "route_short_name": "77",
+      "route_long_name": "Belmont",
+      "weekday_ridership": "12,012",
+      "service": ["westside", "northside"],
+      "direction": "east",
+      "weekday_acc": "89",
+      "weekend_acc": "87",
+      "scheduled_buses": "15"
+    },
+
+    {
+      "id": "244",
+      "route_id": "22",
+      "route_short_name": "22",
+      "route_long_name": "Clark",
+      "weekday_ridership": "11,876",
+      "service": ["northside"],
+      "direction": "north",
+      "weekday_acc": "72",
+      "weekend_acc": "58",
+      "scheduled_buses": "22"
+    },
+    {
+      "id": "253",
+      "route_id": "22",
+      "route_short_name": "22",
+      "route_long_name": "Clark",
+      "weekday_ridership": "11,876",
+      "service": ["northside"],
+      "direction": "south",
+      "weekday_acc": "62",
+      "weekend_acc": "48",
+      "scheduled_buses": "19"
+    },
+    {
+      "id": "249",
+      "route_id": "9",
+      "route_short_name": "9",
+      "route_long_name": "Ashland",
+      "weekday_ridership": "11,307",
+      "service": ["northside", "southside"],
+      "direction": "south",
+      "weekday_acc": "88",
+      "weekend_acc": "75",
+      "scheduled_buses": "15"
+    },
+    {
+      "id": "250",
+      "route_id": "9",
+      "route_short_name": "9",
+      "route_long_name": "Ashland",
+      "weekday_ridership": "11,307",
+      "service": ["northside", "southside"],
+      "direction": "north",
+      "weekday_acc": "85",
+      "weekend_acc": "72",
+      "scheduled_buses": "15"
+    },
+    {
+      "id": "243",
+      "route_id": "53",
+      "route_short_name": "53",
+      "route_long_name": "Pulaski",
+      "weekday_ridership": "11,261",
+      "service": ["westside"],
+      "direction": "south",
+      "weekday_acc": "65",
+      "weekend_acc": "52",
+      "scheduled_buses": "31"
+    },
+    {
+      "id": "247",
+      "route_id": "53",
+      "route_short_name": "53",
+      "route_long_name": "Pulaski",
+      "weekday_ridership": "11,261",
+      "service": ["westside"],
+      "direction": "north",
+      "weekday_acc": "69",
+      "weekend_acc": "52",
+      "scheduled_buses": "25"
+    },
+    {
+      "id": "126",
+      "route_id": "82",
+      "route_short_name": "82",
+      "route_long_name": "Kimball-Homan",
+      "weekday_ridership": "10,961",
+      "service": ["westside"],
+      "direction": "south",
+      "weekday_acc": "49",
+      "weekend_acc": "65",
+      "scheduled_buses": "19"
+    },
+    {
+      "id": "144",
+      "route_id": "82",
+      "route_short_name": "82",
+      "route_long_name": "Kimball-Homan",
+      "weekday_ridership": "10,961",
+      "service": ["westside"],
+      "direction": "north",
+      "weekday_acc": "52",
+      "weekend_acc": "70",
+      "scheduled_buses": "20"
+    },
+    {
+      "id": "142",
+      "route_id": "4",
+      "route_short_name": "4",
+      "route_long_name": "Cottage Grove",
+      "weekday_ridership": "10,245",
+      "service": ["southside"],
+      "direction": "south",
+      "weekday_acc": "93",
+      "weekend_acc": "88",
+      "scheduled_buses": "27"
+    },
+    {
+      "id": "146",
+      "route_id": "4",
+      "route_short_name": "4",
+      "route_long_name": "Cottage Grove",
+      "weekday_ridership": "10,245",
+      "service": ["southside"],
+      "direction": "north",
+      "weekday_acc": "84",
+      "weekend_acc": "82",
+      "scheduled_buses": "29"
+    },
+    {
+      "id": "235",
+      "route_id": "8",
+      "route_short_name": "8",
+      "route_long_name": "Halsted",
+      "weekday_ridership": "10,080",
+      "service": ["northside", "southside"],
+      "direction": "south",
+      "weekday_acc": "78",
+      "weekend_acc": "81"
+      ,
+      "scheduled_buses": "12"
+    },
+    {
+      "id": "241",
+      "route_id": "8",
+      "route_short_name": "8",
+      "route_long_name": "Halsted",
+      "weekday_ridership": "10,080",
+      "service": ["northside", "southside"],
+      "direction": "north",
+      "weekday_acc": "76",
+      "weekend_acc": "75",
+      "scheduled_buses": "14"
+    },
+    {
+      "id": "256",
+      "route_id": "49",
+      "route_short_name": "49",
+      "route_long_name": "Western",
+      "weekday_ridership": "9,977",
+      "service": ["westside"],
+      "direction": "south",
+      "weekday_acc": "66",
+      "weekend_acc": "54",
+      "scheduled_buses": "22"
+    },
+    {
+      "id": "257",
+      "route_id": "49",
+      "route_short_name": "49",
+      "route_long_name": "Western",
+      "weekday_ridership": "9,977",
+      "service": ["westside"],
+      "direction": "north",
+      "weekday_acc": "68",
+      "weekend_acc": "49",
+      "scheduled_buses": "21"
+    }
+  ]
+}

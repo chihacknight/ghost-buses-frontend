@@ -48,7 +48,6 @@
     mix-blend-mode: lighten;
     fill: #fff;
   }
-
   @keyframes drop-in {
     100% {
       margin-top: 1em;
@@ -119,12 +118,10 @@ header {
     width: 200px;
     bottom: -30px;
   }
-
   .svg-container {
     animation: skyline 25s infinite;
     animation-timing-function: linear;
   }
-
   .bus-stop-container {
     animation: busStop 7s infinite;
     animation-timing-function: linear;
@@ -132,7 +129,6 @@ header {
   .bus-stop-container img {
     height: 90px;
   }
-
   @keyframes svgBus {
     40% {
       opacity: 75%;
@@ -435,48 +431,192 @@ aside .dot-nav .dot-line {
     font-size: 1em;
   }
 }
-.graph {
-  width: 60%;
-  margin: 2em auto;
-  padding: 1em 1em 1em 0;
-  border-left: 1px solid #007BC4;
-  border-bottom: 1px solid #007BC4;
+.bargraph {
+  padding: 0 1.5em;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
 }
-.graph-bar {
-  height: 20px;
-  width: 50px;
-  margin-top: 0.25em;
+.bargraph-point {
+  display: flex;
+  flex-direction: column;
 }
-.graph-bar-red {
+.bargraph-point .bargraph-outer-label {
+  order: 2;
+  margin: 0.5em 0 1.5em 0.5em;
+  font-style: italic;
+  font-weight: 600;
+}
+.bargraph-point .bargraph-bar {
+  background-color: #007BC4;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+.bargraph-point .bargraph-bar.results {
+  animation: barGrowth 2s ease-in-out;
+}
+.bargraph-point .bargraph-bar.low-acc {
   background-color: rgb(211, 17, 69);
-  animation: red-graph 2s forwards 0s;
 }
-.graph-bar-green {
-  background-color: green;
-  animation: green-graph 2s forwards 50ms;
-}
-.graph-bar-purple {
-  background-color: purple;
-  animation: purple-graph 2s forwards 70ms;
+.bargraph-point .bargraph-bar .bargraph-inner-label {
+  text-align: right;
+  font-weight: 700;
+  color: white;
+  padding-right: 15px;
+  margin: 5px;
 }
 
-@keyframes red-graph {
-  100% {
-    width: 100%;
+@keyframes barGrowth {
+  0% {
+    width: 10%;
   }
 }
-@keyframes green-graph {
-  100% {
-    width: 50%;
-  }
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
 }
-@keyframes purple-graph {
-  100% {
-    width: 25%;
-  }
+.modal-container {
+  position: relative;
+  width: 85%;
+  max-height: 80vh;
+  max-width: 500px;
+  padding: 2em;
+  overflow-y: auto;
+  background-color: white;
 }
+.modal-container .close-btn {
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  border: none;
+  background-color: white;
+  color: gray;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px 10px;
+  transition: all 300ms ease-in;
+}
+.modal-container .close-btn:hover {
+  background-color: gainsboro;
+  color: black;
+  transition: all 300ms ease-in;
+}
+.modal-container h3 span {
+  color: white;
+  background-color: rgb(211, 17, 69);
+  padding: 5px 10px;
+  border-radius: 7px;
+  margin-right: 7px;
+}
+.modal-container h4 span {
+  color: rgb(211, 17, 69);
+}
+.modal-container ul li.low-acc span {
+  color: rgb(211, 17, 69);
+}
+.modal-container ul li.high-acc span {
+  color: #007BC4;
+}
+.modal-container ul li span {
+  font-weight: 700;
+}
+.modal-container ul li span.high-acc {
+  color: #007BC4;
+}
+.modal-container ul li span.low-acc {
+  color: rgb(211, 17, 69);
+}
+.modal-container .modal-footnote {
+  font-weight: 400;
+  font-size: 12px;
+  font-style: italic;
+}
+.modal-container .modal-footnote a {
+  color: #007BC4;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 300ms ease-in;
+}
+.modal-container .modal-footnote a:hover {
+  color: #007dc8;
+  transition: all 300ms ease-in;
+  text-decoration: underline;
+}
+
+.search-container {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 150;
+  padding: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+.search-container input {
+  padding: 10px;
+  border: none;
+}
+.search-container .results-container p {
+  border-top: 1px #cfcfcf solid;
+  padding: 15px;
+  margin: 0;
+  transition: all 300ms ease-in;
+}
+.search-container .results-container p:hover {
+  cursor: pointer;
+  background-color: #e7e7e7;
+  transition: all 300ms ease-in;
+}
+
+.filter-container {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  z-index: 150;
+}
+.filter-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.filter-container .option-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100px;
+  right: 0px;
+  bottom: 100%;
+  margin-bottom: 1em;
+  z-index: 150;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1.5em;
+}
+.filter-container .option-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.filter-container .option-container label input {
+  margin-right: 5px;
+}
+
 .map {
   padding: 2em 0;
+  position: relative;
 }
 
 #map {
@@ -484,7 +624,12 @@ aside .dot-nav .dot-line {
 }
 
 .leaflet-container {
+  position: relative;
   height: 80vh;
+  z-index: 1;
+}
+.leaflet-container .leaflet-map-pane {
+  z-index: 1;
 }
 
 footer {

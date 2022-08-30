@@ -1,0 +1,96 @@
+.modal {
+  @include flex-center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+
+  &-container {
+    position: relative;
+    width: 85%;
+    max-height: 80vh;
+    max-width: 500px;
+    padding: 2em;
+    overflow-y: auto;
+    background-color: white;
+
+    .close-btn {
+      position: absolute;
+      right: 2em;
+      top: 2em;
+      border: none;
+      background-color: white;
+      color: gray;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 50%;
+      padding: 5px 10px;
+      @include transitionHover;
+
+      &:hover {
+        background-color: gainsboro;
+        color: black;
+        @include transitionHover;
+      }
+    }
+
+    h3 {
+      span {
+        color: white;
+        background-color: $cta-red;
+        padding: 5px 10px;
+        border-radius: 7px;
+        margin-right: 7px;
+      }
+    }
+
+    h4 span {
+      color: $cta-red;
+    }
+
+    ul {
+      li {
+        &.low-acc span {
+          color: $cta-red;
+        }
+
+        &.high-acc span {
+          color: $cta-blue;
+        }
+        span {
+          font-weight: 700;
+
+          &.high-acc {
+            color: $cta-blue;
+          }
+
+          &.low-acc {
+            color: $cta-red;
+          }
+        }
+      }
+    }
+
+    .modal-footnote {
+      font-weight: 400;
+      font-size: 12px;
+      font-style: italic;
+
+      a {
+        color: $cta-blue;
+        text-decoration: none;
+        font-weight: 700;
+        @include transitionHover;
+
+        &:hover {
+          color: lighten($cta-blue, 0.7);
+          @include transitionHover;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
