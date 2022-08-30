@@ -72,8 +72,6 @@ export default function Map() {
       return !route.properties.direction.includes("West");
     });
 
-  console.log(searchResults);
-
   const searchResultsElements = searchResults.map((result) => (
     <div
       key={result.id}
