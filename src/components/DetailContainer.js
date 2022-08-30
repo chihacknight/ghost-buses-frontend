@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DetailContainer({ selected }) {
+const DetailContainer = ({ selected }) => {
   return (
     <div>
       {selected === "matters" && (
@@ -84,4 +84,5 @@ export default function DetailContainer({ selected }) {
       )}
     </div>
   );
-}
+};
+export default DetailContainer;

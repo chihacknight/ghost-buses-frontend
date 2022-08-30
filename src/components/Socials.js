@@ -1,7 +1,7 @@
 import React from "react";
 import CHNsocial from "../assets/CHNsocial.png";
 
-export default function Socials() {
+const Socials = () => {
   return (
     <div className="social-sidebar">
       <a href="https://twitter.com/chihacknight">
@@ -21,4 +21,6 @@ export default function Socials() {
       </a>
     </div>
   );
-}
+};
+
+export default Socials;

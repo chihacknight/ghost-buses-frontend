@@ -1,12 +1,12 @@
 import React from "react";
 import filterImg from "../assets/bi_filter.png";
 
-export default function Filter({
+const Filter = ({
   currentFilters,
   setCurrentFilters,
   filterOpen,
   setFilterOpen,
-}) {
+}) => {
   return (
     <div>
       <div className="filter-container">
@@ -80,4 +80,6 @@ export default function Filter({
       </div>
     </div>
   );
-}
+};
+
+export default Filter;

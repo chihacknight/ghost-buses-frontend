@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BlockQuote() {
+const BlockQuote = () => {
   return (
     <div className="block-quote">
       <h4>
@@ -12,4 +12,6 @@ export default function BlockQuote() {
       </a>
     </div>
   );
-}
+};
+
+export default BlockQuote;

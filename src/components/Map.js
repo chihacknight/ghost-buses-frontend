@@ -7,7 +7,7 @@ import resultsData from "../Routes/dummy_data.json";
 import Search from "./Search";
 import Filter from "./Filter";
 
-export default function Map() {
+const Map = () => {
   const [selectedRoute, setSelectedRoute] = useState();
   const [searchTerm, setSearchTerm] = useState("");
   const [filterOpen, setFilterOpen] = useState(false);
@@ -84,18 +84,18 @@ export default function Map() {
 
   // modal functionality
 
-  function onClickBusRoute(feature) {
+  const onClickBusRoute = (feature) => {
     const results = resultsData.features.filter(
       (data) => Number(data.route_id) === Number(feature.properties.route_id)
     );
     setSelectedRoute(results);
-  }
+  };
 
-  function closeModal() {
+  const closeModal = () => {
     setSelectedRoute();
-  }
+  };
 
-  function onEachFeature(feature, layer) {
+  const onEachFeature = (feature, layer) => {
     if (feature.properties) {
       const { route_long_name, route_id } = feature.properties;
       layer.bindTooltip(`${route_id}, ${route_long_name}`, {
@@ -106,7 +106,7 @@ export default function Map() {
         click: () => onClickBusRoute(feature),
       });
     }
-  }
+  };
 
   return (
     <div className="map padding-container">
@@ -155,4 +155,6 @@ export default function Map() {
       </MapContainer>
     </div>
   );
-}
+};
+
+export default Map;

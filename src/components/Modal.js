@@ -1,7 +1,7 @@
 import React from "react";
 import BusRouteDetails from "./BusRouteDetails";
 
-export default function Modal({ selectedRoute, closeModal }) {
+const Modal = ({ selectedRoute, closeModal }) => {
   const weekdayAcc =
     (parseInt(selectedRoute[0].weekday_acc) +
       parseInt(selectedRoute[1].weekday_acc)) /
@@ -33,4 +33,6 @@ export default function Modal({ selectedRoute, closeModal }) {
       </div>
     </div>
   );
-}
+};
+
+export default Modal;

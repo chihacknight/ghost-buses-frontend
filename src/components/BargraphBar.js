@@ -1,22 +1,17 @@
 import React from "react";
 
-export default function BargraphBar({
-  datapoint,
-  fullWidth,
-  acceptableStandard,
-  label,
-}) {
+const BargraphBar = ({ datapoint, fullWidth, acceptableStandard, label }) => {
   const bargraphWidth = (acc) => {
     if (fullWidth) {
       return { width: "100%" };
     } else return { width: acc + "%" };
   };
 
-  function lowAcc() {
+  const lowAcc = () => {
     if (!fullWidth && datapoint < acceptableStandard) {
       return "low-acc";
     } else return;
-  }
+  };
 
   return (
     <div className="bargraph-point">
@@ -31,4 +26,6 @@ export default function BargraphBar({
       </div>
     </div>
   );
-}
+};
+
+export default BargraphBar;

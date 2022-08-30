@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DetailContainer from "./DetailContainer";
 import DotNav from "./DotNav";
 
-export default function ProjectScope() {
+const ProjectScope = () => {
   const [detailNavSelect, setDetailNavSelect] = useState("matters");
 
   return (
@@ -18,4 +18,6 @@ export default function ProjectScope() {
       </main>
     </div>
   );
-}
+};
+
+export default ProjectScope;

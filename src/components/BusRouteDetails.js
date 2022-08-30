@@ -1,14 +1,14 @@
 import React from "react";
 import BargraphBar from "./BargraphBar";
 
-export default function BusRouteDetails({
+const BusRouteDetails = ({
   totalBuses,
   selectedRoute,
   totalAcc,
   acceptableStandard,
   weekdayAcc,
   weekendAcc,
-}) {
+}) => {
   return (
     <div>
       <h3>
@@ -93,4 +93,6 @@ export default function BusRouteDetails({
       </p>
     </div>
   );
-}
+};
+
+export default BusRouteDetails;

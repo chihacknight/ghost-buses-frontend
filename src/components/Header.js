@@ -4,7 +4,7 @@ import busStop from "../assets/busStop.png";
 import ghostBusLogo from "../assets/ghostBusLogo.png";
 import chiHackLogo from "../assets/chiHackLogo.png";
 
-export default function Header() {
+const Header = () => {
   return (
     <header>
       <div className="h1-container">
@@ -26,4 +26,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

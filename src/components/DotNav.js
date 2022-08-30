@@ -1,7 +1,7 @@
 import React from "react";
 import busNavIcon from "../assets/bus-nav-icon.png";
 
-export default function DotNav({ setDetailNavSelect, detailNavSelect }) {
+const DotNav = ({ setDetailNavSelect, detailNavSelect }) => {
   return (
     <div className="dot-nav">
       <img
@@ -30,4 +30,6 @@ export default function DotNav({ setDetailNavSelect, detailNavSelect }) {
       </div>
     </div>
   );
-}
+};
+
+export default DotNav;
