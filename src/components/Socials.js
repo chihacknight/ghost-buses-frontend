@@ -1,5 +1,5 @@
 import React from "react";
-import CHNsocial from "../assets/chnSocial.svg";
+
 
 export default function Socials() {
   return (
