@@ -1,0 +1,211 @@
+.nav-blur-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(white, 0);
+  backdrop-filter: blur(0px) saturate(100%);
+  @include transitionHover;
+
+  &.open {
+    z-index: 100;
+    background-color: rgba(rgb(223, 216, 213), 0.4);
+    backdrop-filter: blur(5px) saturate(70%);
+  }
+}
+
+.nav-container {
+  position: absolute;
+  z-index: 100;
+  right: 1.5em;
+  top: 0;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    position: relative;
+    @include flex-center;
+    cursor: pointer;
+    z-index: 120;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(white, 0);
+    border-radius: 50%;
+    padding: 2em;
+    border: none;
+    @include transitionHover;
+
+    .hamburger {
+      width: 30px;
+      height: 4px;
+      position: absolute;
+      background: white;
+      @include transitionHover;
+
+      &::before {
+        content: "";
+        width: 26px;
+        height: 4px;
+        left: 2px;
+        top: -9px;
+        position: absolute;
+        background: white;
+        @include transitionHover;
+      }
+
+      &::after {
+        content: "";
+        width: 26px;
+        height: 4px;
+        left: 2px;
+        top: 9px;
+        position: absolute;
+        background: white;
+        @include transitionHover;
+      }
+    }
+
+    &.open {
+      background-color: rgba(white, 100);
+      box-shadow: $bs;
+      transform: translateY(75px);
+
+      .hamburger {
+        background: transparent;
+        @include transitionHover;
+
+        &:before {
+          transform: rotate(45deg) translate(6px, 6px);
+          background: $cta-blue;
+          @include transitionHover;
+        }
+
+        &:after {
+          transform: rotate(-45deg) translate(6px, -7px);
+          background: $cta-blue;
+          @include transitionHover;
+        }
+      }
+    }
+  }
+
+  nav {
+    opacity: 0;
+    z-index: 0;
+    position: relative;
+    bottom: 0;
+    box-shadow: $bs;
+    @include transitionHover;
+    @include flex-center;
+    height: 60vh;
+    width: 30px;
+    padding: 1em;
+    border-radius: 200px;
+
+    li {
+      opacity: 0%;
+    }
+
+    &.open {
+      background-color: white;
+      margin-top: 3em;
+      opacity: 100%;
+      transform: translateY(60px);
+      @include transitionHover;
+
+      .dot-line {
+        position: absolute;
+        margin: 0 auto;
+        height: 70%;
+        width: 7px;
+        background-color: $cta-blue;
+        z-index: -1;
+      }
+
+      ul {
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+
+        a {
+          cursor: pointer;
+        }
+
+        .dot-nav-pair {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            li {
+              opacity: 100%;
+              @include transitionHover;
+            }
+          }
+
+          .dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $cta-blue;
+          }
+
+          li {
+            position: absolute;
+            right: 75px;
+            text-align: center;
+            background-color: rgb(94, 94, 94);
+            color: white;
+            padding: 0.5em;
+            border-radius: 10px;
+            opacity: 0%;
+            width: 100px;
+            @include transitionHover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-bp) {
+  .nav-header-bar {
+    background-color: transparent;
+
+    .nav-container {
+      right: calc(5% + 2vw);
+      top: 1em;
+      button {
+        .hamburger {
+          background: $cta-red;
+          @include transitionHover;
+
+          &::before {
+            background: $cta-red;
+            @include transitionHover;
+          }
+
+          &::after {
+            background: $cta-red;
+            @include transitionHover;
+          }
+        }
+        &.open {
+          .hamburger {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-bp) {
+}

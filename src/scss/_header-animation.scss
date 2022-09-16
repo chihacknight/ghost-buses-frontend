@@ -1,8 +1,3 @@
-header {
-  position: relative;
-  margin-bottom: 5em;
-  margin-top: 3em;
-}
 .svg-container {
   padding-top: 1em;
   position: relative;
@@ -23,7 +18,7 @@ header {
 
   p {
     font-weight: 900;
-    color: rgba($cta-red, .6);
+    color: rgba($cta-red, 0.6);
     opacity: 0%;
     animation: qPop 7s infinite, qRotate 2s infinite;
     animation-timing-function: linear;
@@ -52,51 +47,48 @@ header {
   }
 }
 
-
-
 @media (min-width: $tablet-bp) {
-    .bus-container{
-        img {
-            width: 200px;
-            bottom: -30px;
-        }
+  .bus-container {
+    img {
+      width: 200px;
+      bottom: -30px;
     }
-    .svg-container {
-        animation: skyline 25s infinite;
-        animation-timing-function: linear;
+  }
+  .svg-container {
+    animation: skyline 25s infinite;
+    animation-timing-function: linear;
+  }
+
+  .bus-stop-container {
+    animation: busStop 7s infinite;
+    animation-timing-function: linear;
+
+    img {
+      height: 90px;
     }
+  }
 
-    .bus-stop-container {
-        animation: busStop 7s infinite;
-        animation-timing-function: linear;
-
-        img{
-            height: 90px;
-        }
+  @keyframes svgBus {
+    40% {
+      opacity: 75%;
     }
-
-    @keyframes svgBus {
-        40% {
-          opacity: 75%;
-        }
-        55% {
-          opacity: 0%;
-        }
-        85% {
-          opacity: 0%;
-        }
-        100% {
-          opacity: 75%;
-        }
-      }
-
+    55% {
+      opacity: 0%;
+    }
+    85% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 75%;
+    }
+  }
 }
 
 @media (min-width: $desktop-bp) {
-    .svg-container {
-        animation: skyline 15s infinite;
-        animation-timing-function: linear;
-    }
+  .svg-container {
+    animation: skyline 15s infinite;
+    animation-timing-function: linear;
+  }
 }
 
 @keyframes skyline {
@@ -142,7 +134,13 @@ header {
 }
 
 @keyframes qRotate {
-    0%{transform: rotate(-15deg);}
-    50%{transform: rotate(15deg)}
-    100%{transform: rotate(-15deg)}
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
 }

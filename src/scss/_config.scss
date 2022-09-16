@@ -1,23 +1,29 @@
 // colors
-$cta-blue: #007BC4;
-$cta-red: rgba(211, 17, 69);
+$cta-blue: #007bc4;
+$blue-button: rgba($cta-blue, 0.8);
+$cta-red: rgba(206, 23, 72, 0.74);
 $text-color: #575757;
+
+$bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+  0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 
 // breakpoints
 
 $tablet-bp: 450px;
-$desktop-bp: 800px;
+$desktop-bp: 850px;
+
+//
 
 @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin transitionHover {
-    transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 
 @mixin dotNavtransition {
-    transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
