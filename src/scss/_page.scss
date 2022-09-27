@@ -1,0 +1,27 @@
+.page-container {
+  min-height: 50vh;
+  padding: 1em 3em 5em 3em;
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    @include flex-center;
+
+    .action-btn {
+      padding: 13px 25px;
+      margin-top: 20px;
+      background-color: $blue-button;
+      border: none;
+      color: white;
+      border-radius: 100px;
+      cursor: pointer;
+      @include transitionHover;
+
+      &:hover,
+      &:focus {
+        background-color: $cta-blue;
+        @include transitionHover;
+      }
+    }
+  }
+}

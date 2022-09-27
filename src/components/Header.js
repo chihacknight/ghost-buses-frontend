@@ -7,6 +7,7 @@ import chiHackLogo from "../assets/chiHackLogo.png";
 export default function Header() {
   return (
     <header>
+      <div className="mobile-bar"></div>
       <div className="h1-container">
         <h1>Ghost Bus</h1>
         <img src={ghostBusLogo} alt="ghost bus logo" />
