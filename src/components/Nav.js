@@ -17,7 +17,6 @@ const Nav = () => {
 
   return (
     <div className="nav-header-bar">
-      <div className={`nav-blur-overlay ${navOpen ? "open" : ""}`}></div>
       <div className={`nav-container ${navOpen ? "open" : ""}`}>
         <button
           className={`nav-toggle ${navOpen ? "open" : ""}`}

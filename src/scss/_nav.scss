@@ -1,20 +1,4 @@
-.nav-blur-overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background-color: rgba(white, 0);
-  backdrop-filter: blur(0px) saturate(100%);
-  @include transitionHover;
 
-  &.open {
-    z-index: 100;
-    background-color: rgba(rgb(223, 216, 213), 0.4);
-    backdrop-filter: blur(5px) saturate(70%);
-  }
-}
 
 .nav-container {
   position: absolute;
