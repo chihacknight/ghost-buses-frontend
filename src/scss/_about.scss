@@ -1,0 +1,37 @@
+.about {
+  display: grid;
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn-container {
+    margin-bottom: 3em;
+  }
+}
+
+@media (min-width: $desktop-bp) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 270px;
+
+    grid-gap: 1.5em;
+
+    .chn-details {
+      grid-column-start: 1;
+    }
+
+    .gb-details {
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+
+    .btn-container {
+      align-self: flex-start;
+      margin: 0;
+      .action-btn {
+        margin: 0;
+      }
+    }
+  }
+}
