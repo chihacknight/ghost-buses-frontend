@@ -1,5 +1,6 @@
 .map {
   padding: 2em 0;
+  position: relative;
 }
 
 #map {
@@ -7,6 +8,11 @@
 }
 
 .leaflet-container {
+  position: relative;
   height: 80vh;
-  z-index: 90;
+  z-index: 1;
+
+  .leaflet-map-pane {
+    z-index: 1;
+  }
 }
