@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import busNavIcon from "../assets/bus-nav-icon.png"
+
 const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
   const links = [
@@ -26,14 +28,12 @@ const Nav = () => {
           <span className="hamburger"> </span>
         </button>
         <nav className={navOpen ? "open" : ""}>
-          <div className="dot-line"></div>
           <ul>
             {links.map((link) => {
               return (
-                <div key={link.link} className="dot-nav-pair">
+                <div key={link.link}>
                   <Link onClick={toggle} to={link.link}>
-                    <li className="floating-label">{link.title}</li>
-                    <div className="dot"></div>
+                    <li className="nav-link"><span className="bus-indicator"><img src={busNavIcon} alt=""/> </span>{link.title}</li>
                   </Link>
                 </div>
               );

@@ -1,18 +1,16 @@
-
-
 .nav-container {
   position: absolute;
   z-index: 100;
-  right: 1.5em;
   top: 0;
-  padding: 0.5em;
   display: flex;
   flex-direction: column;
 
   button {
-    position: relative;
+    position: fixed;
     @include flex-center;
     cursor: pointer;
+    top: 13px;
+    right: 45px;
     z-index: 120;
     width: 45px;
     height: 45px;
@@ -55,7 +53,7 @@
     &.open {
       background-color: rgba(white, 100);
       box-shadow: $bs;
-      transform: translateY(75px);
+      transform: translateY(60px);
 
       .hamburger {
         background: transparent;
@@ -77,83 +75,69 @@
   }
 
   nav {
-    opacity: 0;
-    z-index: 0;
-    position: relative;
+    z-index: 1;
+    position: fixed;
+    background-color: $cta-blue;
     bottom: 0;
+    top: 0;
     box-shadow: $bs;
+    height: 100vh;
+    width: 100%;
+    transform: translateX(100%);
     @include transitionHover;
-    @include flex-center;
-    height: 60vh;
-    width: 30px;
-    padding: 1em;
-    border-radius: 200px;
-
-    li {
-      opacity: 0%;
-    }
 
     &.open {
-      background-color: white;
-      margin-top: 3em;
-      opacity: 100%;
-      transform: translateY(60px);
-      @include transitionHover;
+      transform: translateX(0);
+      @include transitionHover
+    }
 
-      .dot-line {
-        position: absolute;
-        margin: 0 auto;
-        height: 70%;
-        width: 7px;
-        background-color: $cta-blue;
-        z-index: -1;
-      }
+    ul {
+      display: flex;
+      height: 80%;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      animation-play-state: paused;
+      margin-top: 2em;
 
-      ul {
-        display: flex;
-        height: 80%;
-        flex-direction: column;
-        justify-content: space-between;
-        list-style: none;
-        padding: 0;
+      a {
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        animation-play-state: paused;
 
-        a {
-          cursor: pointer;
-        }
+        li.nav-link {
+          text-align: center;
+          list-style: none;
+          font-size: 1.5rem;
+          color: white;
+          padding: 0.5em;
+          @include flex-center;
+          animation-play-state: paused;
+          font-weight: 700;
 
-        .dot-nav-pair {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-
-          &:hover {
-            li {
-              opacity: 100%;
-              @include transitionHover;
+          span.bus-indicator {
+            opacity: 0;
+            @include transitionHover;
+            
+            img {
+              height: 30px;
+              margin-right: 15px;
+              margin-top:5px;
             }
           }
 
-          .dot {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: $cta-blue;
-          }
-
-          li {
-            position: absolute;
-            right: 75px;
-            text-align: center;
-            background-color: rgb(94, 94, 94);
-            color: white;
-            padding: 0.5em;
-            border-radius: 10px;
-            opacity: 0%;
-            width: 100px;
-            @include transitionHover;
+          &:hover, &:focus {
+            span.bus-indicator {
+              opacity: 100%;
+              @include transitionHover
+            }
           }
         }
+
+
       }
     }
   }
@@ -164,8 +148,15 @@
     background-color: transparent;
 
     .nav-container {
-      right: calc(5% + 2vw);
-      top: 1em;
+
+      nav {
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30%;
+      }
+      
+      
       button {
         .hamburger {
           background: $cta-red;
