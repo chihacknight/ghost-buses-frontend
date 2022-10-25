@@ -88,7 +88,7 @@
 
     &.open {
       transform: translateX(0);
-      @include transitionHover
+      @include transitionHover;
     }
 
     ul {
@@ -99,45 +99,39 @@
       align-items: center;
       justify-content: center;
       padding: 0;
-      animation-play-state: paused;
       margin-top: 2em;
 
-      a {
-        cursor: pointer;
+      li.nav-link {
+        text-align: center;
+        list-style: none;
+        font-size: 1.5rem;
         color: white;
-        text-decoration: none;
-        animation-play-state: paused;
+        padding: 0.5em;
+        @include flex-center;
+        font-weight: 700;
 
-        li.nav-link {
-          text-align: center;
-          list-style: none;
-          font-size: 1.5rem;
-          color: white;
-          padding: 0.5em;
-          @include flex-center;
-          animation-play-state: paused;
-          font-weight: 700;
-
-          span.bus-indicator {
-            opacity: 0;
-            @include transitionHover;
-            
+        &:hover,
+          &:focus {
             img {
-              height: 30px;
-              margin-right: 15px;
-              margin-top:5px;
+              opacity: 100%;
+              @include transitionHover;
             }
           }
 
-          &:hover, &:focus {
-            span.bus-indicator {
-              opacity: 100%;
-              @include transitionHover
-            }
-          }
+        img {
+          height: 30px;
+          margin-right: 15px;
+          opacity: 0;
+          @include transitionHover;
         }
 
+        a {
+          cursor: pointer;
+          color: white;
+          text-decoration: none;
 
+          
+        }
       }
     }
   }
@@ -148,15 +142,13 @@
     background-color: transparent;
 
     .nav-container {
-
       nav {
         top: 0;
         right: 0;
         height: 100vh;
         width: 30%;
       }
-      
-      
+
       button {
         .hamburger {
           background: $cta-red;

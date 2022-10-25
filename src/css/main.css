@@ -308,16 +308,9 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  animation-play-state: paused;
   margin-top: 2em;
 }
-.nav-container nav ul a {
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-  animation-play-state: paused;
-}
-.nav-container nav ul a li.nav-link {
+.nav-container nav ul li.nav-link {
   text-align: center;
   list-style: none;
   font-size: 1.5rem;
@@ -326,21 +319,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation-play-state: paused;
   font-weight: 700;
 }
-.nav-container nav ul a li.nav-link span.bus-indicator {
+.nav-container nav ul li.nav-link:hover img, .nav-container nav ul li.nav-link:focus img {
+  opacity: 100%;
+  transition: all 300ms ease-in;
+}
+.nav-container nav ul li.nav-link img {
+  height: 30px;
+  margin-right: 15px;
   opacity: 0;
   transition: all 300ms ease-in;
 }
-.nav-container nav ul a li.nav-link span.bus-indicator img {
-  height: 30px;
-  margin-right: 15px;
-  margin-top: 5px;
-}
-.nav-container nav ul a li.nav-link:hover span.bus-indicator, .nav-container nav ul a li.nav-link:focus span.bus-indicator {
-  opacity: 100%;
-  transition: all 300ms ease-in;
+.nav-container nav ul li.nav-link a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
 
 @media (min-width: 850px) {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import busNavIcon from "../assets/bus-nav-icon.png"
+import busNavIcon from "../assets/bus-nav-icon.png";
 
 const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -31,11 +31,12 @@ const Nav = () => {
           <ul>
             {links.map((link) => {
               return (
-                <div key={link.link}>
+                <li key={link.link} className="nav-link">
+                   <img src={busNavIcon} alt="" />
                   <Link onClick={toggle} to={link.link}>
-                    <li className="nav-link"><span className="bus-indicator"><img src={busNavIcon} alt=""/> </span>{link.title}</li>
+                    {link.title}
                   </Link>
-                </div>
+                </li>
               );
             })}
           </ul>
