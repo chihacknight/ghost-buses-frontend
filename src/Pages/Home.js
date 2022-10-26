@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="page-container">
-      <h2> What is a Ghost Bus?</h2>
+      <h1> What is a Ghost Bus?</h1>
       <p>
         You’re waiting to catch your bus. The schedule app says it’ll be there
         in two minutes. You wait, and no bus comes. Now you’re stranded. Should
         you spring for an expensive rideshare? Should you start walking?
       </p>
       <div className="block-quote">
-        <h4>
+        <p>
           "If there's one thing most Chicagoans can agree on nowadays, it's that
           CTA service has become <span>unacceptably unreliable</span>"
-        </h4>
+        </p>
         <a href="https://chi.streetsblog.org/2022/06/22/alderperons-turn-up-the-heat-on-cta-to-explain-how-the-agency-will-fix-service-gaps/">
           -- Streetsblog Chicago, Jun 22nd, 2022
         </a>

@@ -29,7 +29,7 @@
     .action-btn {
       padding: 13px 25px;
       margin-top: 20px;
-      background-color: $blue-button;
+      background-color: $cta-blue;
       border: none;
       color: white;
       border-radius: 100px;
@@ -38,7 +38,7 @@
 
       &:hover,
       &:focus {
-        background-color: $cta-blue;
+        background-color: $blue-button;
         @include transitionHover;
       }
     }

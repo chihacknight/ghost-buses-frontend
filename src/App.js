@@ -16,11 +16,13 @@ import HowToHelp from "./Pages/HowToHelp";
 const App = () => {
   return (
     <div className="App">
+      <a className="skip-link" href="#main">Skip to content</a>
       <Nav />
       <div className="container">
         <Socials />
         <Header />
-        <Routes>
+        <main id="main">
+          <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/map" element={<InteractiveMap />} />
@@ -28,6 +30,8 @@ const App = () => {
           <Route path="/methods" element={<Methods />} />
           <Route path="/how-to-help" element={<HowToHelp />} />
         </Routes>
+        </main>
+        
       </div>
       <Footer />
     </div>

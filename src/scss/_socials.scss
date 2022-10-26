@@ -62,7 +62,7 @@
 @media (min-width: 800px) {
   .social-sidebar {
     flex-direction: column;
-    margin-top: 3em;
+    margin-top: 2em;
 
     a {
       opacity: 0%;
@@ -77,13 +77,13 @@
       }
 
       .social-icon {
-        background-color: $blue-button;
+        background-color: $cta-blue;
         width: 50px;
         height: 50px;
 
         &:hover,
         &:focus {
-          background-color: $cta-blue;
+          background-color: $blue-button;
           @include transitionHover;
         }
 
