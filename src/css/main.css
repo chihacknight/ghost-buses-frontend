@@ -237,11 +237,13 @@ header.paused .svg-container, header.paused .bus-container img, header.paused .b
     transform: rotate(-15deg);
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .svg-container, .bus-container img, .bus-stop-container, .bus-stop-container p {
     animation-play-state: paused;
   }
 }
+
 .nav-container {
   position: absolute;
   z-index: 100;
@@ -463,14 +465,27 @@ header .h1-container .subtitle-container img {
   min-height: 50vh;
   padding: 1em 3em 5em 3em;
 }
-.page-container .btn-container {
+.page-container a {
+  color: #007bc4;
+  text-decoration: none;
+  font-weight: 700;
+}
+.page-container a:hover, .page-container a:focus {
+  color: rgba(0, 123, 196, 0.8);
+  text-decoration: underline;
+}
+.page-container ul li {
+  margin-bottom: 1em;
+}
+
+.btn-container {
   display: flex;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.page-container .btn-container .action-btn {
+.btn-container .action-btn {
   padding: 13px 25px;
   margin-top: 20px;
   background-color: #007bc4;
@@ -485,19 +500,28 @@ header .h1-container .subtitle-container img {
   transition: all 300ms ease-in;
 }
 
+.petition-btn-container {
+  margin: 4em 0;
+}
+.petition-btn-container .petition-btn {
+  margin: 0;
+}
+
 .block-quote {
   position: relative;
   border-left: 12px solid #007bc4;
-  width: 80%;
-  margin: 1em 0;
+  width: 60%;
+  margin: 2em 0;
   padding-left: 1em;
   text-align: right;
 }
+
 .block-quote p {
   font-size: 1rem;
   font-weight: 700;
   font-style: italic;
   margin-bottom: 0.5em;
+  font-weight: 400;
 }
 .block-quote p span {
   color: rgba(206, 23, 72, 0.74);
@@ -518,10 +542,44 @@ header .h1-container .subtitle-container img {
 
 @media (min-width: 450px) {
   .block-quote {
-    margin: 1em auto;
+    margin: 2em auto;
   }
   .block-quote p {
     font-size: 1em;
+  }
+}
+.about {
+  display: grid;
+}
+.about h2 {
+  font-size: 1.3rem;
+}
+.about .btn-container {
+  margin-bottom: 3em;
+}
+.about .btn-container .action-btn {
+  width: 250px;
+}
+
+@media (min-width: 850px) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 270px;
+    grid-gap: 1.5em;
+  }
+  .about .chn-details {
+    grid-column-start: 1;
+  }
+  .about .gb-details {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  .about .btn-container {
+    align-self: flex-start;
+    margin: 0;
+  }
+  .about .btn-container .action-btn {
+    margin: 0;
   }
 }
 .map {
@@ -619,6 +677,12 @@ h1 {
   color: rgba(206, 23, 72, 0.74);
   font-weight: 900;
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #007bc4;
+  font-weight: 900;
 }
 
 hr {

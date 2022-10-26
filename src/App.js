@@ -11,7 +11,7 @@ import About from "./Pages/About";
 import InteractiveMap from "./Pages/InteractiveMap";
 import FurtherReading from "./Pages/FurtherReading";
 import Methods from "./Pages/Methods";
-import HowToHelp from "./Pages/Methods";
+import HowToHelp from "./Pages/HowToHelp";
 
 const App = () => {
   return (

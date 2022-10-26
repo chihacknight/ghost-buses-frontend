@@ -23,10 +23,10 @@ const Home = () => {
         If you’re a regular rider of the CTA, odds are you’ve been “ghosted” by
         your bus. While the pandemic put an understandable strain on transit
         systems, these days Chicago residents have commitments that require
-        travel, and the CTA is struggling to keep up. Most importantly, the CTA
-        has not updated their official schedules to represent this change in
-        service, leading to confusion, delays, and a general sense of distrust
-        in our city’s public transit.
+        travel, and the CTA is struggling to keep up. Most importantly, the
+        CTA's official schedules do not represent this change in service,
+        leading to confusion, delays, and a general sense of distrust in our
+        city’s public transit.
       </p>
 
       <p>

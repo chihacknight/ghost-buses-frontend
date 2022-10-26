@@ -2,6 +2,25 @@
   min-height: 50vh;
   padding: 1em 3em 5em 3em;
 
+  a {
+    color: $cta-blue;
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover, &:focus {
+      color: $blue-button;
+      text-decoration: underline;
+    }
+}
+
+  ul {
+    li {
+      margin-bottom: 1em;
+
+      }
+    }
+  }
+
   .btn-container {
     display: flex;
     flex-direction: column;
@@ -24,4 +43,12 @@
       }
     }
   }
-}
+
+  .petition-btn-container {
+    margin: 4em 0;
+
+    .petition-btn {
+      margin: 0;
+    }
+  }
+

@@ -5,6 +5,7 @@
 @import "header";
 @import "page";
 @import "block-quote";
+@import "about";
 @import "map";
 @import "footer";
 
@@ -54,6 +55,12 @@ h1 {
   color: $cta-red;
   font-weight: 900;
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: $cta-blue;
+  font-weight: 900;
 }
 
 hr {
