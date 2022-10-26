@@ -3,9 +3,9 @@ import React from "react";
 const HowToHelp = () => {
   return (
     <div className="page-container">
-      <h2>How To Help</h2>
+      <h1>How To Help</h1>
       <section>
-        <h3>Sign the Petition</h3>
+        <h2>Sign the Petition</h2>
         Looking for a way to help reduce Ghost Buses? Sign this petition. The
         petition is to call upon Mayor Lori Lightfoot, CTA President Forval
         Carter, and the Chicago Transit Board to be accountable to the people of

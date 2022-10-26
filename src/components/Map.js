@@ -17,7 +17,6 @@ export default function Map() {
 
   return (
     <div className="map padding-container">
-      <h2 >Map/Data</h2>
       <MapContainer
         center={[41.881832, -87.623177]}
         zoom={11}
