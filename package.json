@@ -1,7 +1,6 @@
 {
   "name": "client",
-  "version": "0.1.0",
-  "homepage": "https://chihacknight.github.io/",
+  "version": "0.1.0",                                                                                                      
   "private": true,
   "dependencies": {
     "@axe-core/react": "^4.4.5",
