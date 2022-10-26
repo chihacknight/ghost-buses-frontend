@@ -10,7 +10,7 @@
     @include flex-center;
     cursor: pointer;
     top: 13px;
-    right: 45px;
+    right: 15px;
     z-index: 120;
     width: 45px;
     height: 45px;
@@ -143,11 +143,20 @@
     background-color: transparent;
 
     .nav-container {
+      button {
+        right: 50px;
+      }
       nav {
         top: 0;
         right: 0;
         height: 100vh;
         width: 30%;
+        min-width: 400px;
+
+        ul {
+          align-items: flex-start;
+          margin-left: 4em;
+        }
       }
 
       button {

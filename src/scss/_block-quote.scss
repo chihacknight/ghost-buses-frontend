@@ -6,13 +6,15 @@
   padding-left: 1em;
   text-align: right;
 
-  h4 {
-    font-size: .85rem;
+  p {
+    font-size: 1rem;
+    font-weight: 700;
     font-style: italic;
     margin-bottom: 0.5em;
 
     span {
       color: $cta-red;
+      font-weight: 700;
     }
   }
 
@@ -36,7 +38,7 @@
   .block-quote {
     margin: 1em auto;
 
-    h4 {
+    p {
         font-size: 1em;;
     }
   }

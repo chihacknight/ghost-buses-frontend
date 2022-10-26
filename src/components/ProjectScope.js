@@ -10,9 +10,9 @@ export default function ProjectScope() {
         <aside>
             <DotNav setDetailNavSelect={setDetailNavSelect} detailNavSelect={detailNavSelect}/>
         </aside>
-        <main>
+        
           <DetailContainer selected={detailNavSelect}/>
-        </main>
+        
     </div>
   )
 }
