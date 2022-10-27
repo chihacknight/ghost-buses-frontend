@@ -37,17 +37,17 @@ const Home = () => {
       </p>
 
       <div className="btn-container">
-        <Link to="/">
+        <Link to="/map">
           <button className="action-btn">
             See your bus on our <strong>interactive map</strong>
           </button>
         </Link>
-        <Link to="/">
+        <Link to="/further-reading">
           <button className="action-btn">
             See local <strong>news stories</strong> about ghost buses
           </button>
         </Link>
-        <Link to="/">
+        <Link to="/how-to-help">
           <button className="action-btn">
             Want to help? <strong>Here’s what to do next</strong>
           </button>

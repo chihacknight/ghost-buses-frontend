@@ -237,13 +237,11 @@ header.paused .svg-container, header.paused .bus-container img, header.paused .b
     transform: rotate(-15deg);
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .svg-container, .bus-container img, .bus-stop-container, .bus-stop-container p {
     animation-play-state: paused;
   }
 }
-
 .nav-container {
   position: absolute;
   z-index: 100;
@@ -495,7 +493,7 @@ header .h1-container .subtitle-container img {
   cursor: pointer;
   transition: all 300ms ease-in;
 }
-.page-container .btn-container .action-btn:hover, .page-container .btn-container .action-btn:focus {
+.btn-container .action-btn:hover, .btn-container .action-btn:focus {
   background-color: rgba(0, 123, 196, 0.8);
   transition: all 300ms ease-in;
 }
@@ -515,7 +513,6 @@ header .h1-container .subtitle-container img {
   padding-left: 1em;
   text-align: right;
 }
-
 .block-quote p {
   font-size: 1rem;
   font-weight: 700;
@@ -561,7 +558,7 @@ header .h1-container .subtitle-container img {
   width: 250px;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1000px) {
   .about {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 270px;
@@ -593,6 +590,11 @@ header .h1-container .subtitle-container img {
 .leaflet-container {
   height: 80vh;
   z-index: 90;
+}
+
+.btn-container .action-btn {
+  font-weight: 700;
+  min-width: 250px;
 }
 
 footer {
@@ -679,10 +681,16 @@ h1 {
   font-size: 2rem;
 }
 
-h3 {
-  font-size: 1.2rem;
-  color: #007bc4;
+h2 {
+  font-size: 1.4rem;
   font-weight: 900;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #007bc4;
+  font-style: italic;
 }
 
 hr {

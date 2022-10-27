@@ -35,17 +35,17 @@ const InteractiveMap = () => {
         reach out to us on Twitter!
       </p>
       <div className="btn-container">
-        <a href="https://chihacknight.org/" target="_blank" rel="noreferrer">
+        <a href="https://github.com/chihacknight/ghost-buses-frontend" target="_blank" rel="noreferrer">
           <button className="action-btn">
             Frontend Repository
           </button>
         </a>
-        <a href="https://chihacknight.org/" target="_blank" rel="noreferrer">
+        <a href="https://github.com/chihacknight/chn-ghost-buses/" target="_blank" rel="noreferrer">
           <button className="action-btn">
             Data Repository
           </button>
         </a>
-        <a href="https://chihacknight.org/" target="_blank" rel="noreferrer">
+        <a href="https://twitter.com/ghostbuses" target="_blank" rel="noreferrer">
           <button className="action-btn">
             Ghost Bus Twitter
           </button>

@@ -57,10 +57,17 @@ h1 {
   font-size: 2rem;
 }
 
-h3 {
-  font-size: 1.2rem;
-  color: $cta-blue;
+h2 {
+   font-size: 1.4rem;
+  
   font-weight: 900;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: $cta-blue;
+  font-style: italic;
 }
 
 hr {
