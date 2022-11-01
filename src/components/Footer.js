@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className="padding-container footer-container">
         <div className="footer-links">
-          <h5> Links</h5>
+          <p> Links</p>
           <ul>
             <li>
               <a href="https://chihacknight.org/">ChiHackNight</a>
@@ -18,7 +18,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="footer-attributions">
-          <h5>Attributions</h5>
+          <p>Attributions</p>
           <ul>
             <li>
               <a href="https://www.freepik.com/vectors/business-bag">

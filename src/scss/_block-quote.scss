@@ -1,18 +1,22 @@
 .block-quote {
   position: relative;
   border-left: 12px solid $cta-blue;
-  width: 80%;
-  margin: 1em 0;
+  width: 60%;
+  margin: 2em 0;
   padding-left: 1em;
   text-align: right;
 
-  h4 {
-    font-size: .85rem;
+  p {
+    font-size: 1rem;
+    font-weight: 700;
+
     font-style: italic;
     margin-bottom: 0.5em;
+    font-weight: 400;
 
     span {
       color: $cta-red;
+      font-weight: 700;
     }
   }
 
@@ -34,9 +38,9 @@
 
 @media (min-width: $tablet-bp) {
   .block-quote {
-    margin: 1em auto;
+    margin: 2em auto;
 
-    h4 {
+    p {
         font-size: 1em;;
     }
   }
