@@ -1,0 +1,35 @@
+.search-container {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 150;
+    padding: 6px;
+    background-color: white;
+    border-radius: 10px;
+  
+    input {
+      padding: 10px;
+      border: none;
+    }
+  
+    .results-container {
+
+        max-height: 400px;
+        width: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      p {
+        border-top: 1px #cfcfcf solid;
+        padding: 15px;
+        width: 100%;
+        margin: 0;
+        @include transitionHover;
+  
+        &:hover {
+          cursor: pointer;
+          background-color: #e7e7e7;
+          @include transitionHover;
+        }
+      }
+    }
+  }
