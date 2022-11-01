@@ -1,3 +1,24 @@
+.bargraph {
+  width: 85%;
+  max-width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0.75em;
+  border-left: 1px solid $text-color;
+  border-bottom: 1px solid $text-color;
+
+  .bargraph-bar {
+    width: 15px;
+    background-color: rgb(173, 173, 173);
+
+    &.selected-bar {
+      background-color: $cta-red;
+    }
+  }
+}
+
 .bus-route-details {
   .grid {
     display: grid;
@@ -9,23 +30,21 @@
       height: 200px;
       padding: 4em 2em;
       // border-bottom: solid 1px $text-color;
-      
-
     }
 
-    .ridership, .fraction {
+    .ridership,
+    .fraction {
       @include flex-center;
     }
 
     .fraction {
-      
       .bus-graphic-text {
         p {
           font-size: 1.1rem;
           font-weight: 700;
           padding: 1em 0;
 
-          &:first-of-type{
+          &:first-of-type {
             border-bottom: $text-color solid 1px;
           }
         }
@@ -36,9 +55,8 @@
     }
 
     .bus-graphic {
-
       padding: 6em;
-      
+
       &-text {
         p {
           text-align: center;
@@ -57,7 +75,11 @@
         span {
           color: $cta-red;
           font-weight: 900;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
+
+          &.blue {
+            color: $cta-blue;
+          }
 
           &.ghost {
             font-size: 1.2rem;
@@ -93,7 +115,6 @@
 @media (min-width: $desktop-bp) {
   .bus-route-details {
     .grid {
-    
       grid-template-columns: 1fr 1fr;
 
       div.grid-square {

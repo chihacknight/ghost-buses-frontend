@@ -12,7 +12,11 @@ $bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
 $tablet-bp: 450px;
 $desktop-bp: 850px;
 
-//
+// fonts
+
+$modal-font: 'Arimo', sans-serif;
+
+
 
 @mixin flex-center {
   display: flex;

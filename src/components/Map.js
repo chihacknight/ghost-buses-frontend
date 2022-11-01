@@ -46,19 +46,48 @@ export default function Map() {
 
   // modal functionality
 
+  // clicking a bus route opens the modal
+
   const onClickBusRoute = (feature) => {
     const results = resultsData.features.filter(
       (data) =>
         String(data.properties.route_id) === String(feature.properties.route_id)
     );
     setSelectedRoute(results);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setSelectedRoute();
+    document.body.style.overflow = "scroll";
   };
 
   //leaflet
+
+  //highlight the hovered bus route
+
+  const style = {
+    color: "rgb(51, 136, 255)",
+    fillColor: "rgb(51, 136, 255)",
+    weight: 3,
+    fillOpacity: 1,
+  };
+
+  function highlightFeature(e) {
+    let layer = e.target;
+
+    layer.setStyle({
+      weight: 4,
+      fillColor: "#fff",
+      color: "#fff",
+      fillOpacity: 1,
+    });
+  }
+
+  function resetHighlight(e) {
+    let layer = e.target;
+    layer.setStyle(style);
+  }
 
   function onEachFeature(feature, layer) {
     if (feature.properties) {
@@ -69,7 +98,25 @@ export default function Map() {
 
       layer.on({
         click: () => onClickBusRoute(feature),
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
       });
+
+      // const routeMatch = resultsData.features.find(
+      //   (x) =>
+      //     Number(x.properties.route_id) === Number(feature.properties.route_id)
+      // );
+      // if (!routeMatch) {
+      //   return;
+      // }
+      // if (routeMatch.properties.ratio > 0) {
+      //   layer.setStyle({
+      //     weight: 4,
+      //     fillColor: "red",
+      //     color: "red",
+      //     fillOpacity: 1,
+      //   });
+      // }
     }
   }
 

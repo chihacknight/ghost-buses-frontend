@@ -3,7 +3,7 @@ import Map from "../components/Map";
 
 const InteractiveMap = () => {
   return (
-    <div className="page-container">
+    <div>
       <Map />
     </div>
   );
