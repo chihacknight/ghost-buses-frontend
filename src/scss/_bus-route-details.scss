@@ -1,0 +1,114 @@
+.bus-route-details {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+
+    div.grid-square {
+      height: 200px;
+      padding: 4em 2em;
+      // border-bottom: solid 1px $text-color;
+      
+
+    }
+
+    .ridership, .fraction {
+      @include flex-center;
+    }
+
+    .fraction {
+      
+      .bus-graphic-text {
+        p {
+          font-size: 1.1rem;
+          font-weight: 700;
+          padding: 1em 0;
+
+          &:first-of-type{
+            border-bottom: $text-color solid 1px;
+          }
+        }
+        span {
+          color: $cta-blue;
+        }
+      }
+    }
+
+    .bus-graphic {
+
+      padding: 6em;
+      
+      &-text {
+        p {
+          text-align: center;
+          font-weight: 700;
+          margin: 0;
+          font-size: 1.2rem;
+
+          &.ridership-number {
+            color: $cta-blue;
+            font-size: 4rem;
+            margin: -25px 0 -15px 0;
+            letter-spacing: -2px;
+          }
+        }
+
+        span {
+          color: $cta-red;
+          font-weight: 900;
+          font-size: 1.5rem;
+
+          &.ghost {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-left: 2px;
+          }
+        }
+      }
+
+      .bus-ghost-container {
+        border: 0;
+        padding: 0;
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 40px);
+        grid-auto-rows: 1fr min-content;
+        grid-gap: 5px;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+
+        img {
+          width: 30px;
+          align-self: center;
+          padding: 7px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-bp) {
+  .bus-route-details {
+    .grid {
+    
+      grid-template-columns: 1fr 1fr;
+
+      div.grid-square {
+        padding: 2em;
+        &:first-child {
+          border-right: 1px $text-color solid;
+        }
+        &:nth-child(3) {
+          border-top: 1px $text-color solid;
+          border-right: 1px $text-color solid;
+        }
+        &:last-child {
+          border-top: 1px $text-color solid;
+        }
+      }
+    }
+  }
+}

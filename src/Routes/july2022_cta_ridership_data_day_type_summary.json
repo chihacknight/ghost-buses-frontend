@@ -1,0 +1,2396 @@
+[
+  {
+    "route_id": "1",
+    "day_type": "weekday",
+    "avg_riders": 773.35,
+    "total_riders": 15467
+  },
+  {
+    "route_id": "10",
+    "day_type": "hol",
+    "avg_riders": 417.0,
+    "total_riders": 417
+  },
+  {
+    "route_id": "10",
+    "day_type": "sat",
+    "avg_riders": 333.2,
+    "total_riders": 1666
+  },
+  {
+    "route_id": "10",
+    "day_type": "sun",
+    "avg_riders": 561.4,
+    "total_riders": 2807
+  },
+  {
+    "route_id": "10",
+    "day_type": "weekday",
+    "avg_riders": 476.65,
+    "total_riders": 9533
+  },
+  {
+    "route_id": "100",
+    "day_type": "weekday",
+    "avg_riders": 337.45,
+    "total_riders": 6749
+  },
+  {
+    "route_id": "1001",
+    "day_type": "hol",
+    "avg_riders": 73.0,
+    "total_riders": 73
+  },
+  {
+    "route_id": "1001",
+    "day_type": "sat",
+    "avg_riders": 224.6,
+    "total_riders": 1123
+  },
+  {
+    "route_id": "1001",
+    "day_type": "sun",
+    "avg_riders": 145.4,
+    "total_riders": 727
+  },
+  {
+    "route_id": "1001",
+    "day_type": "weekday",
+    "avg_riders": 47.75,
+    "total_riders": 955
+  },
+  {
+    "route_id": "103",
+    "day_type": "hol",
+    "avg_riders": 470.0,
+    "total_riders": 470
+  },
+  {
+    "route_id": "103",
+    "day_type": "sat",
+    "avg_riders": 639.4,
+    "total_riders": 3197
+  },
+  {
+    "route_id": "103",
+    "day_type": "sun",
+    "avg_riders": 500.4,
+    "total_riders": 2502
+  },
+  {
+    "route_id": "103",
+    "day_type": "weekday",
+    "avg_riders": 956.45,
+    "total_riders": 19129
+  },
+  {
+    "route_id": "106",
+    "day_type": "hol",
+    "avg_riders": 157.0,
+    "total_riders": 157
+  },
+  {
+    "route_id": "106",
+    "day_type": "sat",
+    "avg_riders": 275.2,
+    "total_riders": 1376
+  },
+  {
+    "route_id": "106",
+    "day_type": "sun",
+    "avg_riders": 215.4,
+    "total_riders": 1077
+  },
+  {
+    "route_id": "106",
+    "day_type": "weekday",
+    "avg_riders": 593.2,
+    "total_riders": 11864
+  },
+  {
+    "route_id": "108",
+    "day_type": "weekday",
+    "avg_riders": 427.45,
+    "total_riders": 8549
+  },
+  {
+    "route_id": "11",
+    "day_type": "hol",
+    "avg_riders": 355.0,
+    "total_riders": 355
+  },
+  {
+    "route_id": "11",
+    "day_type": "sat",
+    "avg_riders": 568.6,
+    "total_riders": 2843
+  },
+  {
+    "route_id": "11",
+    "day_type": "sun",
+    "avg_riders": 427.4,
+    "total_riders": 2137
+  },
+  {
+    "route_id": "11",
+    "day_type": "weekday",
+    "avg_riders": 933.1,
+    "total_riders": 18662
+  },
+  {
+    "route_id": "111",
+    "day_type": "hol",
+    "avg_riders": 789.0,
+    "total_riders": 789
+  },
+  {
+    "route_id": "111",
+    "day_type": "sat",
+    "avg_riders": 886.0,
+    "total_riders": 4430
+  },
+  {
+    "route_id": "111",
+    "day_type": "sun",
+    "avg_riders": 705.8,
+    "total_riders": 3529
+  },
+  {
+    "route_id": "111",
+    "day_type": "weekday",
+    "avg_riders": 1432.9,
+    "total_riders": 28658
+  },
+  {
+    "route_id": "111A",
+    "day_type": "hol",
+    "avg_riders": 75.0,
+    "total_riders": 75
+  },
+  {
+    "route_id": "111A",
+    "day_type": "sat",
+    "avg_riders": 122.4,
+    "total_riders": 612
+  },
+  {
+    "route_id": "111A",
+    "day_type": "sun",
+    "avg_riders": 91.0,
+    "total_riders": 455
+  },
+  {
+    "route_id": "111A",
+    "day_type": "weekday",
+    "avg_riders": 174.05,
+    "total_riders": 3481
+  },
+  {
+    "route_id": "112",
+    "day_type": "hol",
+    "avg_riders": 247.0,
+    "total_riders": 247
+  },
+  {
+    "route_id": "112",
+    "day_type": "sat",
+    "avg_riders": 505.4,
+    "total_riders": 2527
+  },
+  {
+    "route_id": "112",
+    "day_type": "sun",
+    "avg_riders": 345.2,
+    "total_riders": 1726
+  },
+  {
+    "route_id": "112",
+    "day_type": "weekday",
+    "avg_riders": 774.85,
+    "total_riders": 15497
+  },
+  {
+    "route_id": "115",
+    "day_type": "hol",
+    "avg_riders": 617.0,
+    "total_riders": 617
+  },
+  {
+    "route_id": "115",
+    "day_type": "sat",
+    "avg_riders": 861.0,
+    "total_riders": 4305
+  },
+  {
+    "route_id": "115",
+    "day_type": "sun",
+    "avg_riders": 712.4,
+    "total_riders": 3562
+  },
+  {
+    "route_id": "115",
+    "day_type": "weekday",
+    "avg_riders": 1398.05,
+    "total_riders": 27961
+  },
+  {
+    "route_id": "119",
+    "day_type": "hol",
+    "avg_riders": 1025.0,
+    "total_riders": 1025
+  },
+  {
+    "route_id": "119",
+    "day_type": "sat",
+    "avg_riders": 1525.2,
+    "total_riders": 7626
+  },
+  {
+    "route_id": "119",
+    "day_type": "sun",
+    "avg_riders": 1029.8,
+    "total_riders": 5149
+  },
+  {
+    "route_id": "119",
+    "day_type": "weekday",
+    "avg_riders": 1878.85,
+    "total_riders": 37577
+  },
+  {
+    "route_id": "12",
+    "day_type": "hol",
+    "avg_riders": 2600.0,
+    "total_riders": 2600
+  },
+  {
+    "route_id": "12",
+    "day_type": "sat",
+    "avg_riders": 4076.6,
+    "total_riders": 20383
+  },
+  {
+    "route_id": "12",
+    "day_type": "sun",
+    "avg_riders": 2685.4,
+    "total_riders": 13427
+  },
+  {
+    "route_id": "12",
+    "day_type": "weekday",
+    "avg_riders": 6300.95,
+    "total_riders": 126019
+  },
+  {
+    "route_id": "120",
+    "day_type": "weekday",
+    "avg_riders": 179.55,
+    "total_riders": 3591
+  },
+  {
+    "route_id": "121",
+    "day_type": "weekday",
+    "avg_riders": 167.8,
+    "total_riders": 3356
+  },
+  {
+    "route_id": "124",
+    "day_type": "hol",
+    "avg_riders": 939.0,
+    "total_riders": 939
+  },
+  {
+    "route_id": "124",
+    "day_type": "sat",
+    "avg_riders": 1746.8,
+    "total_riders": 8734
+  },
+  {
+    "route_id": "124",
+    "day_type": "sun",
+    "avg_riders": 1057.8,
+    "total_riders": 5289
+  },
+  {
+    "route_id": "124",
+    "day_type": "weekday",
+    "avg_riders": 1196.5,
+    "total_riders": 23930
+  },
+  {
+    "route_id": "125",
+    "day_type": "weekday",
+    "avg_riders": 313.8,
+    "total_riders": 6276
+  },
+  {
+    "route_id": "126",
+    "day_type": "hol",
+    "avg_riders": 1101.0,
+    "total_riders": 1101
+  },
+  {
+    "route_id": "126",
+    "day_type": "sat",
+    "avg_riders": 1471.2,
+    "total_riders": 7356
+  },
+  {
+    "route_id": "126",
+    "day_type": "sun",
+    "avg_riders": 1147.2,
+    "total_riders": 5736
+  },
+  {
+    "route_id": "126",
+    "day_type": "weekday",
+    "avg_riders": 2383.15,
+    "total_riders": 47663
+  },
+  {
+    "route_id": "130",
+    "day_type": "hol",
+    "avg_riders": 387.0,
+    "total_riders": 387
+  },
+  {
+    "route_id": "130",
+    "day_type": "sat",
+    "avg_riders": 607.6,
+    "total_riders": 3038
+  },
+  {
+    "route_id": "130",
+    "day_type": "sun",
+    "avg_riders": 434.2,
+    "total_riders": 2171
+  },
+  {
+    "route_id": "130",
+    "day_type": "weekday",
+    "avg_riders": 521.1,
+    "total_riders": 10422
+  },
+  {
+    "route_id": "134",
+    "day_type": "weekday",
+    "avg_riders": 705.75,
+    "total_riders": 14115
+  },
+  {
+    "route_id": "135",
+    "day_type": "weekday",
+    "avg_riders": 1216.5,
+    "total_riders": 24330
+  },
+  {
+    "route_id": "136",
+    "day_type": "weekday",
+    "avg_riders": 748.35,
+    "total_riders": 14967
+  },
+  {
+    "route_id": "143",
+    "day_type": "weekday",
+    "avg_riders": 495.55,
+    "total_riders": 9911
+  },
+  {
+    "route_id": "146",
+    "day_type": "hol",
+    "avg_riders": 5820.0,
+    "total_riders": 5820
+  },
+  {
+    "route_id": "146",
+    "day_type": "sat",
+    "avg_riders": 8108.4,
+    "total_riders": 40542
+  },
+  {
+    "route_id": "146",
+    "day_type": "sun",
+    "avg_riders": 6803.0,
+    "total_riders": 34015
+  },
+  {
+    "route_id": "146",
+    "day_type": "weekday",
+    "avg_riders": 9663.8,
+    "total_riders": 193276
+  },
+  {
+    "route_id": "147",
+    "day_type": "hol",
+    "avg_riders": 4456.0,
+    "total_riders": 4456
+  },
+  {
+    "route_id": "147",
+    "day_type": "sat",
+    "avg_riders": 7009.2,
+    "total_riders": 35046
+  },
+  {
+    "route_id": "147",
+    "day_type": "sun",
+    "avg_riders": 5792.6,
+    "total_riders": 28963
+  },
+  {
+    "route_id": "147",
+    "day_type": "weekday",
+    "avg_riders": 8860.75,
+    "total_riders": 177215
+  },
+  {
+    "route_id": "148",
+    "day_type": "weekday",
+    "avg_riders": 1209.15,
+    "total_riders": 24183
+  },
+  {
+    "route_id": "15",
+    "day_type": "hol",
+    "avg_riders": 1287.0,
+    "total_riders": 1287
+  },
+  {
+    "route_id": "15",
+    "day_type": "sat",
+    "avg_riders": 2641.4,
+    "total_riders": 13207
+  },
+  {
+    "route_id": "15",
+    "day_type": "sun",
+    "avg_riders": 1628.6,
+    "total_riders": 8143
+  },
+  {
+    "route_id": "15",
+    "day_type": "weekday",
+    "avg_riders": 4096.55,
+    "total_riders": 81931
+  },
+  {
+    "route_id": "151",
+    "day_type": "hol",
+    "avg_riders": 7430.0,
+    "total_riders": 7430
+  },
+  {
+    "route_id": "151",
+    "day_type": "sat",
+    "avg_riders": 11442.4,
+    "total_riders": 57212
+  },
+  {
+    "route_id": "151",
+    "day_type": "sun",
+    "avg_riders": 7832.0,
+    "total_riders": 39160
+  },
+  {
+    "route_id": "151",
+    "day_type": "weekday",
+    "avg_riders": 10815.75,
+    "total_riders": 216315
+  },
+  {
+    "route_id": "152",
+    "day_type": "hol",
+    "avg_riders": 1510.0,
+    "total_riders": 1510
+  },
+  {
+    "route_id": "152",
+    "day_type": "sat",
+    "avg_riders": 3177.6,
+    "total_riders": 15888
+  },
+  {
+    "route_id": "152",
+    "day_type": "sun",
+    "avg_riders": 2321.2,
+    "total_riders": 11606
+  },
+  {
+    "route_id": "152",
+    "day_type": "weekday",
+    "avg_riders": 4980.6,
+    "total_riders": 99612
+  },
+  {
+    "route_id": "155",
+    "day_type": "hol",
+    "avg_riders": 2666.0,
+    "total_riders": 2666
+  },
+  {
+    "route_id": "155",
+    "day_type": "sat",
+    "avg_riders": 3715.6,
+    "total_riders": 18578
+  },
+  {
+    "route_id": "155",
+    "day_type": "sun",
+    "avg_riders": 2985.0,
+    "total_riders": 14925
+  },
+  {
+    "route_id": "155",
+    "day_type": "weekday",
+    "avg_riders": 4270.1,
+    "total_riders": 85402
+  },
+  {
+    "route_id": "156",
+    "day_type": "weekday",
+    "avg_riders": 2366.7,
+    "total_riders": 47334
+  },
+  {
+    "route_id": "157",
+    "day_type": "weekday",
+    "avg_riders": 2621.45,
+    "total_riders": 52429
+  },
+  {
+    "route_id": "165",
+    "day_type": "weekday",
+    "avg_riders": 106.65,
+    "total_riders": 2133
+  },
+  {
+    "route_id": "169",
+    "day_type": "sat",
+    "avg_riders": 9.0,
+    "total_riders": 18
+  },
+  {
+    "route_id": "169",
+    "day_type": "weekday",
+    "avg_riders": 123.8,
+    "total_riders": 2476
+  },
+  {
+    "route_id": "171",
+    "day_type": "weekday",
+    "avg_riders": 158.85,
+    "total_riders": 3177
+  },
+  {
+    "route_id": "172",
+    "day_type": "weekday",
+    "avg_riders": 363.5,
+    "total_riders": 7270
+  },
+  {
+    "route_id": "18",
+    "day_type": "hol",
+    "avg_riders": 788.0,
+    "total_riders": 788
+  },
+  {
+    "route_id": "18",
+    "day_type": "sat",
+    "avg_riders": 1333.6,
+    "total_riders": 6668
+  },
+  {
+    "route_id": "18",
+    "day_type": "sun",
+    "avg_riders": 1086.2,
+    "total_riders": 5431
+  },
+  {
+    "route_id": "18",
+    "day_type": "weekday",
+    "avg_riders": 1840.35,
+    "total_riders": 36807
+  },
+  {
+    "route_id": "19",
+    "day_type": "sat",
+    "avg_riders": 60.0,
+    "total_riders": 60
+  },
+  {
+    "route_id": "19",
+    "day_type": "weekday",
+    "avg_riders": 5.0,
+    "total_riders": 5
+  },
+  {
+    "route_id": "192",
+    "day_type": "weekday",
+    "avg_riders": 416.05,
+    "total_riders": 8321
+  },
+  {
+    "route_id": "2",
+    "day_type": "weekday",
+    "avg_riders": 1370.4,
+    "total_riders": 27408
+  },
+  {
+    "route_id": "20",
+    "day_type": "hol",
+    "avg_riders": 3312.0,
+    "total_riders": 3312
+  },
+  {
+    "route_id": "20",
+    "day_type": "sat",
+    "avg_riders": 4828.4,
+    "total_riders": 24142
+  },
+  {
+    "route_id": "20",
+    "day_type": "sun",
+    "avg_riders": 3158.6,
+    "total_riders": 15793
+  },
+  {
+    "route_id": "20",
+    "day_type": "weekday",
+    "avg_riders": 8382.7,
+    "total_riders": 167654
+  },
+  {
+    "route_id": "201",
+    "day_type": "sat",
+    "avg_riders": 670.0,
+    "total_riders": 3350
+  },
+  {
+    "route_id": "201",
+    "day_type": "weekday",
+    "avg_riders": 1054.25,
+    "total_riders": 21085
+  },
+  {
+    "route_id": "206",
+    "day_type": "weekday",
+    "avg_riders": 87.95,
+    "total_riders": 1759
+  },
+  {
+    "route_id": "21",
+    "day_type": "hol",
+    "avg_riders": 2047.0,
+    "total_riders": 2047
+  },
+  {
+    "route_id": "21",
+    "day_type": "sat",
+    "avg_riders": 4131.0,
+    "total_riders": 20655
+  },
+  {
+    "route_id": "21",
+    "day_type": "sun",
+    "avg_riders": 2413.0,
+    "total_riders": 12065
+  },
+  {
+    "route_id": "21",
+    "day_type": "weekday",
+    "avg_riders": 5389.8,
+    "total_riders": 107796
+  },
+  {
+    "route_id": "22",
+    "day_type": "hol",
+    "avg_riders": 6504.0,
+    "total_riders": 6504
+  },
+  {
+    "route_id": "22",
+    "day_type": "sat",
+    "avg_riders": 9182.6,
+    "total_riders": 45913
+  },
+  {
+    "route_id": "22",
+    "day_type": "sun",
+    "avg_riders": 7732.8,
+    "total_riders": 38664
+  },
+  {
+    "route_id": "22",
+    "day_type": "weekday",
+    "avg_riders": 11777.95,
+    "total_riders": 235559
+  },
+  {
+    "route_id": "24",
+    "day_type": "weekday",
+    "avg_riders": 1219.25,
+    "total_riders": 24385
+  },
+  {
+    "route_id": "26",
+    "day_type": "weekday",
+    "avg_riders": 2137.8,
+    "total_riders": 42756
+  },
+  {
+    "route_id": "28",
+    "day_type": "hol",
+    "avg_riders": 732.0,
+    "total_riders": 732
+  },
+  {
+    "route_id": "28",
+    "day_type": "sat",
+    "avg_riders": 1451.4,
+    "total_riders": 7257
+  },
+  {
+    "route_id": "28",
+    "day_type": "sun",
+    "avg_riders": 1144.6,
+    "total_riders": 5723
+  },
+  {
+    "route_id": "28",
+    "day_type": "weekday",
+    "avg_riders": 2795.0,
+    "total_riders": 55900
+  },
+  {
+    "route_id": "29",
+    "day_type": "hol",
+    "avg_riders": 3125.0,
+    "total_riders": 3125
+  },
+  {
+    "route_id": "29",
+    "day_type": "sat",
+    "avg_riders": 5716.4,
+    "total_riders": 28582
+  },
+  {
+    "route_id": "29",
+    "day_type": "sun",
+    "avg_riders": 2638.4,
+    "total_riders": 13192
+  },
+  {
+    "route_id": "29",
+    "day_type": "weekday",
+    "avg_riders": 5165.2,
+    "total_riders": 103304
+  },
+  {
+    "route_id": "3",
+    "day_type": "hol",
+    "avg_riders": 4600.0,
+    "total_riders": 4600
+  },
+  {
+    "route_id": "3",
+    "day_type": "sat",
+    "avg_riders": 6898.4,
+    "total_riders": 34492
+  },
+  {
+    "route_id": "3",
+    "day_type": "sun",
+    "avg_riders": 5121.8,
+    "total_riders": 25609
+  },
+  {
+    "route_id": "3",
+    "day_type": "weekday",
+    "avg_riders": 9170.9,
+    "total_riders": 183418
+  },
+  {
+    "route_id": "30",
+    "day_type": "hol",
+    "avg_riders": 498.0,
+    "total_riders": 498
+  },
+  {
+    "route_id": "30",
+    "day_type": "sat",
+    "avg_riders": 1015.6,
+    "total_riders": 5078
+  },
+  {
+    "route_id": "30",
+    "day_type": "sun",
+    "avg_riders": 395.2,
+    "total_riders": 1976
+  },
+  {
+    "route_id": "30",
+    "day_type": "weekday",
+    "avg_riders": 1268.95,
+    "total_riders": 25379
+  },
+  {
+    "route_id": "31",
+    "day_type": "weekday",
+    "avg_riders": 265.25,
+    "total_riders": 5305
+  },
+  {
+    "route_id": "34",
+    "day_type": "hol",
+    "avg_riders": 1132.0,
+    "total_riders": 1132
+  },
+  {
+    "route_id": "34",
+    "day_type": "sat",
+    "avg_riders": 1322.8,
+    "total_riders": 6614
+  },
+  {
+    "route_id": "34",
+    "day_type": "sun",
+    "avg_riders": 984.8,
+    "total_riders": 4924
+  },
+  {
+    "route_id": "34",
+    "day_type": "weekday",
+    "avg_riders": 2166.35,
+    "total_riders": 43327
+  },
+  {
+    "route_id": "35",
+    "day_type": "hol",
+    "avg_riders": 959.0,
+    "total_riders": 959
+  },
+  {
+    "route_id": "35",
+    "day_type": "sat",
+    "avg_riders": 1461.2,
+    "total_riders": 7306
+  },
+  {
+    "route_id": "35",
+    "day_type": "sun",
+    "avg_riders": 1049.0,
+    "total_riders": 5245
+  },
+  {
+    "route_id": "35",
+    "day_type": "weekday",
+    "avg_riders": 2428.8,
+    "total_riders": 48576
+  },
+  {
+    "route_id": "36",
+    "day_type": "hol",
+    "avg_riders": 6346.0,
+    "total_riders": 6346
+  },
+  {
+    "route_id": "36",
+    "day_type": "sat",
+    "avg_riders": 8699.8,
+    "total_riders": 43499
+  },
+  {
+    "route_id": "36",
+    "day_type": "sun",
+    "avg_riders": 7169.6,
+    "total_riders": 35848
+  },
+  {
+    "route_id": "36",
+    "day_type": "weekday",
+    "avg_riders": 9214.75,
+    "total_riders": 184295
+  },
+  {
+    "route_id": "37",
+    "day_type": "weekday",
+    "avg_riders": 560.95,
+    "total_riders": 11219
+  },
+  {
+    "route_id": "39",
+    "day_type": "hol",
+    "avg_riders": 298.0,
+    "total_riders": 298
+  },
+  {
+    "route_id": "39",
+    "day_type": "sat",
+    "avg_riders": 463.6,
+    "total_riders": 2318
+  },
+  {
+    "route_id": "39",
+    "day_type": "sun",
+    "avg_riders": 358.8,
+    "total_riders": 1794
+  },
+  {
+    "route_id": "39",
+    "day_type": "weekday",
+    "avg_riders": 1148.4,
+    "total_riders": 22968
+  },
+  {
+    "route_id": "4",
+    "day_type": "hol",
+    "avg_riders": 4859.0,
+    "total_riders": 4859
+  },
+  {
+    "route_id": "4",
+    "day_type": "sat",
+    "avg_riders": 6703.0,
+    "total_riders": 33515
+  },
+  {
+    "route_id": "4",
+    "day_type": "sun",
+    "avg_riders": 5117.0,
+    "total_riders": 25585
+  },
+  {
+    "route_id": "4",
+    "day_type": "weekday",
+    "avg_riders": 9613.55,
+    "total_riders": 192271
+  },
+  {
+    "route_id": "43",
+    "day_type": "hol",
+    "avg_riders": 263.0,
+    "total_riders": 263
+  },
+  {
+    "route_id": "43",
+    "day_type": "sat",
+    "avg_riders": 361.4,
+    "total_riders": 1807
+  },
+  {
+    "route_id": "43",
+    "day_type": "sun",
+    "avg_riders": 308.8,
+    "total_riders": 1544
+  },
+  {
+    "route_id": "43",
+    "day_type": "weekday",
+    "avg_riders": 719.65,
+    "total_riders": 14393
+  },
+  {
+    "route_id": "44",
+    "day_type": "hol",
+    "avg_riders": 618.0,
+    "total_riders": 618
+  },
+  {
+    "route_id": "44",
+    "day_type": "sat",
+    "avg_riders": 924.8,
+    "total_riders": 4624
+  },
+  {
+    "route_id": "44",
+    "day_type": "sun",
+    "avg_riders": 696.6,
+    "total_riders": 3483
+  },
+  {
+    "route_id": "44",
+    "day_type": "weekday",
+    "avg_riders": 1810.5,
+    "total_riders": 36210
+  },
+  {
+    "route_id": "47",
+    "day_type": "hol",
+    "avg_riders": 2803.0,
+    "total_riders": 2803
+  },
+  {
+    "route_id": "47",
+    "day_type": "sat",
+    "avg_riders": 4239.2,
+    "total_riders": 21196
+  },
+  {
+    "route_id": "47",
+    "day_type": "sun",
+    "avg_riders": 3194.8,
+    "total_riders": 15974
+  },
+  {
+    "route_id": "47",
+    "day_type": "weekday",
+    "avg_riders": 5580.85,
+    "total_riders": 111617
+  },
+  {
+    "route_id": "48",
+    "day_type": "weekday",
+    "avg_riders": 358.65,
+    "total_riders": 7173
+  },
+  {
+    "route_id": "49",
+    "day_type": "hol",
+    "avg_riders": 5450.0,
+    "total_riders": 5450
+  },
+  {
+    "route_id": "49",
+    "day_type": "sat",
+    "avg_riders": 8642.4,
+    "total_riders": 43212
+  },
+  {
+    "route_id": "49",
+    "day_type": "sun",
+    "avg_riders": 5914.6,
+    "total_riders": 29573
+  },
+  {
+    "route_id": "49",
+    "day_type": "weekday",
+    "avg_riders": 9341.9,
+    "total_riders": 186838
+  },
+  {
+    "route_id": "49B",
+    "day_type": "hol",
+    "avg_riders": 1799.0,
+    "total_riders": 1799
+  },
+  {
+    "route_id": "49B",
+    "day_type": "sat",
+    "avg_riders": 2534.4,
+    "total_riders": 12672
+  },
+  {
+    "route_id": "49B",
+    "day_type": "sun",
+    "avg_riders": 2279.4,
+    "total_riders": 11397
+  },
+  {
+    "route_id": "49B",
+    "day_type": "weekday",
+    "avg_riders": 3396.9,
+    "total_riders": 67938
+  },
+  {
+    "route_id": "5",
+    "day_type": "hol",
+    "avg_riders": 201.0,
+    "total_riders": 201
+  },
+  {
+    "route_id": "5",
+    "day_type": "sat",
+    "avg_riders": 215.2,
+    "total_riders": 1076
+  },
+  {
+    "route_id": "5",
+    "day_type": "sun",
+    "avg_riders": 226.2,
+    "total_riders": 1131
+  },
+  {
+    "route_id": "5",
+    "day_type": "weekday",
+    "avg_riders": 313.0,
+    "total_riders": 6260
+  },
+  {
+    "route_id": "50",
+    "day_type": "hol",
+    "avg_riders": 1875.0,
+    "total_riders": 1875
+  },
+  {
+    "route_id": "50",
+    "day_type": "sat",
+    "avg_riders": 3757.8,
+    "total_riders": 18789
+  },
+  {
+    "route_id": "50",
+    "day_type": "sun",
+    "avg_riders": 2995.4,
+    "total_riders": 14977
+  },
+  {
+    "route_id": "50",
+    "day_type": "weekday",
+    "avg_riders": 6023.5,
+    "total_riders": 120470
+  },
+  {
+    "route_id": "51",
+    "day_type": "hol",
+    "avg_riders": 361.0,
+    "total_riders": 361
+  },
+  {
+    "route_id": "51",
+    "day_type": "sat",
+    "avg_riders": 597.2,
+    "total_riders": 2986
+  },
+  {
+    "route_id": "51",
+    "day_type": "sun",
+    "avg_riders": 422.6,
+    "total_riders": 2113
+  },
+  {
+    "route_id": "51",
+    "day_type": "weekday",
+    "avg_riders": 782.15,
+    "total_riders": 15643
+  },
+  {
+    "route_id": "52",
+    "day_type": "hol",
+    "avg_riders": 2029.0,
+    "total_riders": 2029
+  },
+  {
+    "route_id": "52",
+    "day_type": "sat",
+    "avg_riders": 3295.4,
+    "total_riders": 16477
+  },
+  {
+    "route_id": "52",
+    "day_type": "sun",
+    "avg_riders": 2402.6,
+    "total_riders": 12013
+  },
+  {
+    "route_id": "52",
+    "day_type": "weekday",
+    "avg_riders": 5024.7,
+    "total_riders": 100494
+  },
+  {
+    "route_id": "52A",
+    "day_type": "hol",
+    "avg_riders": 834.0,
+    "total_riders": 834
+  },
+  {
+    "route_id": "52A",
+    "day_type": "sat",
+    "avg_riders": 1252.8,
+    "total_riders": 6264
+  },
+  {
+    "route_id": "52A",
+    "day_type": "sun",
+    "avg_riders": 883.2,
+    "total_riders": 4416
+  },
+  {
+    "route_id": "52A",
+    "day_type": "weekday",
+    "avg_riders": 2199.15,
+    "total_riders": 43983
+  },
+  {
+    "route_id": "53",
+    "day_type": "hol",
+    "avg_riders": 4598.0,
+    "total_riders": 4598
+  },
+  {
+    "route_id": "53",
+    "day_type": "sat",
+    "avg_riders": 6897.0,
+    "total_riders": 34485
+  },
+  {
+    "route_id": "53",
+    "day_type": "sun",
+    "avg_riders": 4763.4,
+    "total_riders": 23817
+  },
+  {
+    "route_id": "53",
+    "day_type": "weekday",
+    "avg_riders": 10248.85,
+    "total_riders": 204977
+  },
+  {
+    "route_id": "53A",
+    "day_type": "hol",
+    "avg_riders": 1074.0,
+    "total_riders": 1074
+  },
+  {
+    "route_id": "53A",
+    "day_type": "sat",
+    "avg_riders": 2167.8,
+    "total_riders": 10839
+  },
+  {
+    "route_id": "53A",
+    "day_type": "sun",
+    "avg_riders": 1370.2,
+    "total_riders": 6851
+  },
+  {
+    "route_id": "53A",
+    "day_type": "weekday",
+    "avg_riders": 3987.75,
+    "total_riders": 79755
+  },
+  {
+    "route_id": "54",
+    "day_type": "hol",
+    "avg_riders": 2396.0,
+    "total_riders": 2396
+  },
+  {
+    "route_id": "54",
+    "day_type": "sat",
+    "avg_riders": 4028.4,
+    "total_riders": 20142
+  },
+  {
+    "route_id": "54",
+    "day_type": "sun",
+    "avg_riders": 2899.0,
+    "total_riders": 14495
+  },
+  {
+    "route_id": "54",
+    "day_type": "weekday",
+    "avg_riders": 5801.6,
+    "total_riders": 116032
+  },
+  {
+    "route_id": "54A",
+    "day_type": "weekday",
+    "avg_riders": 409.15,
+    "total_riders": 8183
+  },
+  {
+    "route_id": "54B",
+    "day_type": "hol",
+    "avg_riders": 749.0,
+    "total_riders": 749
+  },
+  {
+    "route_id": "54B",
+    "day_type": "sat",
+    "avg_riders": 1436.2,
+    "total_riders": 7181
+  },
+  {
+    "route_id": "54B",
+    "day_type": "sun",
+    "avg_riders": 1041.4,
+    "total_riders": 5207
+  },
+  {
+    "route_id": "54B",
+    "day_type": "weekday",
+    "avg_riders": 1764.55,
+    "total_riders": 35291
+  },
+  {
+    "route_id": "55",
+    "day_type": "hol",
+    "avg_riders": 2284.0,
+    "total_riders": 2284
+  },
+  {
+    "route_id": "55",
+    "day_type": "sat",
+    "avg_riders": 3568.2,
+    "total_riders": 17841
+  },
+  {
+    "route_id": "55",
+    "day_type": "sun",
+    "avg_riders": 2760.4,
+    "total_riders": 13802
+  },
+  {
+    "route_id": "55",
+    "day_type": "weekday",
+    "avg_riders": 4504.2,
+    "total_riders": 90084
+  },
+  {
+    "route_id": "55A",
+    "day_type": "weekday",
+    "avg_riders": 97.75,
+    "total_riders": 1955
+  },
+  {
+    "route_id": "55N",
+    "day_type": "sat",
+    "avg_riders": 177.4,
+    "total_riders": 887
+  },
+  {
+    "route_id": "55N",
+    "day_type": "weekday",
+    "avg_riders": 262.3,
+    "total_riders": 5246
+  },
+  {
+    "route_id": "56",
+    "day_type": "hol",
+    "avg_riders": 1978.0,
+    "total_riders": 1978
+  },
+  {
+    "route_id": "56",
+    "day_type": "sat",
+    "avg_riders": 2831.2,
+    "total_riders": 14156
+  },
+  {
+    "route_id": "56",
+    "day_type": "sun",
+    "avg_riders": 2486.6,
+    "total_riders": 12433
+  },
+  {
+    "route_id": "56",
+    "day_type": "weekday",
+    "avg_riders": 4592.4,
+    "total_riders": 91848
+  },
+  {
+    "route_id": "57",
+    "day_type": "hol",
+    "avg_riders": 338.0,
+    "total_riders": 338
+  },
+  {
+    "route_id": "57",
+    "day_type": "sat",
+    "avg_riders": 594.4,
+    "total_riders": 2972
+  },
+  {
+    "route_id": "57",
+    "day_type": "sun",
+    "avg_riders": 339.0,
+    "total_riders": 1695
+  },
+  {
+    "route_id": "57",
+    "day_type": "weekday",
+    "avg_riders": 1124.85,
+    "total_riders": 22497
+  },
+  {
+    "route_id": "59",
+    "day_type": "sat",
+    "avg_riders": 1185.0,
+    "total_riders": 5925
+  },
+  {
+    "route_id": "59",
+    "day_type": "weekday",
+    "avg_riders": 1785.4,
+    "total_riders": 35708
+  },
+  {
+    "route_id": "6",
+    "day_type": "hol",
+    "avg_riders": 3392.0,
+    "total_riders": 3392
+  },
+  {
+    "route_id": "6",
+    "day_type": "sat",
+    "avg_riders": 4717.4,
+    "total_riders": 23587
+  },
+  {
+    "route_id": "6",
+    "day_type": "sun",
+    "avg_riders": 3591.0,
+    "total_riders": 17955
+  },
+  {
+    "route_id": "6",
+    "day_type": "weekday",
+    "avg_riders": 4692.1,
+    "total_riders": 93842
+  },
+  {
+    "route_id": "60",
+    "day_type": "hol",
+    "avg_riders": 2594.0,
+    "total_riders": 2594
+  },
+  {
+    "route_id": "60",
+    "day_type": "sat",
+    "avg_riders": 3970.2,
+    "total_riders": 19851
+  },
+  {
+    "route_id": "60",
+    "day_type": "sun",
+    "avg_riders": 2947.0,
+    "total_riders": 14735
+  },
+  {
+    "route_id": "60",
+    "day_type": "weekday",
+    "avg_riders": 6166.3,
+    "total_riders": 123326
+  },
+  {
+    "route_id": "62",
+    "day_type": "hol",
+    "avg_riders": 3241.0,
+    "total_riders": 3241
+  },
+  {
+    "route_id": "62",
+    "day_type": "sat",
+    "avg_riders": 4190.0,
+    "total_riders": 20950
+  },
+  {
+    "route_id": "62",
+    "day_type": "sun",
+    "avg_riders": 3494.8,
+    "total_riders": 17474
+  },
+  {
+    "route_id": "62",
+    "day_type": "weekday",
+    "avg_riders": 5723.4,
+    "total_riders": 114468
+  },
+  {
+    "route_id": "62H",
+    "day_type": "sat",
+    "avg_riders": 380.6,
+    "total_riders": 1903
+  },
+  {
+    "route_id": "62H",
+    "day_type": "weekday",
+    "avg_riders": 703.05,
+    "total_riders": 14061
+  },
+  {
+    "route_id": "63",
+    "day_type": "hol",
+    "avg_riders": 3874.0,
+    "total_riders": 3874
+  },
+  {
+    "route_id": "63",
+    "day_type": "sat",
+    "avg_riders": 5383.0,
+    "total_riders": 26915
+  },
+  {
+    "route_id": "63",
+    "day_type": "sun",
+    "avg_riders": 4076.4,
+    "total_riders": 20382
+  },
+  {
+    "route_id": "63",
+    "day_type": "weekday",
+    "avg_riders": 7094.85,
+    "total_riders": 141897
+  },
+  {
+    "route_id": "63W",
+    "day_type": "hol",
+    "avg_riders": 334.0,
+    "total_riders": 334
+  },
+  {
+    "route_id": "63W",
+    "day_type": "sat",
+    "avg_riders": 497.4,
+    "total_riders": 2487
+  },
+  {
+    "route_id": "63W",
+    "day_type": "sun",
+    "avg_riders": 457.6,
+    "total_riders": 2288
+  },
+  {
+    "route_id": "63W",
+    "day_type": "weekday",
+    "avg_riders": 954.25,
+    "total_riders": 19085
+  },
+  {
+    "route_id": "65",
+    "day_type": "hol",
+    "avg_riders": 2647.0,
+    "total_riders": 2647
+  },
+  {
+    "route_id": "65",
+    "day_type": "sat",
+    "avg_riders": 3474.4,
+    "total_riders": 17372
+  },
+  {
+    "route_id": "65",
+    "day_type": "sun",
+    "avg_riders": 2366.0,
+    "total_riders": 11830
+  },
+  {
+    "route_id": "65",
+    "day_type": "weekday",
+    "avg_riders": 4229.25,
+    "total_riders": 84585
+  },
+  {
+    "route_id": "66",
+    "day_type": "hol",
+    "avg_riders": 6013.0,
+    "total_riders": 6013
+  },
+  {
+    "route_id": "66",
+    "day_type": "sat",
+    "avg_riders": 8865.0,
+    "total_riders": 44325
+  },
+  {
+    "route_id": "66",
+    "day_type": "sun",
+    "avg_riders": 5840.4,
+    "total_riders": 29202
+  },
+  {
+    "route_id": "66",
+    "day_type": "weekday",
+    "avg_riders": 12321.05,
+    "total_riders": 246421
+  },
+  {
+    "route_id": "67",
+    "day_type": "hol",
+    "avg_riders": 2708.0,
+    "total_riders": 2708
+  },
+  {
+    "route_id": "67",
+    "day_type": "sat",
+    "avg_riders": 3516.0,
+    "total_riders": 17580
+  },
+  {
+    "route_id": "67",
+    "day_type": "sun",
+    "avg_riders": 2797.0,
+    "total_riders": 13985
+  },
+  {
+    "route_id": "67",
+    "day_type": "weekday",
+    "avg_riders": 4539.1,
+    "total_riders": 90782
+  },
+  {
+    "route_id": "68",
+    "day_type": "hol",
+    "avg_riders": 165.0,
+    "total_riders": 165
+  },
+  {
+    "route_id": "68",
+    "day_type": "sat",
+    "avg_riders": 340.2,
+    "total_riders": 1701
+  },
+  {
+    "route_id": "68",
+    "day_type": "sun",
+    "avg_riders": 264.0,
+    "total_riders": 1320
+  },
+  {
+    "route_id": "68",
+    "day_type": "weekday",
+    "avg_riders": 649.85,
+    "total_riders": 12997
+  },
+  {
+    "route_id": "7",
+    "day_type": "weekday",
+    "avg_riders": 2147.0,
+    "total_riders": 42940
+  },
+  {
+    "route_id": "70",
+    "day_type": "hol",
+    "avg_riders": 1953.0,
+    "total_riders": 1953
+  },
+  {
+    "route_id": "70",
+    "day_type": "sat",
+    "avg_riders": 3072.4,
+    "total_riders": 15362
+  },
+  {
+    "route_id": "70",
+    "day_type": "sun",
+    "avg_riders": 2319.2,
+    "total_riders": 11596
+  },
+  {
+    "route_id": "70",
+    "day_type": "weekday",
+    "avg_riders": 4456.2,
+    "total_riders": 89124
+  },
+  {
+    "route_id": "71",
+    "day_type": "hol",
+    "avg_riders": 2328.0,
+    "total_riders": 2328
+  },
+  {
+    "route_id": "71",
+    "day_type": "sat",
+    "avg_riders": 3088.6,
+    "total_riders": 15443
+  },
+  {
+    "route_id": "71",
+    "day_type": "sun",
+    "avg_riders": 2265.0,
+    "total_riders": 11325
+  },
+  {
+    "route_id": "71",
+    "day_type": "weekday",
+    "avg_riders": 4072.85,
+    "total_riders": 81457
+  },
+  {
+    "route_id": "72",
+    "day_type": "hol",
+    "avg_riders": 3661.0,
+    "total_riders": 3661
+  },
+  {
+    "route_id": "72",
+    "day_type": "sat",
+    "avg_riders": 6471.4,
+    "total_riders": 32357
+  },
+  {
+    "route_id": "72",
+    "day_type": "sun",
+    "avg_riders": 4659.2,
+    "total_riders": 23296
+  },
+  {
+    "route_id": "72",
+    "day_type": "weekday",
+    "avg_riders": 8136.7,
+    "total_riders": 162734
+  },
+  {
+    "route_id": "73",
+    "day_type": "hol",
+    "avg_riders": 754.0,
+    "total_riders": 754
+  },
+  {
+    "route_id": "73",
+    "day_type": "sat",
+    "avg_riders": 1607.2,
+    "total_riders": 8036
+  },
+  {
+    "route_id": "73",
+    "day_type": "sun",
+    "avg_riders": 978.2,
+    "total_riders": 4891
+  },
+  {
+    "route_id": "73",
+    "day_type": "weekday",
+    "avg_riders": 2496.7,
+    "total_riders": 49934
+  },
+  {
+    "route_id": "74",
+    "day_type": "hol",
+    "avg_riders": 2829.0,
+    "total_riders": 2829
+  },
+  {
+    "route_id": "74",
+    "day_type": "sat",
+    "avg_riders": 5143.8,
+    "total_riders": 25719
+  },
+  {
+    "route_id": "74",
+    "day_type": "sun",
+    "avg_riders": 3877.4,
+    "total_riders": 19387
+  },
+  {
+    "route_id": "74",
+    "day_type": "weekday",
+    "avg_riders": 6942.2,
+    "total_riders": 138844
+  },
+  {
+    "route_id": "75",
+    "day_type": "hol",
+    "avg_riders": 2069.0,
+    "total_riders": 2069
+  },
+  {
+    "route_id": "75",
+    "day_type": "sat",
+    "avg_riders": 2838.0,
+    "total_riders": 14190
+  },
+  {
+    "route_id": "75",
+    "day_type": "sun",
+    "avg_riders": 2099.4,
+    "total_riders": 10497
+  },
+  {
+    "route_id": "75",
+    "day_type": "weekday",
+    "avg_riders": 3481.7,
+    "total_riders": 69634
+  },
+  {
+    "route_id": "76",
+    "day_type": "hol",
+    "avg_riders": 2805.0,
+    "total_riders": 2805
+  },
+  {
+    "route_id": "76",
+    "day_type": "sat",
+    "avg_riders": 4501.6,
+    "total_riders": 22508
+  },
+  {
+    "route_id": "76",
+    "day_type": "sun",
+    "avg_riders": 3372.8,
+    "total_riders": 16864
+  },
+  {
+    "route_id": "76",
+    "day_type": "weekday",
+    "avg_riders": 7128.4,
+    "total_riders": 142568
+  },
+  {
+    "route_id": "77",
+    "day_type": "hol",
+    "avg_riders": 4564.0,
+    "total_riders": 4564
+  },
+  {
+    "route_id": "77",
+    "day_type": "sat",
+    "avg_riders": 7945.0,
+    "total_riders": 39725
+  },
+  {
+    "route_id": "77",
+    "day_type": "sun",
+    "avg_riders": 5951.6,
+    "total_riders": 29758
+  },
+  {
+    "route_id": "77",
+    "day_type": "weekday",
+    "avg_riders": 10978.3,
+    "total_riders": 219566
+  },
+  {
+    "route_id": "78",
+    "day_type": "hol",
+    "avg_riders": 1728.0,
+    "total_riders": 1728
+  },
+  {
+    "route_id": "78",
+    "day_type": "sat",
+    "avg_riders": 3265.8,
+    "total_riders": 16329
+  },
+  {
+    "route_id": "78",
+    "day_type": "sun",
+    "avg_riders": 2286.2,
+    "total_riders": 11431
+  },
+  {
+    "route_id": "78",
+    "day_type": "weekday",
+    "avg_riders": 4528.45,
+    "total_riders": 90569
+  },
+  {
+    "route_id": "79",
+    "day_type": "hol",
+    "avg_riders": 6878.0,
+    "total_riders": 6878
+  },
+  {
+    "route_id": "79",
+    "day_type": "sat",
+    "avg_riders": 9271.8,
+    "total_riders": 46359
+  },
+  {
+    "route_id": "79",
+    "day_type": "sun",
+    "avg_riders": 7667.2,
+    "total_riders": 38336
+  },
+  {
+    "route_id": "79",
+    "day_type": "weekday",
+    "avg_riders": 11933.25,
+    "total_riders": 238665
+  },
+  {
+    "route_id": "8",
+    "day_type": "hol",
+    "avg_riders": 3817.0,
+    "total_riders": 3817
+  },
+  {
+    "route_id": "8",
+    "day_type": "sat",
+    "avg_riders": 5839.2,
+    "total_riders": 29196
+  },
+  {
+    "route_id": "8",
+    "day_type": "sun",
+    "avg_riders": 4596.6,
+    "total_riders": 22983
+  },
+  {
+    "route_id": "8",
+    "day_type": "weekday",
+    "avg_riders": 9688.85,
+    "total_riders": 193777
+  },
+  {
+    "route_id": "80",
+    "day_type": "hol",
+    "avg_riders": 3021.0,
+    "total_riders": 3021
+  },
+  {
+    "route_id": "80",
+    "day_type": "sat",
+    "avg_riders": 4470.2,
+    "total_riders": 22351
+  },
+  {
+    "route_id": "80",
+    "day_type": "sun",
+    "avg_riders": 3381.0,
+    "total_riders": 16905
+  },
+  {
+    "route_id": "80",
+    "day_type": "weekday",
+    "avg_riders": 6197.5,
+    "total_riders": 123950
+  },
+  {
+    "route_id": "81",
+    "day_type": "hol",
+    "avg_riders": 4418.0,
+    "total_riders": 4418
+  },
+  {
+    "route_id": "81",
+    "day_type": "sat",
+    "avg_riders": 5461.4,
+    "total_riders": 27307
+  },
+  {
+    "route_id": "81",
+    "day_type": "sun",
+    "avg_riders": 4596.6,
+    "total_riders": 22983
+  },
+  {
+    "route_id": "81",
+    "day_type": "weekday",
+    "avg_riders": 7408.25,
+    "total_riders": 148165
+  },
+  {
+    "route_id": "81W",
+    "day_type": "hol",
+    "avg_riders": 213.0,
+    "total_riders": 213
+  },
+  {
+    "route_id": "81W",
+    "day_type": "sat",
+    "avg_riders": 644.0,
+    "total_riders": 3220
+  },
+  {
+    "route_id": "81W",
+    "day_type": "sun",
+    "avg_riders": 366.6,
+    "total_riders": 1833
+  },
+  {
+    "route_id": "81W",
+    "day_type": "weekday",
+    "avg_riders": 1000.5,
+    "total_riders": 20010
+  },
+  {
+    "route_id": "82",
+    "day_type": "hol",
+    "avg_riders": 4023.0,
+    "total_riders": 4023
+  },
+  {
+    "route_id": "82",
+    "day_type": "sat",
+    "avg_riders": 5734.0,
+    "total_riders": 28670
+  },
+  {
+    "route_id": "82",
+    "day_type": "sun",
+    "avg_riders": 3920.4,
+    "total_riders": 19602
+  },
+  {
+    "route_id": "82",
+    "day_type": "weekday",
+    "avg_riders": 8796.7,
+    "total_riders": 175934
+  },
+  {
+    "route_id": "84",
+    "day_type": "hol",
+    "avg_riders": 722.0,
+    "total_riders": 722
+  },
+  {
+    "route_id": "84",
+    "day_type": "sat",
+    "avg_riders": 1013.8,
+    "total_riders": 5069
+  },
+  {
+    "route_id": "84",
+    "day_type": "sun",
+    "avg_riders": 747.2,
+    "total_riders": 3736
+  },
+  {
+    "route_id": "84",
+    "day_type": "weekday",
+    "avg_riders": 1974.2,
+    "total_riders": 39484
+  },
+  {
+    "route_id": "85",
+    "day_type": "hol",
+    "avg_riders": 2840.0,
+    "total_riders": 2840
+  },
+  {
+    "route_id": "85",
+    "day_type": "sat",
+    "avg_riders": 4313.2,
+    "total_riders": 21566
+  },
+  {
+    "route_id": "85",
+    "day_type": "sun",
+    "avg_riders": 3499.2,
+    "total_riders": 17496
+  },
+  {
+    "route_id": "85",
+    "day_type": "weekday",
+    "avg_riders": 6369.4,
+    "total_riders": 127388
+  },
+  {
+    "route_id": "85A",
+    "day_type": "sat",
+    "avg_riders": 202.0,
+    "total_riders": 1010
+  },
+  {
+    "route_id": "85A",
+    "day_type": "weekday",
+    "avg_riders": 377.05,
+    "total_riders": 7541
+  },
+  {
+    "route_id": "86",
+    "day_type": "weekday",
+    "avg_riders": 1009.85,
+    "total_riders": 20197
+  },
+  {
+    "route_id": "87",
+    "day_type": "hol",
+    "avg_riders": 2796.0,
+    "total_riders": 2796
+  },
+  {
+    "route_id": "87",
+    "day_type": "sat",
+    "avg_riders": 3888.8,
+    "total_riders": 19444
+  },
+  {
+    "route_id": "87",
+    "day_type": "sun",
+    "avg_riders": 2960.4,
+    "total_riders": 14802
+  },
+  {
+    "route_id": "87",
+    "day_type": "weekday",
+    "avg_riders": 5596.9,
+    "total_riders": 111938
+  },
+  {
+    "route_id": "88",
+    "day_type": "hol",
+    "avg_riders": 182.0,
+    "total_riders": 182
+  },
+  {
+    "route_id": "88",
+    "day_type": "sat",
+    "avg_riders": 348.8,
+    "total_riders": 1744
+  },
+  {
+    "route_id": "88",
+    "day_type": "sun",
+    "avg_riders": 279.0,
+    "total_riders": 1395
+  },
+  {
+    "route_id": "88",
+    "day_type": "weekday",
+    "avg_riders": 678.9,
+    "total_riders": 13578
+  },
+  {
+    "route_id": "8A",
+    "day_type": "hol",
+    "avg_riders": 873.0,
+    "total_riders": 873
+  },
+  {
+    "route_id": "8A",
+    "day_type": "sat",
+    "avg_riders": 1162.2,
+    "total_riders": 5811
+  },
+  {
+    "route_id": "8A",
+    "day_type": "sun",
+    "avg_riders": 876.4,
+    "total_riders": 4382
+  },
+  {
+    "route_id": "8A",
+    "day_type": "weekday",
+    "avg_riders": 1528.35,
+    "total_riders": 30567
+  },
+  {
+    "route_id": "9",
+    "day_type": "hol",
+    "avg_riders": 5913.0,
+    "total_riders": 5913
+  },
+  {
+    "route_id": "9",
+    "day_type": "sat",
+    "avg_riders": 11363.8,
+    "total_riders": 56819
+  },
+  {
+    "route_id": "9",
+    "day_type": "sun",
+    "avg_riders": 8259.8,
+    "total_riders": 41299
+  },
+  {
+    "route_id": "9",
+    "day_type": "weekday",
+    "avg_riders": 9964.85,
+    "total_riders": 199297
+  },
+  {
+    "route_id": "90",
+    "day_type": "hol",
+    "avg_riders": 1187.0,
+    "total_riders": 1187
+  },
+  {
+    "route_id": "90",
+    "day_type": "sat",
+    "avg_riders": 2299.0,
+    "total_riders": 11495
+  },
+  {
+    "route_id": "90",
+    "day_type": "sun",
+    "avg_riders": 1566.4,
+    "total_riders": 7832
+  },
+  {
+    "route_id": "90",
+    "day_type": "weekday",
+    "avg_riders": 3197.85,
+    "total_riders": 63957
+  },
+  {
+    "route_id": "91",
+    "day_type": "hol",
+    "avg_riders": 1392.0,
+    "total_riders": 1392
+  },
+  {
+    "route_id": "91",
+    "day_type": "sat",
+    "avg_riders": 2131.0,
+    "total_riders": 10655
+  },
+  {
+    "route_id": "91",
+    "day_type": "sun",
+    "avg_riders": 1639.6,
+    "total_riders": 8198
+  },
+  {
+    "route_id": "91",
+    "day_type": "weekday",
+    "avg_riders": 3749.95,
+    "total_riders": 74999
+  },
+  {
+    "route_id": "92",
+    "day_type": "hol",
+    "avg_riders": 1704.0,
+    "total_riders": 1704
+  },
+  {
+    "route_id": "92",
+    "day_type": "sat",
+    "avg_riders": 2625.2,
+    "total_riders": 13126
+  },
+  {
+    "route_id": "92",
+    "day_type": "sun",
+    "avg_riders": 2242.0,
+    "total_riders": 11210
+  },
+  {
+    "route_id": "92",
+    "day_type": "weekday",
+    "avg_riders": 4052.4,
+    "total_riders": 81048
+  },
+  {
+    "route_id": "93",
+    "day_type": "sat",
+    "avg_riders": 1244.8,
+    "total_riders": 6224
+  },
+  {
+    "route_id": "93",
+    "day_type": "weekday",
+    "avg_riders": 2298.55,
+    "total_riders": 45971
+  },
+  {
+    "route_id": "94",
+    "day_type": "hol",
+    "avg_riders": 2132.0,
+    "total_riders": 2132
+  },
+  {
+    "route_id": "94",
+    "day_type": "sat",
+    "avg_riders": 3573.4,
+    "total_riders": 17867
+  },
+  {
+    "route_id": "94",
+    "day_type": "sun",
+    "avg_riders": 2497.6,
+    "total_riders": 12488
+  },
+  {
+    "route_id": "94",
+    "day_type": "weekday",
+    "avg_riders": 6306.05,
+    "total_riders": 126121
+  },
+  {
+    "route_id": "95",
+    "day_type": "hol",
+    "avg_riders": 1744.0,
+    "total_riders": 1744
+  },
+  {
+    "route_id": "95",
+    "day_type": "sat",
+    "avg_riders": 2025.0,
+    "total_riders": 10125
+  },
+  {
+    "route_id": "95",
+    "day_type": "sun",
+    "avg_riders": 1700.4,
+    "total_riders": 8502
+  },
+  {
+    "route_id": "95",
+    "day_type": "weekday",
+    "avg_riders": 2616.05,
+    "total_riders": 52321
+  },
+  {
+    "route_id": "96",
+    "day_type": "hol",
+    "avg_riders": 181.0,
+    "total_riders": 181
+  },
+  {
+    "route_id": "96",
+    "day_type": "sat",
+    "avg_riders": 173.5,
+    "total_riders": 347
+  },
+  {
+    "route_id": "96",
+    "day_type": "sun",
+    "avg_riders": 143.5,
+    "total_riders": 287
+  },
+  {
+    "route_id": "96",
+    "day_type": "weekday",
+    "avg_riders": 569.85,
+    "total_riders": 11397
+  },
+  {
+    "route_id": "97",
+    "day_type": "hol",
+    "avg_riders": 808.0,
+    "total_riders": 808
+  },
+  {
+    "route_id": "97",
+    "day_type": "sat",
+    "avg_riders": 1326.2,
+    "total_riders": 6631
+  },
+  {
+    "route_id": "97",
+    "day_type": "sun",
+    "avg_riders": 988.6,
+    "total_riders": 4943
+  },
+  {
+    "route_id": "97",
+    "day_type": "weekday",
+    "avg_riders": 1806.8,
+    "total_riders": 36136
+  },
+  {
+    "route_id": "J14",
+    "day_type": "hol",
+    "avg_riders": 2250.0,
+    "total_riders": 2250
+  },
+  {
+    "route_id": "J14",
+    "day_type": "sat",
+    "avg_riders": 2982.0,
+    "total_riders": 14910
+  },
+  {
+    "route_id": "J14",
+    "day_type": "sun",
+    "avg_riders": 2077.8,
+    "total_riders": 10389
+  },
+  {
+    "route_id": "J14",
+    "day_type": "weekday",
+    "avg_riders": 5216.75,
+    "total_riders": 104335
+  },
+  {
+    "route_id": "X49",
+    "day_type": "weekday",
+    "avg_riders": 2991.25,
+    "total_riders": 59825
+  },
+  {
+    "route_id": "X9",
+    "day_type": "weekday",
+    "avg_riders": 4453.5,
+    "total_riders": 89070
+  },
+  {
+    "route_id": "X98",
+    "day_type": "weekday",
+    "avg_riders": 3.125,
+    "total_riders": 50
+  }
+]
