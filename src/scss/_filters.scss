@@ -1,0 +1,39 @@
+.filter-container {
+    position: absolute;
+    right: 21px;
+    bottom: 40px;
+    z-index: 150;
+  
+    button {
+      @include flex-center;
+      padding: 10px;
+      background-color: white;
+      border-radius: 10px;
+      cursor: pointer
+    }
+  
+    .option-container {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100px;
+      right: 0px;
+      bottom: 100%;
+      margin-bottom: 1em;
+      z-index: 150;
+      border-radius: 10px;
+      background-color: white;
+      padding: 1.5em;
+  
+      label {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
+  
+          input {
+              margin-right: 5px;
+          }
+      }
+    }
+  }
