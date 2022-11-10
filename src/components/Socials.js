@@ -4,12 +4,12 @@ import React from "react";
 export default function Socials() {
   return (
     <div className="social-sidebar">
-      <a href="https://twitter.com/chihacknight">
+      <a href="https://twitter.com/ghostbuses">
         <div className="social-icon twitter">
           <i className="fa-brands fa-twitter"></i>
         </div>
       </a>
-      <a href="https://github.com/lauriemerrell/chn-ghost-buses">
+      <a href="https://github.com/chihacknight/chn-ghost-buses">
         <div className="social-icon github">
           <i className="fa-brands fa-github"></i>
         </div>
