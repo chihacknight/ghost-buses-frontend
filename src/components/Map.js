@@ -6,6 +6,7 @@ import resultsData from "../Routes/data.json";
 import Search from "./Search";
 import Modal from "./Modal";
 import Filter from "./Filter";
+import findPercentileIndex from "../utils/percentileKeys";
 
 export default function Map() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,6 +14,7 @@ export default function Map() {
 
   const [filterOpen, setFilterOpen] = useState(false);
   const [currentFilters, setCurrentFilters] = useState({
+    color: true,
     reliability: {
       top10: false,
       bottom10: false,
@@ -40,8 +42,6 @@ export default function Map() {
     .filter(filterMapRoutes)
     .map((route) => route.properties.route_id)
     .filter((v, i, a) => a.indexOf(v) === i);
-
-  console.log(availableRoutes.length);
 
   const mapToDisplay = mapRoutes.features.filter((route) =>
     availableRoutes.includes(route.properties.route_id)
@@ -84,12 +84,16 @@ export default function Map() {
 
   // clicking a bus route opens the modal
 
-  const onClickBusRoute = (feature) => {
+  function findDataForRoute(feature) {
     const results = resultsData.features.filter(
       (data) =>
         String(data.properties.route_id) === String(feature.properties.route_id)
     );
-    setSelectedRoute(results);
+    return results;
+  }
+
+  const onClickBusRoute = (feature) => {
+    setSelectedRoute(findDataForRoute(feature));
     document.body.style.overflow = "hidden";
   };
 
@@ -109,20 +113,21 @@ export default function Map() {
     fillOpacity: 1,
   };
 
-  function highlightFeature(e) {
-    let layer = e.target;
+  const heatmap = ["#FFED39", "#EB4F12", "#D84091", "#8E47F3", "#0852C1"];
 
-    layer.setStyle({
-      weight: 4,
-      fillColor: "#fff",
-      color: "#fff",
-      fillOpacity: 1,
-    });
-  }
-
-  function resetHighlight(e) {
-    let layer = e.target;
-    layer.setStyle(style);
+  function setColor(route) {
+    const percentileIndex = findPercentileIndex(route);
+    if (percentileIndex === 0 || percentileIndex === 1) {
+      return heatmap[0];
+    } else if (percentileIndex === 2 || percentileIndex === 3) {
+      return heatmap[1];
+    } else if (percentileIndex === 4 || percentileIndex === 5) {
+      return heatmap[2];
+    } else if (percentileIndex === 6 || percentileIndex === 7) {
+      return heatmap[3];
+    } else {
+      return heatmap[4];
+    }
   }
 
   function onEachFeature(feature, layer) {
@@ -138,26 +143,50 @@ export default function Map() {
         mouseout: resetHighlight,
       });
 
-      // const routeMatch = resultsData.features.find(
-      //   (x) =>
-      //     Number(x.properties.route_id) === Number(feature.properties.route_id)
-      // );
-      // if (!routeMatch) {
-      //   return;
-      // }
-      // if (routeMatch.properties.ratio > 0) {
-      //   layer.setStyle({
-      //     weight: 4,
-      //     fillColor: "red",
-      //     color: "red",
-      //     fillOpacity: 1,
-      //   });
-      // }
+      const routeMatch = findDataForRoute(feature)[0];
+
+      routeMatch &&
+        layer.setStyle(
+          currentFilters.color
+            ? {
+                weight: 4,
+                fillColor: setColor(routeMatch),
+                color: setColor(routeMatch),
+                fillOpacity: 1,
+              }
+            : style
+        );
     }
   }
 
+  function highlightFeature(e) {
+    let layer = e.target;
+
+    layer.setStyle({
+      weight: 4,
+      fillColor: "#fff",
+      color: "#fff",
+      fillOpacity: 1,
+    });
+  }
+
+  function resetHighlight(e) {
+    let layer = e.target;
+    const routeMatch = findDataForRoute(layer.feature)[0];
+    layer.setStyle(
+      currentFilters.color
+        ? {
+            color: setColor(routeMatch),
+            fillColor: setColor(routeMatch),
+            weight: 3,
+            fillOpacity: 1,
+          }
+        : style
+    );
+  }
+
   return (
-    <div className="map padding-container">
+    <div className="map">
       <h2>Map/Data</h2>
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />

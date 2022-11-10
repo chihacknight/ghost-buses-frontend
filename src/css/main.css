@@ -580,7 +580,7 @@ header .h1-container .subtitle-container img {
   }
 }
 .map {
-  padding: 2em 0;
+  padding: 1em 0;
   position: relative;
 }
 
@@ -654,7 +654,7 @@ header .h1-container .subtitle-container img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100px;
+  width: 120px;
   right: 0px;
   bottom: 100%;
   margin-bottom: 1em;
@@ -670,6 +670,44 @@ header .h1-container .subtitle-container img {
 }
 .filter-container .option-container label input {
   margin-right: 5px;
+}
+
+.filter-key {
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 21px;
+  z-index: 150;
+  bottom: 40px;
+  padding: 1em;
+}
+.filter-key ul {
+  list-style: none;
+  padding: 0 1em;
+}
+.filter-key ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-key ul li span.color-key {
+  height: 15px;
+  width: 25px;
+  border-radius: 5px;
+}
+.filter-key ul li span.color-key.one {
+  background-color: #FFED39;
+}
+.filter-key ul li span.color-key.two {
+  background-color: #EB4F12;
+}
+.filter-key ul li span.color-key.three {
+  background-color: #D84091;
+}
+.filter-key ul li span.color-key.four {
+  background-color: #8E47F3;
+}
+.filter-key ul li span.color-key.five {
+  background-color: #0D277C;
 }
 
 .modal {
