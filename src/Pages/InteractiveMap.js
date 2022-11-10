@@ -9,7 +9,7 @@ const InteractiveMap = () => {
 
       <h2>Welcome to the Map Beta!</h2>
       <p>
-        Use the map above to explore all of Chicago's 127 bus lines.  
+        Use the map above to explore Chicago's bus lines.  
       </p>
       <ul>
         <li>Click a
