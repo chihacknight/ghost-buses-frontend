@@ -5,7 +5,7 @@ const FurtherReading = () => {
     <div className="page-container further-reading">
       <h2>Further Reading</h2>
       <p>
-        Ghost Buses have been written about in local Chicago News. Here is a
+        Ghost Buses have been written about in local Chicago news. Here is a
         selection of recent news media articles for further reading.
       </p>
       <ul>
@@ -29,7 +29,7 @@ const FurtherReading = () => {
             "CTA Trains seeing more delays during weekends - and more staff
             desperately needed to make it better, employees say."
           </a>{" "}
-          9/14/22 -- Block Club Chicago.
+          - 9/14/22 -- Block Club Chicago.
         </li>
         <li>
           <a
@@ -40,7 +40,7 @@ const FurtherReading = () => {
             "Aldermen, Residents Rip CTA on ghost trains and buses as agency
             president skips public hearing."{" "}
           </a>{" "}
-          9/14/22 -- Block Club Chicago.
+          - 9/14/22 -- Block Club Chicago
         </li>
         <li>
           <a
@@ -50,7 +50,7 @@ const FurtherReading = () => {
           >
            "Southwest Side CTA riders have continued to experience service gaps"
           </a>{" "}
-          9/7/22   Streetsblog
+          - 9/7/22 -- Streetsblog Chicago
         </li>
         <li>
           <a
@@ -60,7 +60,7 @@ const FurtherReading = () => {
           >
             "Transit Agency checking public priorities"
           </a>{" "}
-          9/1/22 -- Evanston Now
+          - 9/1/22 -- Evanston Now
         </li>
         <li>
           <a
@@ -68,10 +68,10 @@ const FurtherReading = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Amid complaints about bus and train service, CTA takes the first
-            step to update bus trackers
-          </a>
-          8/25/22. Mass Transit
+            "Amid complaints about bus and train service, CTA takes the first
+            step to update bus trackers"
+          </a>{" "}
+          - 8/25/22 -- Mass Transit
         </li>
         <li>
           <a
@@ -79,10 +79,10 @@ const FurtherReading = () => {
             target="_blank"
             rel="noreferrer"
           >
-            CTA unveils improvements to Bus Tracker, but will they bust the
-            “ghost run” problem?
-          </a>
-          8/24/22. Streetsblog
+            "CTA unveils improvements to Bus Tracker, but will they bust the
+            'ghost run' problem?""
+          </a>{" "}
+          - 8/24/22 -- Streetsblog Chicago
         </li>
       </ul>
     </div>
