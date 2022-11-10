@@ -83,7 +83,7 @@ function BusRouteDetails({ selectedRoute, busFraction, percentileKeys }) {
             <div className="bus-graphic-text">
               <p>
                 <span>{busFraction[0]}</span> in every{" "}
-                <span>{busFraction[1]} weekday buses</span>
+                <span>{busFraction[1]}</span> weekday buses
               </p>
               <p>
                 is <span className="ghost">ghosting</span> CTA riders
