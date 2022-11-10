@@ -18,7 +18,7 @@ const FurtherReading = () => {
             "After experiencing 'ghost' buses firsthand, mayoral challenger Kam
             Buckner unveils transportation plan"
           </a>{" "}
-          - 9/14/22 -- Chicago Sun Times
+          - Chicago Sun Times, 9/14/22
         </li>
         <li>
           <a
@@ -29,7 +29,7 @@ const FurtherReading = () => {
             "CTA Trains seeing more delays during weekends - and more staff
             desperately needed to make it better, employees say."
           </a>{" "}
-          - 9/14/22 -- Block Club Chicago.
+          -  Block Club Chicago, 9/14/22
         </li>
         <li>
           <a
@@ -40,7 +40,7 @@ const FurtherReading = () => {
             "Aldermen, Residents Rip CTA on ghost trains and buses as agency
             president skips public hearing."{" "}
           </a>{" "}
-          - 9/14/22 -- Block Club Chicago
+          -  Block Club Chicago, 9/14/22
         </li>
         <li>
           <a
@@ -50,7 +50,7 @@ const FurtherReading = () => {
           >
            "Southwest Side CTA riders have continued to experience service gaps"
           </a>{" "}
-          - 9/7/22 -- Streetsblog Chicago
+          -  Streetsblog Chicago, 9/7/22
         </li>
         <li>
           <a
@@ -60,7 +60,7 @@ const FurtherReading = () => {
           >
             "Transit Agency checking public priorities"
           </a>{" "}
-          - 9/1/22 -- Evanston Now
+          - Evanston Now, 9/1/22
         </li>
         <li>
           <a
@@ -71,7 +71,7 @@ const FurtherReading = () => {
             "Amid complaints about bus and train service, CTA takes the first
             step to update bus trackers"
           </a>{" "}
-          - 8/25/22 -- Mass Transit
+          - Mass Transit, 8/25/22
         </li>
         <li>
           <a
@@ -82,7 +82,7 @@ const FurtherReading = () => {
             "CTA unveils improvements to Bus Tracker, but will they bust the
             'ghost run' problem?""
           </a>{" "}
-          - 8/24/22 -- Streetsblog Chicago
+          - Streetsblog Chicago, 8/24/22
         </li>
       </ul>
     </div>
