@@ -8,7 +8,7 @@ const About = () => {
         <p>
           Chi Hack Night is a free, weekly event in Chicago to build, share, and
           learn about tools to serve the public good. Chi Hack Night relies on
-          volunteer citizens who want to make our city more just, equitable,
+          volunteers who want to make our city more just, equitable,
           transparent and delightful to live in through data, design, and
           technology. Chi Hack Night is registered as a not-for-profit 501(c)(3)
           charitable organization.
@@ -25,7 +25,7 @@ const About = () => {
       <div className="gb-details">
         <h2>About the Ghost Bus team</h2>
         <p>
-          The Ghost Bus project is run by volunteer Chicago citizens who have an
+          The Ghost Bus project is run by volunteer Chicagoans who have an
           interest in making Chicago better through data and technology. The
           group welcomes contributions from folks of any background whether in
           technology like data science, front- or back-end software engineering,
