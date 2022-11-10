@@ -27,14 +27,19 @@ const InteractiveMap = () => {
       <p>
         {" "}
         For a list of planned upcoming additions to this project, please visit
-        our Github
+        our GitHub pages.
       </p>
-      <p>If you want to get involved, you can join our Tuesday Chi Hack Night breakout group. Read more about that here.</p>
+      <p>If you want to get involved, you can join our Tuesday Chi Hack Night breakout group.</p>
       <p>
         Finally, if you have feedback for us on this project, you can always
         reach out to us on Twitter!
       </p>
       <div className="btn-container">
+      <a href="https://github.com/chihacknight/breakout-groups/issues/217" target="_blank" rel="noreferrer">
+          <button className="action-btn">
+            Breakout group information
+          </button>
+        </a>
         <a href="https://github.com/chihacknight/ghost-buses-frontend" target="_blank" rel="noreferrer">
           <button className="action-btn">
             Frontend Repository
