@@ -40,7 +40,7 @@ export default function Map() {
       className="search-result"
       onClick={() => onClickBusRoute(result)}
     >
-      <p>{result.properties.route_long_name}</p>
+      <p><span>{result.properties.route_id}</span>{result.properties.route_long_name}</p>
     </div>
   ));
 

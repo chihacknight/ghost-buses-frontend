@@ -627,6 +627,10 @@ header .h1-container .subtitle-container img {
   margin: 0;
   transition: all 300ms ease-in;
 }
+.search-container .results-container p span {
+  margin-right: 7px;
+  font-weight: 900;
+}
 .search-container .results-container p:hover {
   cursor: pointer;
   background-color: #e7e7e7;
