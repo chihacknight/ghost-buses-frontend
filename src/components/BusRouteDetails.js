@@ -4,7 +4,9 @@ import ghostIcon from "../assets/bxs_ghost.png";
 
 import ridershipData from "../Routes/july2022_cta_ridership_data_day_type_summary.json";
 
-function BusRouteDetails({ selectedRoute, busFraction, percentileKeys }) {
+import findPercentileIndex from "../utils/percentileKeys";
+
+function BusRouteDetails({ selectedRoute, busFraction }) {
   const selectedRouteRidership = ridershipData.filter(
     (x) => x.route_id === selectedRoute[0].properties.route_id
   );
@@ -14,13 +16,12 @@ function BusRouteDetails({ selectedRoute, busFraction, percentileKeys }) {
   );
 
   //percentile
-  const percentileIndex = Number(
-    (selectedRoute[0].properties.percentiles * 100).toLocaleString("en-US", {
-      minimumIntegerDigits: 2,
-      useGrouping: false,
-    })[0]
-  );
 
+  // i averaged the data for these percentiles in excel. you can use this key by using the index as the first digit of the percentile block, so percentileKeys[2] will be percentiles from 20-29%
+  // FIX ME : eventually we're going to want these numbers rendered dynamically when the backend/data updates
+
+  const percentileKeys = [63, 73, 75, 77, 80, 83, 87, 90, 93, 94];
+  const percentileIndex = findPercentileIndex(selectedRoute[0]);
   const barGraphBars = percentileKeys.map((x, index) => {
     return (
       <div
@@ -103,11 +104,12 @@ function BusRouteDetails({ selectedRoute, busFraction, percentileKeys }) {
           <div className="grid-square bus-graphic">
             <div className="bus-graphic-text">
               <p>
-                This bus is running over <span className="blue">95%</span> of its scheduled trips
+                This bus is running over <span className="blue">95%</span> of
+                its scheduled trips
               </p>
             </div>
             <div className="bus-ghost-container">
-            <img src={busIcon} alt="representation of CTA bus" />
+              <img src={busIcon} alt="representation of CTA bus" />
             </div>
           </div>
         )}

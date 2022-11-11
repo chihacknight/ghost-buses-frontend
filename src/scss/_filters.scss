@@ -1,0 +1,82 @@
+.filter-container {
+  position: absolute;
+  right: 21px;
+  bottom: 40px;
+  z-index: 150;
+
+  button {
+    @include flex-center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .option-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 120px;
+    right: 0px;
+    bottom: 100%;
+    margin-bottom: 1em;
+    z-index: 150;
+    border-radius: 10px;
+    background-color: white;
+    padding: 1.5em;
+
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+
+      input {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.filter-key {
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 21px;
+  z-index: 150;
+  bottom: 40px;
+  padding: 1em;
+
+  ul {
+    list-style: none;
+    padding: 0 1em;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      span.color-key {
+        height: 15px;
+        width: 25px;
+        border-radius: 5px;
+
+        &.one {
+          background-color: $key-one;
+        }
+
+        &.two{
+          background-color: $key-two;
+        }
+        &.three{
+          background-color: $key-three;
+        }
+        &.four{
+          background-color: $key-four;
+        }
+        &.five{
+          background-color: $key-five;
+        }
+        
+      }
+    }
+  }
+}

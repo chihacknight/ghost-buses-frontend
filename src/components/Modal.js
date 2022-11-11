@@ -1,15 +1,7 @@
 import React from "react";
 import BusRouteDetails from "./BusRouteDetails";
 
-export default function Modal({ selectedRoute, closeModal }) {
-
-    //data percentiles
-
-  // i averaged the data for these percentiles in excel. you can use this key by using the index as the first digit of the percentile block, so percentileKeys[2] will be percentiles from 20-29% 
-  // FIX ME : eventually we're going to want these numbers rendered dynamically when the backend/data updates
-
-
-  var percentileKeys = [62, 72, 75, 77, 80, 83, 86, 90, 93, 95]
+export default function Modal({ selectedRoute, closeModal, }) {
 
 
 
@@ -61,7 +53,6 @@ export default function Modal({ selectedRoute, closeModal }) {
       digits[1] = 0;
     }
     digits = digits.map((x) => Number(x));
-    console.log(parseInt(digits.join("")))
     return parseInt(digits.join(""));
   }
 
@@ -84,7 +75,6 @@ export default function Modal({ selectedRoute, closeModal }) {
     } else if (acc > 72 && acc < 77){
       fraction = [1, 4]
     } else {
-      console.log(Math.round(acc))
       fraction = reduce((100 - round10(Math.round(acc))), 100);
     }
 
@@ -102,7 +92,6 @@ export default function Modal({ selectedRoute, closeModal }) {
           selectedRoute={selectedRoute}
           totalAcc={totalAcc}
           busFraction={busFraction}
-          percentileKeys={percentileKeys}
 
         />
         <p className="modal-footnote">

@@ -3,13 +3,49 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
 import resultsData from "../Routes/data.json";
-
 import Search from "./Search";
 import Modal from "./Modal";
+import Filter from "./Filter";
+import findPercentileIndex from "../utils/percentileKeys";
 
 export default function Map() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRoute, setSelectedRoute] = useState();
+
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [currentFilters, setCurrentFilters] = useState({
+    color: true,
+    reliability: {
+      top10: false,
+      bottom10: false,
+    },
+  });
+
+  // filter functionality
+
+  const filterMapRoutes = (route) => {
+    if (
+      !currentFilters.reliability.top10 &&
+      !currentFilters.reliability.bottom10
+    ) {
+      return true;
+    }
+
+    const topTen =
+      !currentFilters.reliability.top10 || route.properties.ranking <= 10;
+    const bottomTen =
+      !currentFilters.reliability.bottom10 || route.properties.ranking >= 114;
+    return topTen && bottomTen;
+  };
+
+  const availableRoutes = resultsData.features
+    .filter(filterMapRoutes)
+    .map((route) => route.properties.route_id)
+    .filter((v, i, a) => a.indexOf(v) === i);
+
+  const mapToDisplay = mapRoutes.features.filter((route) =>
+    availableRoutes.includes(route.properties.route_id)
+  );
 
   //search functionality
 
@@ -48,12 +84,16 @@ export default function Map() {
 
   // clicking a bus route opens the modal
 
-  const onClickBusRoute = (feature) => {
+  function findDataForRoute(feature) {
     const results = resultsData.features.filter(
       (data) =>
         String(data.properties.route_id) === String(feature.properties.route_id)
     );
-    setSelectedRoute(results);
+    return results;
+  }
+
+  const onClickBusRoute = (feature) => {
+    setSelectedRoute(findDataForRoute(feature));
     document.body.style.overflow = "hidden";
   };
 
@@ -73,20 +113,21 @@ export default function Map() {
     fillOpacity: 1,
   };
 
-  function highlightFeature(e) {
-    let layer = e.target;
+  const heatmap = ["#0852C1", "#8E47F3", "#D84091", "#EB4F12", "#FFED39"];
 
-    layer.setStyle({
-      weight: 4,
-      fillColor: "#fff",
-      color: "#fff",
-      fillOpacity: 1,
-    });
-  }
-
-  function resetHighlight(e) {
-    let layer = e.target;
-    layer.setStyle(style);
+  function setColor(route) {
+    const percentileIndex = findPercentileIndex(route);
+    if (percentileIndex === 0 || percentileIndex === 1) {
+      return heatmap[0];
+    } else if (percentileIndex === 2 || percentileIndex === 3) {
+      return heatmap[1];
+    } else if (percentileIndex === 4 || percentileIndex === 5) {
+      return heatmap[2];
+    } else if (percentileIndex === 6 || percentileIndex === 7) {
+      return heatmap[3];
+    } else {
+      return heatmap[4];
+    }
   }
 
   function onEachFeature(feature, layer) {
@@ -102,26 +143,50 @@ export default function Map() {
         mouseout: resetHighlight,
       });
 
-      // const routeMatch = resultsData.features.find(
-      //   (x) =>
-      //     Number(x.properties.route_id) === Number(feature.properties.route_id)
-      // );
-      // if (!routeMatch) {
-      //   return;
-      // }
-      // if (routeMatch.properties.ratio > 0) {
-      //   layer.setStyle({
-      //     weight: 4,
-      //     fillColor: "red",
-      //     color: "red",
-      //     fillOpacity: 1,
-      //   });
-      // }
+      const routeMatch = findDataForRoute(feature)[0];
+
+      routeMatch &&
+        layer.setStyle(
+          currentFilters.color
+            ? {
+                weight: 4,
+                fillColor: setColor(routeMatch),
+                color: setColor(routeMatch),
+                fillOpacity: 1,
+              }
+            : style
+        );
     }
   }
 
+  function highlightFeature(e) {
+    let layer = e.target;
+
+    layer.setStyle({
+      weight: 4,
+      fillColor: "#fff",
+      color: "#fff",
+      fillOpacity: 1,
+    });
+  }
+
+  function resetHighlight(e) {
+    let layer = e.target;
+    const routeMatch = findDataForRoute(layer.feature)[0];
+    layer.setStyle(
+      currentFilters.color
+        ? {
+            color: setColor(routeMatch),
+            fillColor: setColor(routeMatch),
+            weight: 3,
+            fillOpacity: 1,
+          }
+        : style
+    );
+  }
+
   return (
-    <div className="map padding-container">
+    <div className="map">
       <h2>Map/Data</h2>
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
@@ -131,16 +196,28 @@ export default function Map() {
         zoom={11}
         scrollWheelZoom={false}
       >
+        <Filter
+          filterOpen={filterOpen}
+          setFilterOpen={setFilterOpen}
+          currentFilters={currentFilters}
+          setCurrentFilters={setCurrentFilters}
+        />
         <Search
           onChangeSearch={onChangeSearch}
           searchTerm={searchTerm}
           searchResultsElements={searchResultsElements}
         />
+
         <TileLayer
           attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
         />
-        <GeoJSON data={mapRoutes} onEachFeature={onEachFeature} />
+        <GeoJSON
+          data={mapToDisplay}
+          onEachFeature={onEachFeature}
+          //map will only re-render on key change, so use current filter string as key
+          key={JSON.stringify(currentFilters)}
+        />
       </MapContainer>
     </div>
   );
