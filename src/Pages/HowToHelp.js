@@ -5,12 +5,8 @@ const HowToHelp = () => {
     <div className="page-container">
       <h1>How To Help</h1>
       <section>
-        <h2>Sign the Petition</h2>
-        Looking for a way to help reduce Ghost Buses? Sign this petition. The
-        petition is to call upon Mayor Lori Lightfoot, CTA President Forval
-        Carter, and the Chicago Transit Board to be accountable to the people of
-        Chicago and take immediate action to improve Chicago transit service and
-        reliability. This petition is sponsored by{" "}
+        <h2>Send a petition letter</h2>
+        Looking for a way to help reduce Ghost Buses?{" "}
         <a
           href="https://www.betterstreetschicago.org/"
           target="_blank"
@@ -22,8 +18,10 @@ const HowToHelp = () => {
         <a href="https://www.ctaction.org/" target="_blank" rel="noreferrer">
           Commuters Take Action
         </a>
-        . As of 9/27/22, 2,470 letters of the goal of 3,200 letters have been
-        sent.
+        {" "} have a petition calling upon Mayor Lori Lightfoot, CTA President Dorval
+        Carter, and the Chicago Transit Board to be accountable to the people of
+        Chicago and take immediate action to improve Chicago transit service and
+        reliability. 
         <div className="btn-container petition-btn-container">
           <a
             href="https://actionnetwork.org/letters/commuters-take-action"
@@ -31,7 +29,7 @@ const HowToHelp = () => {
             rel="noreferrer"
           >
             <button className="action-btn petition-btn">
-              <strong>Sign</strong> the <strong>Petition</strong>
+              <strong>Send</strong> a <strong>Petition Letter</strong>
             </button>
           </a>
         </div>
@@ -51,7 +49,7 @@ const HowToHelp = () => {
             target="_blank"
             rel="noreferrer"
           >
-            submit yours here
+            submit your comment to the board here
           </a>
           .
         </p>
@@ -66,34 +64,18 @@ const HowToHelp = () => {
           >
             Transit4All
           </a>{" "}
-          is a transit campaign in Chicago. Recently, Transit4All has created a
+          is a transit campaign in Chicago. Transit4All has created a
           petition to demand that the CTA spend their $118 million funds more
           effectively to improve Chicago transit. Long term, Transit4All is
           organizing to establish a transit rider union that represents all of
           Chicago working with advocates, unions, community organizations, and
-          policymakers. Sign their petition{" "}
+          policymakers. {" "}
           <a
             href="https://www.transit4all.org/petition_en"
             target="_blank"
             rel="noreferrer"
           >
-            here
-          </a>.
-        </p>
-        <h3>2023 RTA planning survey</h3>
-        <p>
-          The RTA is the regional transportation authority and is the parent
-          organization of: Metra, L, and CTA. The RTA is looking for responses
-          to their 2023 RTA planning survey. The survey asks respondents to
-          compare their current RTA ridership frequency now and before COVID and
-          to choose options for RTA priorities (improving safety, accessibility,
-          economic development, transition to zero-emission vehicles).{" "}
-          <a
-            href="https://wedaylight.surveysparrow.com/s/priority-actions-survey/tt-34fb94"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Take the survey here
+            Sign the Transit4All petition here
           </a>.
         </p>
       </section>

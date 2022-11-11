@@ -30,10 +30,10 @@ const Home = () => {
       </p>
 
       <p>
-        Ghost Bus is a ChiHackNight project conducted by volunteer data
+        Ghost Bus is a Chi Hack Night project conducted by volunteer data
         scientists, engineers, and researchers. Our project compares open source
         real-time bus tracking data to the CTA’s official schedules to identify
-        gaps in service across Chicago’s 129 bus lines.
+        gaps in service across Chicago’s bus lines.
       </p>
 
       <div className="btn-container">

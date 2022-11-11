@@ -8,11 +8,11 @@ export default function Footer() {
           <p> Links</p>
           <ul>
             <li>
-              <a href="https://chihacknight.org/">ChiHackNight</a>
+              <a href="https://chihacknight.org/">Chi Hack Night</a>
             </li>
             <li>
-              <a href="https://github.com/lauriemerrell/chn-ghost-buses">
-                Github Repo
+              <a href="https://github.com/chihacknight/chn-ghost-buses/">
+                GitHub
               </a>
             </li>
           </ul>

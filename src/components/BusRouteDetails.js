@@ -81,19 +81,19 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
 
         {busFraction[0] !== 0 ? (
           <div className="grid-square bus-graphic">
-              <div className="bus-graphic-text">
-                <p>
-                  <span>{busFraction[0]}</span> in every{" "}
-                  <span>{busFraction[1]} buses</span>
-                </p>
-                <p>
-                  is <span className="ghost">ghosting</span> CTA riders
-                </p>
-              </div>
-              <div className="bus-ghost-container">
-                {[...Array(busFraction[1] - busFraction[0])].map((x) => (
-                  <img src={busIcon} alt="representation of CTA bus" />
-                ))}
+            <div className="bus-graphic-text">
+              <p>
+                <span>{busFraction[0]}</span> in every{" "}
+                <span>{busFraction[1]}</span> weekday buses
+              </p>
+              <p>
+                is <span className="ghost">ghosting</span> CTA riders
+              </p>
+            </div>
+            <div className="bus-ghost-container">
+              {[...Array(busFraction[1] - busFraction[0])].map((x) => (
+                <img src={busIcon} alt="representation of CTA bus" />
+              ))}
 
                 {[...Array(busFraction[0])].map((x) => (
                   <img src={ghostIcon} alt="representation of CTA bus" />
