@@ -15,6 +15,7 @@
       border-radius: 15px;
       width: 80%;
       max-height: 80vh;
+      margin-top: 2em;
       max-width: 600px;
       padding: 2em;
       background-color: white;
@@ -42,6 +43,10 @@
   
       h3 {
         font-size: 1.2rem;
+        color: $text-color;
+        font-style: inherit;
+        letter-spacing: 1px;;
+
         span {
           color: white;
           background-color: $cta-red;
@@ -103,5 +108,6 @@
   @media (min-width: $desktop-bp) {
     .modal-container {
       overflow: hidden;
+      margin-top: 0
     }
   }

@@ -61,7 +61,6 @@ export default function Modal({ selectedRoute, closeModal }) {
       digits[1] = 0;
     }
     digits = digits.map((x) => Number(x));
-    console.log(parseInt(digits.join("")))
     return parseInt(digits.join(""));
   }
 
@@ -84,7 +83,6 @@ export default function Modal({ selectedRoute, closeModal }) {
     } else if (acc > 72 && acc < 77){
       fraction = [1, 4]
     } else {
-      console.log(Math.round(acc))
       fraction = reduce((100 - round10(Math.round(acc))), 100);
     }
 
