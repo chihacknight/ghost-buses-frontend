@@ -2,6 +2,7 @@
   width: 85%;
   max-width: 300px;
   height: 100%;
+  margin-bottom: 10px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -29,7 +30,14 @@
     div.grid-square {
       height: 200px;
       padding: 4em 2em;
-      // border-bottom: solid 1px $text-color;
+      
+      &.percentile {
+        @include flex-center;
+        .bus-graphic-text {
+          max-width: 300px;
+        }
+      }
+      
     }
 
     .ridership,
@@ -39,6 +47,8 @@
 
     .fraction {
       .bus-graphic-text {
+        
+
         p {
           font-size: 1.1rem;
           font-weight: 700;
@@ -62,7 +72,7 @@
           text-align: center;
           font-weight: 700;
           margin: 0;
-          font-size: 1.2rem;
+          font-size: 1rem;
 
           &.ridership-number {
             color: $cta-blue;

@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   position: fixed;
-  z-index: 150;
+  z-index: 99;
   margin-top: 15px;
   left: 3%;
 }
@@ -48,7 +48,7 @@
     opacity: 100%;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .social-sidebar {
     flex-direction: column;
     margin-top: 2em;
@@ -414,7 +414,7 @@ header .mobile-bar {
   left: 0;
   width: 100%;
   height: 70px;
-  z-index: 1;
+  z-index: 101;
 }
 header .h1-container {
   position: absolute;
@@ -521,7 +521,6 @@ header .h1-container .subtitle-container img {
   font-weight: 400;
 }
 .block-quote p span {
-  color: rgba(206, 23, 72, 0.74);
   font-weight: 700;
 }
 .block-quote a {
@@ -580,7 +579,7 @@ header .h1-container .subtitle-container img {
   }
 }
 .map {
-  padding: 2em 0;
+  padding: 1em 0;
   position: relative;
 }
 
@@ -628,10 +627,90 @@ header .h1-container .subtitle-container img {
   margin: 0;
   transition: all 300ms ease-in;
 }
+.search-container .results-container p span {
+  margin-right: 7px;
+  font-weight: 900;
+}
 .search-container .results-container p:hover {
   cursor: pointer;
   background-color: #e7e7e7;
   transition: all 300ms ease-in;
+}
+
+.filter-container {
+  position: absolute;
+  right: 21px;
+  bottom: 40px;
+  z-index: 150;
+}
+.filter-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.filter-container .option-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 120px;
+  right: 0px;
+  bottom: 100%;
+  margin-bottom: 1em;
+  z-index: 150;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1.5em;
+}
+.filter-container .option-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.filter-container .option-container label input {
+  margin-right: 5px;
+}
+
+.filter-key {
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 21px;
+  z-index: 150;
+  bottom: 40px;
+  padding: 1em;
+}
+.filter-key ul {
+  list-style: none;
+  padding: 0 1em;
+}
+.filter-key ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-key ul li span.color-key {
+  height: 15px;
+  width: 25px;
+  border-radius: 5px;
+}
+.filter-key ul li span.color-key.one {
+  background-color: #0852C1;
+}
+.filter-key ul li span.color-key.two {
+  background-color: #8E47F3;
+}
+.filter-key ul li span.color-key.three {
+  background-color: #D84091;
+}
+.filter-key ul li span.color-key.four {
+  background-color: #EB4F12;
+}
+.filter-key ul li span.color-key.five {
+  background-color: #FFED39;
 }
 
 .modal {
@@ -653,6 +732,7 @@ header .h1-container .subtitle-container img {
   border-radius: 15px;
   width: 80%;
   max-height: 80vh;
+  margin-top: 2em;
   max-width: 600px;
   padding: 2em;
   background-color: white;
@@ -678,6 +758,9 @@ header .h1-container .subtitle-container img {
 }
 .modal-container h3 {
   font-size: 1.2rem;
+  color: #575757;
+  font-style: inherit;
+  letter-spacing: 1px;
 }
 .modal-container h3 span {
   color: white;
@@ -725,12 +808,14 @@ header .h1-container .subtitle-container img {
 @media (min-width: 1000px) {
   .modal-container {
     overflow: hidden;
+    margin-top: 0;
   }
 }
 .bargraph {
   width: 85%;
   max-width: 300px;
   height: 100%;
+  margin-bottom: 10px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -756,6 +841,14 @@ header .h1-container .subtitle-container img {
   height: 200px;
   padding: 4em 2em;
 }
+.bus-route-details .grid div.grid-square.percentile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bus-route-details .grid div.grid-square.percentile .bus-graphic-text {
+  max-width: 300px;
+}
 .bus-route-details .grid .ridership,
 .bus-route-details .grid .fraction {
   display: flex;
@@ -780,7 +873,7 @@ header .h1-container .subtitle-container img {
   text-align: center;
   font-weight: 700;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .bus-route-details .grid .bus-graphic-text p.ridership-number {
   color: #007bc4;
