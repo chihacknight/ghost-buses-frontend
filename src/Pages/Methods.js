@@ -36,7 +36,7 @@ const Methods = () => {
       <p>
         Schedule data is collected from the CTA General Transit Feed Specification (GTFS) feed data. 
         A list of schedule versions starting from the beginning of data collection on 20 May 2022 up to 
-        the current date is compiled from{" "}
+        5 November 2022 is compiled from{" "}
         <a
           href="https://transitfeeds.com/p/chicago-transit-authority/165"
           target="_blank"
