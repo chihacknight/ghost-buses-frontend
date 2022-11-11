@@ -24,6 +24,11 @@
         width: 100%;
         margin: 0;
         @include transitionHover;
+
+        span {
+          margin-right: 7px;
+          font-weight: 900;
+        }
   
         &:hover {
           cursor: pointer;

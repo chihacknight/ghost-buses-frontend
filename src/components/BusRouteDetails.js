@@ -71,8 +71,8 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
             )}
             {percentileIndex > 0 && percentileIndex < 9 && (
               <p>
-                This bus line is in the{" "}
-                <span>{`${percentileIndex}0th percentile`}</span> in terms of
+                This bus line is performing better than{" "}
+                <span>{`${percentileIndex}0%`}</span> of bus lines in terms of
                 reliability
               </p>
             )}
@@ -81,24 +81,24 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
 
         {busFraction[0] !== 0 ? (
           <div className="grid-square bus-graphic">
-            <div className="bus-graphic-text">
-              <p>
-                <span>{busFraction[0]}</span> in every{" "}
-                <span>{busFraction[1]} buses</span>
-              </p>
-              <p>
-                is <span className="ghost">ghosting</span> CTA riders
-              </p>
-            </div>
-            <div className="bus-ghost-container">
-              {[...Array(busFraction[1] - busFraction[0])].map((x) => (
-                <img src={busIcon} alt="representation of CTA bus" />
-              ))}
+              <div className="bus-graphic-text">
+                <p>
+                  <span>{busFraction[0]}</span> in every{" "}
+                  <span>{busFraction[1]} buses</span>
+                </p>
+                <p>
+                  is <span className="ghost">ghosting</span> CTA riders
+                </p>
+              </div>
+              <div className="bus-ghost-container">
+                {[...Array(busFraction[1] - busFraction[0])].map((x) => (
+                  <img src={busIcon} alt="representation of CTA bus" />
+                ))}
 
-              {[...Array(busFraction[0])].map((x) => (
-                <img src={ghostIcon} alt="representation of CTA bus" />
-              ))}
-            </div>
+                {[...Array(busFraction[0])].map((x) => (
+                  <img src={ghostIcon} alt="representation of CTA bus" />
+                ))}
+              </div>
           </div>
         ) : (
           <div className="grid-square bus-graphic">
@@ -121,7 +121,7 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
               in reliability
             </p>
             <p>
-              out of <span>127</span> Chicago Bus lines
+              out of <span>124</span> Chicago Bus lines
             </p>
           </div>
         </div>
