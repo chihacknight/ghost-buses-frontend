@@ -695,19 +695,19 @@ header .h1-container .subtitle-container img {
   border-radius: 5px;
 }
 .filter-key ul li span.color-key.one {
-  background-color: #FFED39;
+  background-color: #0D277C;
 }
 .filter-key ul li span.color-key.two {
-  background-color: #EB4F12;
+  background-color: #8E47F3;
 }
 .filter-key ul li span.color-key.three {
   background-color: #D84091;
 }
 .filter-key ul li span.color-key.four {
-  background-color: #8E47F3;
+  background-color: #EB4F12;
 }
 .filter-key ul li span.color-key.five {
-  background-color: #0D277C;
+  background-color: #FFED39;
 }
 
 .modal {

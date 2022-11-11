@@ -72,8 +72,9 @@ const Filter = ({
         )}
         <button
           onClick={() => setFilterOpen((prevFilterOpen) => !prevFilterOpen)}
+          aria-label="Open map filtering options"
         >
-          <i class="fa-sharp fa-solid fa-filter-list"></i>
+          <i aria-hidden="true" class="fa-solid fa-filter"></i>
         </button>
       </div>
       {currentFilters.color && (
@@ -97,7 +98,7 @@ const Filter = ({
               <span className="color-key four"></span>
             </li>
             <li>
-              <span className="percentile-text">80-100%</span>
+              <span className="percentile-text">80-99%</span>
               <span className="color-key five"></span>
             </li>
           </ul>
