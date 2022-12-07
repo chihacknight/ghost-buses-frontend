@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   position: fixed;
-  z-index: 150;
+  z-index: 99;
   margin-top: 15px;
   left: 3%;
 
@@ -44,9 +44,6 @@
   }
 }
 
-@media (min-width: $desktop-bp) {
-}
-
 @keyframes drop-in {
   100% {
     margin-top: 1em;
@@ -59,10 +56,10 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: $desktop-bp) {
   .social-sidebar {
     flex-direction: column;
-    margin-top: 3em;
+    margin-top: 2em;
 
     a {
       opacity: 0%;
@@ -77,13 +74,13 @@
       }
 
       .social-icon {
-        background-color: $blue-button;
+        background-color: $cta-blue;
         width: 50px;
         height: 50px;
 
         &:hover,
         &:focus {
-          background-color: $cta-blue;
+          background-color: $blue-button;
           @include transitionHover;
         }
 
