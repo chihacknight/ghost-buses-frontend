@@ -13,6 +13,13 @@
 @import "bus-route-details";
 @import "footer";
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1.6;
 }
