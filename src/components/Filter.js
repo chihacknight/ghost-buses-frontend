@@ -79,7 +79,7 @@ const Filter = ({
       </div>
       {currentFilters.color && (
         <div className="filter-key">
-          <h4>Map Key by Percentile</h4>
+          <h4>Ratio of actual to scheduled trips<br></br>Percentile rank</h4>
           <ul>
             <li>
               <span className="percentile-text">0-19%</span>
