@@ -9,7 +9,8 @@
   
     input {
       border: none;
-      width: 85%;
+      width: 100%;
+      box-sizing: border-box;
     }
   
     .results-container {
