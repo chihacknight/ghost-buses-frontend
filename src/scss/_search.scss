@@ -8,8 +8,9 @@
     border-radius: 10px;
   
     input {
-      padding: 10px;
       border: none;
+      width: 100%;
+      box-sizing: border-box;
     }
   
     .results-container {
