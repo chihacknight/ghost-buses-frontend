@@ -55,6 +55,21 @@ const Filter = ({
               <label>
                 <input
                   type="checkbox"
+                  checked={currentFilters.busLines}
+                  onChange={() =>
+                    setCurrentFilters((prevfilters) => {
+                      return {
+                        ...prevfilters,
+                        busLines: !prevfilters.busLines,
+                      };
+                    })
+                  }
+                />
+                Show Bus Routes
+              </label>
+              <label>
+                <input
+                  type="checkbox"
                   checked={currentFilters.color}
                   onChange={() =>
                     setCurrentFilters((prevfilters) => {
@@ -66,6 +81,24 @@ const Filter = ({
                   }
                 />
                 Color Filtering
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={currentFilters.wards.wardsShowing}
+                  onChange={() =>
+                    setCurrentFilters((prevfilters) => {
+                      return {
+                        ...prevfilters,
+                        wards: {
+                          ...prevfilters.wards,
+                          wardsShowing: !prevfilters.wards.wardsShowing,
+                        },
+                      };
+                    })
+                  }
+                />
+                Wards
               </label>
             </>
           </div>

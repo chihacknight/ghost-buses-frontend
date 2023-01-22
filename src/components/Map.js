@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
 import resultsData from "../Routes/data.json";
+import wardRankings from "../Routes/ward_data.json";
 import Search from "./Search";
 import Modal from "./Modal";
 import Filter from "./Filter";
@@ -14,28 +15,38 @@ export default function Map() {
 
   const [filterOpen, setFilterOpen] = useState(false);
   const [currentFilters, setCurrentFilters] = useState({
+    busLines: true,
     color: true,
     reliability: {
       top10: false,
       bottom10: false,
     },
+    wards: {
+      selectedWard: null,
+      wardsShowing: false,
+    },
   });
+  const { reliability, wards } = currentFilters;
+
+  const selectedWardFeature = wardRankings.features.find(
+    (feature) => feature.properties.ward === wards.selectedWard
+  );
 
   // filter functionality
 
   const filterMapRoutes = (route) => {
-    if (
-      !currentFilters.reliability.top10 &&
-      !currentFilters.reliability.bottom10
-    ) {
+    if (!reliability.top10 && !reliability.bottom10 && !wards.selectedWard) {
       return true;
     }
 
-    const topTen =
-      !currentFilters.reliability.top10 || route.properties.ranking <= 10;
-    const bottomTen =
-      !currentFilters.reliability.bottom10 || route.properties.ranking >= 114;
-    return topTen && bottomTen;
+    const topTen = !reliability.top10 || route.properties.ranking <= 10;
+    const bottomTen = !reliability.bottom10 || route.properties.ranking >= 114;
+    const wardMatches =
+      !wards.selectedWard ||
+      selectedWardFeature.properties.routes.includes(
+        ` ${route.properties.route_id} `
+      );
+    return topTen && bottomTen && wardMatches;
   };
 
   const availableRoutes = resultsData.features
@@ -76,7 +87,10 @@ export default function Map() {
       className="search-result"
       onClick={() => onClickBusRoute(result)}
     >
-      <p><span>{result.properties.route_id}</span>{result.properties.route_long_name}</p>
+      <p>
+        <span>{result.properties.route_id}</span>
+        {result.properties.route_long_name}
+      </p>
     </div>
   ));
 
@@ -95,6 +109,19 @@ export default function Map() {
   const onClickBusRoute = (feature) => {
     setSelectedRoute(findDataForRoute(feature));
     document.body.style.overflow = "hidden";
+  };
+
+  const onClickWard = (feature) => {
+    setCurrentFilters((prevfilters) => {
+      return {
+        ...prevfilters,
+        busLines: true,
+        wards: {
+          ...prevfilters.wards,
+          selectedWard: feature.properties.ward,
+        },
+      };
+    });
   };
 
   const closeModal = () => {
@@ -130,7 +157,7 @@ export default function Map() {
     }
   }
 
-  function onEachFeature(feature, layer) {
+  function onEachRouteFeature(feature, layer) {
     if (feature.properties) {
       const { route_long_name, route_id } = feature.properties;
       layer.bindTooltip(`${route_id}, ${route_long_name}`, {
@@ -157,6 +184,43 @@ export default function Map() {
             : style
         );
     }
+  }
+
+  function onEachWardFeature(feature, layer) {
+    if (feature.properties) {
+      const { ward } = feature.properties;
+      layer.bindTooltip(`Ward ${ward}`, {
+        sticky: true,
+      });
+      layer.setStyle({
+        weight: 1,
+        color: "#fff",
+        fillOpacity: 0.2,
+        dashArray: 5,
+      });
+
+      layer.on({
+        click: () => onClickWard(feature),
+        mouseover: highlightWard,
+        mouseout: resetHighlightWard,
+      });
+    }
+  }
+
+  function highlightWard(e) {
+    let layer = e.target;
+
+    layer.setStyle({
+      fillOpacity: 0.7,
+    });
+  }
+
+  function resetHighlightWard(e) {
+    let layer = e.target;
+
+    layer.setStyle({
+      fillOpacity: 0.2,
+    });
   }
 
   function highlightFeature(e) {
@@ -212,12 +276,20 @@ export default function Map() {
           attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
         />
-        <GeoJSON
-          data={mapToDisplay}
-          onEachFeature={onEachFeature}
-          //map will only re-render on key change, so use current filter string as key
-          key={JSON.stringify(currentFilters)}
-        />
+        {currentFilters.wards.wardsShowing && (
+          <GeoJSON
+            data={wardRankings.features}
+            onEachFeature={onEachWardFeature}
+          />
+        )}
+        {currentFilters.busLines && (
+          <GeoJSON
+            data={mapToDisplay}
+            onEachFeature={onEachRouteFeature}
+            //map will only re-render on key change, so use current filter string as key
+            key={JSON.stringify(currentFilters)}
+          />
+        )}
       </MapContainer>
     </div>
   );
