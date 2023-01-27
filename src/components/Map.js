@@ -113,7 +113,7 @@ export default function Map() {
     fillOpacity: 1,
   };
 
-  const heatmap = ["#0852C1", "#8E47F3", "#D84091", "#EB4F12", "#FFED39"];
+  const heatmap = ["#DE1919", "#AD3453", "#7C4F8C", "#4B6AC6", "#1A85FF"];
 
   function setColor(route) {
     const percentileIndex = findPercentileIndex(route);

@@ -79,27 +79,27 @@ const Filter = ({
       </div>
       {currentFilters.color && (
         <div className="filter-key">
-          <h4>Ratio of actual to scheduled trips<br></br>Percentile rank</h4>
+          <h4>Reliability Ranking</h4>
           <ul>
             <li>
-              <span className="percentile-text">0-19%</span>
-              <span className="color-key one"></span>
+              <span className="percentile-text">Top 20%</span>
+              <span className="color-key five"></span>
             </li>
             <li>
-              <span className="percentile-text">20-39%</span>
-              <span className="color-key two"></span>
-            </li>
-            <li>
-              <span className="percentile-text">40-59%</span>
-              <span className="color-key three"></span>
-            </li>
-            <li>
-              <span className="percentile-text">60-79%</span>
+              <span className="percentile-text"></span>
               <span className="color-key four"></span>
             </li>
             <li>
-              <span className="percentile-text">80-99%</span>
-              <span className="color-key five"></span>
+              <span className="percentile-text">Middle 20%</span>
+              <span className="color-key three"></span>
+            </li>
+            <li>
+              <span className="percentile-text"></span>
+              <span className="color-key two"></span>
+            </li>
+            <li>
+              <span className="percentile-text">Bottom 20%</span>
+              <span className="color-key one"></span>
             </li>
           </ul>
         </div>

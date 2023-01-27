@@ -694,24 +694,32 @@ header .h1-container .subtitle-container img {
 }
 .filter-key ul li span.color-key {
   height: 15px;
-  width: 25px;
+  width: 30px;
   border-radius: 5px;
 }
 .filter-key ul li span.color-key.one {
-  background-color: #0852C1;
+  background-color: #DE1919;
 }
 .filter-key ul li span.color-key.two {
-  background-color: #8E47F3;
+  background-color:#AD3453;
 }
 .filter-key ul li span.color-key.three {
-  background-color: #D84091;
+  background-color: #7C4F8C;
 }
 .filter-key ul li span.color-key.four {
-  background-color: #EB4F12;
+  background-color: #4B6AC6;
 }
 .filter-key ul li span.color-key.five {
-  background-color: #FFED39;
+  background-color: #1A85FF;
 }
+
+.filter-key h4{
+  text-align: center;
+}
+.percentile-text{
+  text-align: right;
+}
+
 
 .modal {
   display: flex;
