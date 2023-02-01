@@ -5,6 +5,11 @@ const InteractiveWardMap = () => {
   return (
     <div className="page-container">
       <h1>Ward-Based Interactive Map</h1>
+
+      <p>
+        Click a ward to see the routes that pass through it.
+      </p>
+
       <WardMap />
 
       <h2>Welcome to the Ward Map Beta!</h2>
@@ -12,10 +17,8 @@ const InteractiveWardMap = () => {
         This map allows you to filter bus route reliability by the 2023 ward boundaries.
       </p>
       <ul>
-        <li>Click a
-        route or use the search bar to open route-specific details.</li>
-        <li>Use the filter to compare the performance of different bus lines
-        across Chicago.</li>
+        <li>Click a ward to see the bus routes that pass through it</li>
+        <li>Click a bus route for more information</li>
       </ul>
       <h3> See a Bug? Have an Idea?</h3>
       <p>

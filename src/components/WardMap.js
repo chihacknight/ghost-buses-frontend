@@ -15,7 +15,7 @@ export default function WardMap() {
 
   const [filterOpen, setFilterOpen] = useState(false);
   const [currentFilters, setCurrentFilters] = useState({
-    busLines: true,
+    busLines: false,
     color: true,
     reliability: {
       top10: false,
@@ -23,7 +23,7 @@ export default function WardMap() {
     },
     wards: {
       selectedWard: null,
-      wardsShowing: false,
+      wardsShowing: true,
     },
   });
   const { reliability, wards } = currentFilters;
