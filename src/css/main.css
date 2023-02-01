@@ -511,7 +511,7 @@ header .h1-container .subtitle-container img {
   width: 60%;
   margin: 2em 0;
   padding-left: 1em;
-  text-align: right;
+  text-align: left;
 }
 .block-quote p {
   font-size: 1rem;
@@ -1049,3 +1049,5 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+/*# sourceMappingURL=main.css.map */
