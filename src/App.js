@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import InteractiveMap from "./Pages/InteractiveMap";
+import InteractiveWardMap from "./Pages/InteractiveWardMap";
 import FurtherReading from "./Pages/FurtherReading";
 import Methods from "./Pages/Methods";
 import HowToHelp from "./Pages/HowToHelp";
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/map" element={<InteractiveMap />} />
+            <Route path="/ward-map" element={<InteractiveWardMap />} />
           <Route path="/further-reading" element={<FurtherReading />} />
           <Route path="/methods" element={<Methods />} />
           <Route path="/how-to-help" element={<HowToHelp />} />

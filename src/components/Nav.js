@@ -8,7 +8,8 @@ const Nav = () => {
   const links = [
     { title: "Home", link: "/" },
     { title: "About Us", link: "/about" },
-    { title: "Map", link: "/map" },
+    { title: "Bus Route Map", link: "/map" },
+    { title: "Ward Map", link: "/ward-map" },
     { title: "Methods", link: "/methods" },
     { title: "Further Readings", link: "/further-reading" },
     { title: "How To Help", link: "/how-to-help" },
