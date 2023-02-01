@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
 import resultsData from "../Routes/data.json";
-import wardRankings from "../Routes/ward_data.json";
 import Search from "./Search";
 import Modal from "./Modal";
 import Filter from "./Filter";
@@ -21,32 +20,19 @@ export default function Map() {
       top10: false,
       bottom10: false,
     },
-    wards: {
-      selectedWard: null,
-      wardsShowing: false,
-    },
   });
-  const { reliability, wards } = currentFilters;
-
-  const selectedWardFeature = wardRankings.features.find(
-    (feature) => feature.properties.ward === wards.selectedWard
-  );
+  const {reliability} = currentFilters;
 
   // filter functionality
 
   const filterMapRoutes = (route) => {
-    if (!reliability.top10 && !reliability.bottom10 && !wards.selectedWard) {
+    if (!reliability.top10 && !reliability.bottom10) {
       return true;
     }
 
     const topTen = !reliability.top10 || route.properties.ranking <= 10;
     const bottomTen = !reliability.bottom10 || route.properties.ranking >= 114;
-    const wardMatches =
-      !wards.selectedWard ||
-      selectedWardFeature.properties.routes.includes(
-        ` ${route.properties.route_id} `
-      );
-    return topTen && bottomTen && wardMatches;
+    return topTen && bottomTen;
   };
 
   const availableRoutes = resultsData.features
@@ -111,18 +97,6 @@ export default function Map() {
     document.body.style.overflow = "hidden";
   };
 
-  const onClickWard = (feature) => {
-    setCurrentFilters((prevfilters) => {
-      return {
-        ...prevfilters,
-        busLines: true,
-        wards: {
-          ...prevfilters.wards,
-          selectedWard: feature.properties.ward,
-        },
-      };
-    });
-  };
 
   const closeModal = () => {
     setSelectedRoute();
@@ -186,43 +160,6 @@ export default function Map() {
     }
   }
 
-  function onEachWardFeature(feature, layer) {
-    if (feature.properties) {
-      const { ward } = feature.properties;
-      layer.bindTooltip(`Ward ${ward}`, {
-        sticky: true,
-      });
-      layer.setStyle({
-        weight: 1,
-        color: "#fff",
-        fillOpacity: 0.2,
-        dashArray: 5,
-      });
-
-      layer.on({
-        click: () => onClickWard(feature),
-        mouseover: highlightWard,
-        mouseout: resetHighlightWard,
-      });
-    }
-  }
-
-  function highlightWard(e) {
-    let layer = e.target;
-
-    layer.setStyle({
-      fillOpacity: 0.7,
-    });
-  }
-
-  function resetHighlightWard(e) {
-    let layer = e.target;
-
-    layer.setStyle({
-      fillOpacity: 0.2,
-    });
-  }
-
   function highlightFeature(e) {
     let layer = e.target;
 
@@ -276,12 +213,6 @@ export default function Map() {
           attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
         />
-        {currentFilters.wards.wardsShowing && (
-          <GeoJSON
-            data={wardRankings.features}
-            onEachFeature={onEachWardFeature}
-          />
-        )}
         {currentFilters.busLines && (
           <GeoJSON
             data={mapToDisplay}

@@ -82,6 +82,24 @@ const Filter = ({
                 />
                 Color Filtering
               </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={currentFilters.wards.wardsShowing}
+                  onChange={() =>
+                    setCurrentFilters((prevfilters) => {
+                      return {
+                        ...prevfilters,
+                        wards: {
+                          ...prevfilters.wards,
+                          wardsShowing: !prevfilters.wards.wardsShowing,
+                        },
+                      };
+                    })
+                  }
+                />
+                Wards
+              </label>
             </>
           </div>
         )}

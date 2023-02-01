@@ -6,7 +6,7 @@ import resultsData from "../Routes/data.json";
 import wardRankings from "../Routes/ward_data.json";
 import Search from "./Search";
 import Modal from "./Modal";
-import Filter from "./Filter";
+import WardFilter from "./WardFilter";
 import findPercentileIndex from "../utils/percentileKeys";
 
 export default function WardMap() {
@@ -251,7 +251,6 @@ export default function WardMap() {
 
   return (
     <div className="map">
-      <h2>Map/Data</h2>
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
       )}
@@ -260,7 +259,7 @@ export default function WardMap() {
         zoom={11}
         scrollWheelZoom={false}
       >
-        <Filter
+        <WardFilter
           filterOpen={filterOpen}
           setFilterOpen={setFilterOpen}
           currentFilters={currentFilters}
