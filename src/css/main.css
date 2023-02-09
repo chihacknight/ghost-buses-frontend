@@ -703,19 +703,19 @@ header .h1-container .subtitle-container img {
   border-radius: 5px;
 }
 .filter-key ul li span.color-key.one {
-  background-color: #0852C1;
+  background-color: #FFED39;
 }
 .filter-key ul li span.color-key.two {
-  background-color: #8E47F3;
+  background-color: #D9B762;
 }
 .filter-key ul li span.color-key.three {
-  background-color: #D84091;
+  background-color: #B3808A;
 }
 .filter-key ul li span.color-key.four {
-  background-color: #EB4F12;
+  background-color: #8D4AB3;
 }
 .filter-key ul li span.color-key.five {
-  background-color: #FFED39;
+  background-color: #6713db;
 }
 
 .percentile-text {
