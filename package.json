@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "0.1.0",                                                                                                      
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@axe-core/react": "^4.4.5",
@@ -21,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": "sass src/scss:src/css --watch --no-source-map"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "sass": "^1.58.0"
   }
 }
