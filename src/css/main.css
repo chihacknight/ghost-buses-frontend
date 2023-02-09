@@ -445,7 +445,8 @@ header .h1-container .subtitle-container .subtitle {
 header .h1-container .subtitle-container img {
   width: 70px;
   height: 20px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (min-width: 1000px) {
@@ -684,43 +685,43 @@ header .h1-container .subtitle-container img {
   bottom: 40px;
   padding: 1em;
 }
+.filter-key h4 {
+  text-align: center;
+}
 .filter-key ul {
   list-style: none;
   padding: 0 1em;
 }
 .filter-key ul li {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  display: flex;
   gap: 10px;
+  justify-content: space-between;
 }
 .filter-key ul li span.color-key {
   height: 15px;
-  width: 20px;
+  width: 25px;
   border-radius: 5px;
 }
 .filter-key ul li span.color-key.one {
-  background-color: #DE1919;
+  background-color: #0852C1;
 }
 .filter-key ul li span.color-key.two {
-  background-color:#AD3453;
+  background-color: #8E47F3;
 }
 .filter-key ul li span.color-key.three {
-  background-color: #7C4F8C;
+  background-color: #D84091;
 }
 .filter-key ul li span.color-key.four {
-  background-color: #4B6AC6;
+  background-color: #EB4F12;
 }
 .filter-key ul li span.color-key.five {
-  background-color: #1A85FF;
+  background-color: #FFED39;
 }
 
-.filter-key h4{
-  text-align: center;
-}
-.percentile-text{
+.percentile-text {
   text-align: right;
+  width: 100%;
 }
-
 
 .modal {
   display: flex;
@@ -1064,4 +1065,4 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
+}/*# sourceMappingURL=main.css.map */
