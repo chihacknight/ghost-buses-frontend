@@ -113,7 +113,7 @@ export default function Map() {
     fillOpacity: 1,
   };
 
-  const heatmap = ["#FFED39", "#D9B762", "#B3808A", "#8D4AB3", "#6713db"];
+  const heatmap = ["#0852C1", "#8E47F3", "#D84091", "#EB4F12", "#FFED39"];
 
 
   function setColor(route) {
