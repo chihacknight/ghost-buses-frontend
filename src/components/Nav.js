@@ -8,8 +8,8 @@ const Nav = () => {
   const links = [
     { title: "Home", link: "/" },
     { title: "About Us", link: "/about" },
-    { title: "Map", link: "/map" },
     { title: "Route Statistics", link: "/route-stats/1" },
+    { title: "Interactive Maps", link: "/map" },
     { title: "Methods", link: "/methods" },
     { title: "Further Readings", link: "/further-reading" },
     { title: "How To Help", link: "/how-to-help" },
@@ -33,7 +33,7 @@ const Nav = () => {
             {links.map((link) => {
               return (
                 <li key={link.link} className="nav-link">
-                   <img src={busNavIcon} alt="" />
+                  <img src={busNavIcon} alt="" />
                   <Link onClick={toggle} to={link.link}>
                     {link.title}
                   </Link>

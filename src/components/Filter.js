@@ -5,6 +5,7 @@ const Filter = ({
   setCurrentFilters,
   filterOpen,
   setFilterOpen,
+  wardFilter,
 }) => {
   return (
     <>
@@ -14,44 +15,65 @@ const Filter = ({
             {" "}
             <>
               {" "}
-              <h4>Reliability</h4>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={currentFilters.reliability.top10}
-                  onChange={() =>
-                    setCurrentFilters((prevfilters) => {
-                      return {
-                        ...prevfilters,
-                        reliability: {
-                          ...prevfilters.reliability,
-                          top10: !prevfilters.reliability.top10,
-                        },
-                      };
-                    })
-                  }
-                />
-                Top 10 Buses
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={currentFilters.reliability.bottom10}
-                  onChange={() =>
-                    setCurrentFilters((prevfilters) => {
-                      return {
-                        ...prevfilters,
-                        reliability: {
-                          ...prevfilters.reliability,
-                          bottom10: !prevfilters.reliability.bottom10,
-                        },
-                      };
-                    })
-                  }
-                />
-                Bottom 10 buses
-              </label>
+              {!wardFilter && (
+                <>
+                  <h4>Reliability</h4>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={currentFilters.reliability.top10}
+                      onChange={() =>
+                        setCurrentFilters((prevfilters) => {
+                          return {
+                            ...prevfilters,
+                            reliability: {
+                              ...prevfilters.reliability,
+                              top10: !prevfilters.reliability.top10,
+                            },
+                          };
+                        })
+                      }
+                    />
+                    Top 10 Buses
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={currentFilters.reliability.bottom10}
+                      onChange={() =>
+                        setCurrentFilters((prevfilters) => {
+                          return {
+                            ...prevfilters,
+                            reliability: {
+                              ...prevfilters.reliability,
+                              bottom10: !prevfilters.reliability.bottom10,
+                            },
+                          };
+                        })
+                      }
+                    />
+                    Bottom 10 buses
+                  </label>
+                </>
+              )}
               <h4>Map Settings</h4>
+              {!wardFilter && (
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={currentFilters.busLines}
+                    onChange={() =>
+                      setCurrentFilters((prevfilters) => {
+                        return {
+                          ...prevfilters,
+                          busLines: !prevfilters.busLines,
+                        };
+                      })
+                    }
+                  />
+                  Show Bus Routes
+                </label>
+              )}
               <label>
                 <input
                   type="checkbox"
@@ -77,33 +99,7 @@ const Filter = ({
           <i aria-hidden="true" class="fa-solid fa-filter"></i>
         </button>
       </div>
-      {currentFilters.color && (
-        <div className="filter-key">
-          <h4>Reliability Ranking</h4>
-          <ul>
-            <li>
-              <span className="percentile-text">Top 20%</span>
-              <span className="color-key five"></span>
-            </li>
-            <li>
-              <span className="percentile-text"></span>
-              <span className="color-key four"></span>
-            </li>
-            <li>
-              <span className="percentile-text">Middle 20%</span>
-              <span className="color-key three"></span>
-            </li>
-            <li>
-              <span className="percentile-text"></span>
-              <span className="color-key two"></span>
-            </li>
-            <li>
-              <span className="percentile-text">Bottom 20%</span>
-              <span className="color-key one"></span>
-            </li>
-          </ul>
-        </div>
-      )}
+      {currentFilters.color && <RankingLegend />}
     </>
   );
 };

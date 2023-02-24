@@ -17,7 +17,9 @@ import RouteStats from "./Pages/RouteStats";
 const App = () => {
   return (
     <div className="App">
-      <a className="skip-link" href="#main">Skip to content</a>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <Nav />
       <div className="container">
         <Socials />
@@ -30,10 +32,8 @@ const App = () => {
             <Route path="/further-reading" element={<FurtherReading />} />
             <Route path="/methods" element={<Methods />} />
             <Route path="/how-to-help" element={<HowToHelp />} />
-            <Route path="/route-stats/:route" element={<RouteStats />} />
           </Routes>
         </main>
-
       </div>
       <Footer />
     </div>

@@ -6,7 +6,13 @@ import resultsData from "../Routes/data.json";
 import Search from "./Search";
 import Modal from "./Modal";
 import Filter from "./Filter";
-import findPercentileIndex from "../utils/percentileKeys";
+
+import {
+  highlightFeature,
+  resetHighlight,
+  setColor,
+  findDataForRoute,
+} from "../utils/routeStyles";
 
 export default function Map() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -20,6 +26,7 @@ export default function Map() {
       bottom10: false,
     },
   });
+  const { reliability } = currentFilters;
 
   // filter functionality
 
@@ -91,17 +98,7 @@ export default function Map() {
     </div>
   ));
 
-  // modal functionality
-
   // clicking a bus route opens the modal
-
-  function findDataForRoute(feature) {
-    const results = resultsData.features.filter(
-      (data) =>
-        String(data.properties.route_id) === String(feature.properties.route_id)
-    );
-    return results;
-  }
 
   const onClickBusRoute = (feature) => {
     setSelectedRoute(findDataForRoute(feature));
@@ -117,31 +114,7 @@ export default function Map() {
 
   //highlight the hovered bus route
 
-  const style = {
-    color: "rgb(51, 136, 255)",
-    fillColor: "rgb(51, 136, 255)",
-    weight: 3,
-    fillOpacity: 1,
-  };
-
-  const heatmap = ["#0852C1", "#8E47F3", "#D84091", "#EB4F12", "#FFED39"];
-
-  function setColor(route) {
-    const percentileIndex = findPercentileIndex(route);
-    if (percentileIndex === 0 || percentileIndex === 1) {
-      return heatmap[0];
-    } else if (percentileIndex === 2 || percentileIndex === 3) {
-      return heatmap[1];
-    } else if (percentileIndex === 4 || percentileIndex === 5) {
-      return heatmap[2];
-    } else if (percentileIndex === 6 || percentileIndex === 7) {
-      return heatmap[3];
-    } else {
-      return heatmap[4];
-    }
-  }
-
-  function onEachFeature(feature, layer) {
+  const onEachFeature = (feature, layer) => {
     if (feature.properties) {
       const { route_long_name, route_id } = feature.properties;
       layer.bindTooltip(`${route_id}, ${route_long_name}`, {
@@ -170,33 +143,42 @@ export default function Map() {
     }
   }
 
-  function highlightFeature(e) {
-    let layer = e.target;
+  const style = {
+    color: "rgb(51, 136, 255)",
+    fillColor: "rgb(51, 136, 255)",
+    weight: 3,
+    fillOpacity: 1,
+  };
 
-    layer.setStyle({
-      weight: 4,
-      fillColor: "#fff",
-      color: "#fff",
-      fillOpacity: 1,
-    });
-    layer.bringToFront();
+  function onEachRouteFeature(feature, layer) {
+    if (feature.properties) {
+      const { route_long_name, route_id } = feature.properties;
+      layer.bindTooltip(`${route_id}, ${route_long_name}`, {
+        sticky: true,
+      });
+
+      layer.on({
+        click: () => onClickBusRoute(feature),
+        mouseover: highlightFeature,
+        mouseout: (e) => resetHighlight(e, currentFilters),
+      });
+
+      const routeMatch = findDataForRoute(feature)[0];
+      const routeMatchPercent = routeMatch.properties.percentiles * 100;
+
+      routeMatch &&
+        layer.setStyle(
+          currentFilters.color
+            ? {
+                weight: 4,
+                fillColor: setColor(routeMatchPercent),
+                color: setColor(routeMatchPercent),
+                fillOpacity: 1,
+              }
+            : style
+        );
+    }
   }
-
-  function resetHighlight(e) {
-    let layer = e.target;
-    const routeMatch = findDataForRoute(layer.feature)[0];
-    layer.setStyle(
-      currentFilters.color
-        ? {
-            color: setColor(routeMatch),
-            fillColor: setColor(routeMatch),
-            weight: 3,
-            fillOpacity: 1,
-          }
-        : style
-    );
-  }
-
   return (
     <div className="map">
       {selectedRoute && (

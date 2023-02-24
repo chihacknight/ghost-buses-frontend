@@ -1,6 +1,6 @@
-export default function findPercentileIndex(route) {
+export default function findPercentileIndex(percent) {
   const percentileIndex = Number(
-    (route.properties.ratio_percentiles * 100).toLocaleString("en-US", {
+    percent.toLocaleString("en-US", {
       minimumIntegerDigits: 2,
       useGrouping: false,
     })[0]

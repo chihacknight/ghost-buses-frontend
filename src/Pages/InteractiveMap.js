@@ -1,11 +1,17 @@
 import React from "react";
 import Map from "../components/Map";
+import WardMap from "../components/WardMap";
 
 const InteractiveMap = () => {
   return (
     <div className="page-container">
-      <h1>Interactive Map</h1>
+      <h1>Interactive Maps</h1>
+
+      <h2>Routes</h2>
       <Map />
+
+      <h2>Wards</h2>
+      <WardMap />
 
       <h2>Welcome to the Map Beta!</h2>
       <p>Use the map above to explore Chicago's bus lines.</p>
