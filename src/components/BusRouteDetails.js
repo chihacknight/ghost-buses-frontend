@@ -21,7 +21,9 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
   // FIX ME : eventually we're going to want these numbers rendered dynamically when the backend/data updates
 
   const percentileKeys = [63, 73, 75, 77, 80, 83, 87, 90, 93, 94];
-  const percentileIndex = findPercentileIndex(selectedRoute[0]);
+  const percentileIndex = findPercentileIndex(
+    selectedRoute[0].properties.percentiles * 100
+  );
   const barGraphBars = percentileKeys.map((x, index) => {
     return (
       <div
@@ -95,10 +97,10 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
                 <img src={busIcon} alt="representation of CTA bus" />
               ))}
 
-                {[...Array(busFraction[0])].map((x) => (
-                  <img src={ghostIcon} alt="representation of CTA bus" />
-                ))}
-              </div>
+              {[...Array(busFraction[0])].map((x) => (
+                <img src={ghostIcon} alt="representation of CTA bus" />
+              ))}
+            </div>
           </div>
         ) : (
           <div className="grid-square bus-graphic">

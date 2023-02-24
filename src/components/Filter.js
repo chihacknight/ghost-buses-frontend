@@ -6,6 +6,7 @@ const Filter = ({
   setCurrentFilters,
   filterOpen,
   setFilterOpen,
+  wardFilter,
 }) => {
   return (
     <>
@@ -15,59 +16,65 @@ const Filter = ({
             {" "}
             <>
               {" "}
-              <h4>Reliability</h4>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={currentFilters.reliability.top10}
-                  onChange={() =>
-                    setCurrentFilters((prevfilters) => {
-                      return {
-                        ...prevfilters,
-                        reliability: {
-                          ...prevfilters.reliability,
-                          top10: !prevfilters.reliability.top10,
-                        },
-                      };
-                    })
-                  }
-                />
-                Top 10 Buses
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={currentFilters.reliability.bottom10}
-                  onChange={() =>
-                    setCurrentFilters((prevfilters) => {
-                      return {
-                        ...prevfilters,
-                        reliability: {
-                          ...prevfilters.reliability,
-                          bottom10: !prevfilters.reliability.bottom10,
-                        },
-                      };
-                    })
-                  }
-                />
-                Bottom 10 buses
-              </label>
+              {!wardFilter && (
+                <>
+                  <h4>Reliability</h4>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={currentFilters.reliability.top10}
+                      onChange={() =>
+                        setCurrentFilters((prevfilters) => {
+                          return {
+                            ...prevfilters,
+                            reliability: {
+                              ...prevfilters.reliability,
+                              top10: !prevfilters.reliability.top10,
+                            },
+                          };
+                        })
+                      }
+                    />
+                    Top 10 Buses
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={currentFilters.reliability.bottom10}
+                      onChange={() =>
+                        setCurrentFilters((prevfilters) => {
+                          return {
+                            ...prevfilters,
+                            reliability: {
+                              ...prevfilters.reliability,
+                              bottom10: !prevfilters.reliability.bottom10,
+                            },
+                          };
+                        })
+                      }
+                    />
+                    Bottom 10 buses
+                  </label>
+                </>
+              )}
               <h4>Map Settings</h4>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={currentFilters.busLines}
-                  onChange={() =>
-                    setCurrentFilters((prevfilters) => {
-                      return {
-                        ...prevfilters,
-                        busLines: !prevfilters.busLines,
-                      };
-                    })
-                  }
-                />
-                Show Bus Routes
-              </label>
+              {!wardFilter && (
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={currentFilters.busLines}
+                    onChange={() =>
+                      setCurrentFilters((prevfilters) => {
+                        return {
+                          ...prevfilters,
+                          busLines: !prevfilters.busLines,
+                        };
+                      })
+                    }
+                  />
+                  Show Bus Routes
+                </label>
+              )}
               <label>
                 <input
                   type="checkbox"
@@ -93,9 +100,7 @@ const Filter = ({
           <i aria-hidden="true" class="fa-solid fa-filter"></i>
         </button>
       </div>
-      {currentFilters.color && (
-        <RankingLegend/>
-      )}
+      {currentFilters.color && <RankingLegend />}
     </>
   );
 };

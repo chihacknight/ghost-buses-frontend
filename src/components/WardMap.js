@@ -4,29 +4,29 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
 import resultsData from "../Routes/data.json";
 import wardRankings from "../Routes/ward_data.json";
-import Search from "./Search";
 import Modal from "./Modal";
-import WardFilter from "./WardFilter";
-import findPercentileIndex from "../utils/percentileKeys";
+import Filter from "./Filter";
+
+import {
+  highlightFeature,
+  resetHighlight,
+  setColor,
+  findDataForRoute,
+} from "../utils/routeStyles";
 
 export default function WardMap() {
-  const [searchTerm, setSearchTerm] = useState("");
   const [selectedRoute, setSelectedRoute] = useState();
 
   const [filterOpen, setFilterOpen] = useState(false);
   const [currentFilters, setCurrentFilters] = useState({
     busLines: false,
     color: true,
-    reliability: {
-      top10: false,
-      bottom10: false,
-    },
     wards: {
       selectedWard: null,
       wardsShowing: true,
     },
   });
-  const { reliability, wards } = currentFilters;
+  const { wards } = currentFilters;
 
   const selectedWardFeature = wardRankings.features.find(
     (feature) => feature.properties.ward === wards.selectedWard
@@ -35,18 +35,16 @@ export default function WardMap() {
   // filter functionality
 
   const filterMapRoutes = (route) => {
-    if (!reliability.top10 && !reliability.bottom10 && !wards.selectedWard) {
+    if (!wards.selectedWard) {
       return true;
     }
 
-    const topTen = !reliability.top10 || route.properties.ranking <= 10;
-    const bottomTen = !reliability.bottom10 || route.properties.ranking >= 114;
     const wardMatches =
       !wards.selectedWard ||
       selectedWardFeature.properties.routes.includes(
         ` ${route.properties.route_id} `
       );
-    return topTen && bottomTen && wardMatches;
+    return wardMatches;
   };
 
   const availableRoutes = resultsData.features
@@ -58,53 +56,9 @@ export default function WardMap() {
     availableRoutes.includes(route.properties.route_id)
   );
 
-  //search functionality
-
-  const onChangeSearch = (e) => {
-    setSearchTerm(e.target.value.toLowerCase());
-  };
-
-  const searchResults = resultsData.features
-    .filter((route) => {
-      return (
-        String(route.properties.route_id) +
-        route.properties.route_long_name.toLowerCase()
-      ).includes(searchTerm);
-    })
-    .filter((route) => {
-      return !route.properties.direction.includes("South");
-    })
-    .filter((route) => {
-      return !route.properties.direction.includes("West");
-    })
-    .filter((route) => {
-      return route.properties.day_type === "wk";
-    });
-
-  const searchResultsElements = searchResults.map((result) => (
-    <div
-      key={result.id}
-      className="search-result"
-      onClick={() => onClickBusRoute(result)}
-    >
-      <p>
-        <span>{result.properties.route_id}</span>
-        {result.properties.route_long_name}
-      </p>
-    </div>
-  ));
-
   // modal functionality
 
   // clicking a bus route opens the modal
-
-  function findDataForRoute(feature) {
-    const results = resultsData.features.filter(
-      (data) =>
-        String(data.properties.route_id) === String(feature.properties.route_id)
-    );
-    return results;
-  }
 
   const onClickBusRoute = (feature) => {
     setSelectedRoute(findDataForRoute(feature));
@@ -112,6 +66,7 @@ export default function WardMap() {
   };
 
   const onClickWard = (feature) => {
+    debugger;
     setCurrentFilters((prevfilters) => {
       return {
         ...prevfilters,
@@ -140,23 +95,6 @@ export default function WardMap() {
     fillOpacity: 1,
   };
 
-  const heatmap = ["#0852C1", "#8E47F3", "#D84091", "#EB4F12", "#FFED39"];
-
-  function setColor(route) {
-    const percentileIndex = findPercentileIndex(route);
-    if (percentileIndex === 0 || percentileIndex === 1) {
-      return heatmap[0];
-    } else if (percentileIndex === 2 || percentileIndex === 3) {
-      return heatmap[1];
-    } else if (percentileIndex === 4 || percentileIndex === 5) {
-      return heatmap[2];
-    } else if (percentileIndex === 6 || percentileIndex === 7) {
-      return heatmap[3];
-    } else {
-      return heatmap[4];
-    }
-  }
-
   function onEachRouteFeature(feature, layer) {
     if (feature.properties) {
       const { route_long_name, route_id } = feature.properties;
@@ -167,10 +105,11 @@ export default function WardMap() {
       layer.on({
         click: () => onClickBusRoute(feature),
         mouseover: highlightFeature,
-        mouseout: resetHighlight,
+        mouseout: (e) => resetHighlight(e, currentFilters),
       });
 
-      const routeMatch = findDataForRoute(feature)[0];
+      const routeMatch =
+        findDataForRoute(feature)[0].properties.percentiles * 100;
 
       routeMatch &&
         layer.setStyle(
@@ -186,18 +125,27 @@ export default function WardMap() {
     }
   }
 
+  const wardStyle = {
+    weight: 1,
+    fillOpacity: 0.2,
+    dashArray: 5,
+    color: "white",
+  };
+
   function onEachWardFeature(feature, layer) {
     if (feature.properties) {
-      const { ward } = feature.properties;
+      const { ward, median_percentiles } = feature.properties;
       layer.bindTooltip(`Ward ${ward}`, {
         sticky: true,
       });
-      layer.setStyle({
-        weight: 1,
-        color: "#fff",
-        fillOpacity: 0.2,
-        dashArray: 5,
-      });
+      layer.setStyle(
+        wards.selectedWard || !currentFilters.color
+          ? wardStyle
+          : {
+              ...wardStyle,
+              color: setColor(median_percentiles * 100),
+            }
+      );
 
       layer.on({
         click: () => onClickWard(feature),
@@ -223,32 +171,6 @@ export default function WardMap() {
     });
   }
 
-  function highlightFeature(e) {
-    let layer = e.target;
-
-    layer.setStyle({
-      weight: 4,
-      fillColor: "#fff",
-      color: "#fff",
-      fillOpacity: 1,
-    });
-  }
-
-  function resetHighlight(e) {
-    let layer = e.target;
-    const routeMatch = findDataForRoute(layer.feature)[0];
-    layer.setStyle(
-      currentFilters.color
-        ? {
-            color: setColor(routeMatch),
-            fillColor: setColor(routeMatch),
-            weight: 3,
-            fillOpacity: 1,
-          }
-        : style
-    );
-  }
-
   return (
     <div className="map">
       {selectedRoute && (
@@ -259,16 +181,29 @@ export default function WardMap() {
         zoom={11}
         scrollWheelZoom={false}
       >
-        <WardFilter
+        <button
+          className="route-close-btn"
+          onClick={() =>
+            setCurrentFilters((prevfilters) => {
+              return {
+                ...prevfilters,
+                busLines: false,
+                wards: {
+                  ...prevfilters.wards,
+                  selectedWard: null,
+                },
+              };
+            })
+          }
+        >
+          Clear Routes
+        </button>
+        <Filter
           filterOpen={filterOpen}
           setFilterOpen={setFilterOpen}
           currentFilters={currentFilters}
           setCurrentFilters={setCurrentFilters}
-        />
-        <Search
-          onChangeSearch={onChangeSearch}
-          searchTerm={searchTerm}
-          searchResultsElements={searchResultsElements}
+          wardFilter
         />
 
         <TileLayer
@@ -279,6 +214,7 @@ export default function WardMap() {
           <GeoJSON
             data={wardRankings.features}
             onEachFeature={onEachWardFeature}
+            key={JSON.stringify(currentFilters)}
           />
         )}
         {currentFilters.busLines && (

@@ -601,6 +601,13 @@ header .h1-container .subtitle-container img {
   min-width: 250px;
 }
 
+.route-close-btn {
+  position: absolute;
+  right: 70px;
+  bottom: 45px;
+  z-index: 150;
+}
+
 .search-container {
   position: absolute;
   right: 15px;
