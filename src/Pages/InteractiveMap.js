@@ -6,24 +6,29 @@ const InteractiveMap = () => {
   return (
     <div className="page-container">
       <h1>Interactive Maps</h1>
+      
+      <div id="routeMap">
+        <h2>Bus Routes</h2>
+        <ul>
+          <li>
+            Click a route or use the search bar to open route-specific details
+          </li>
+          <li>
+            Use the filter to compare the performance of different bus lines
+            across Chicago
+          </li>
+        </ul>
+        <Map />
+      </div>
 
-      <h2>Routes</h2>
-      <Map />
+      <div id ="wardMap">
+        <h2>Wards</h2>
+        <p>
+          Click a ward to see the routes that pass through it. This map uses the 2023 ward boundaries.
+        </p>
+        <WardMap />
+      </div>
 
-      <h2>Wards</h2>
-      <WardMap />
-
-      <h2>Welcome to the Map Beta!</h2>
-      <p>Use the map above to explore Chicago's bus lines.</p>
-      <ul>
-        <li>
-          Click a route or use the search bar to open route-specific details.
-        </li>
-        <li>
-          Use the filter to compare the performance of different bus lines
-          across Chicago.
-        </li>
-      </ul>
       <h3> See a Bug? Have an Idea?</h3>
       <p>
         {" "}

@@ -141,7 +141,6 @@ export default function Map() {
 
   return (
     <div className="map">
-      <h2>Map/Data</h2>
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
       )}

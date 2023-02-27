@@ -128,7 +128,6 @@ export default function WardMap() {
   const wardStyle = {
     weight: 1,
     fillOpacity: 0.2,
-    dashArray: 5,
     color: "white",
   };
 
