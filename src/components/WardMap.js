@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, useMapEvents } from "react-leaflet";
 
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
 import resultsData from "../Routes/data.json";
@@ -32,8 +32,7 @@ export default function WardMap() {
     (feature) => feature.properties.ward === wards.selectedWard
   );
 
-  // filter functionality
-
+  // filter functionality    
   const filterMapRoutes = (route) => {
     if (!wards.selectedWard) {
       return true;
@@ -63,20 +62,6 @@ export default function WardMap() {
   const onClickBusRoute = (feature) => {
     setSelectedRoute(findDataForRoute(feature));
     document.body.style.overflow = "hidden";
-  };
-
-  const onClickWard = (feature) => {
-    debugger;
-    setCurrentFilters((prevfilters) => {
-      return {
-        ...prevfilters,
-        busLines: true,
-        wards: {
-          ...prevfilters.wards,
-          selectedWard: feature.properties.ward,
-        },
-      };
-    });
   };
 
   const closeModal = () => {
@@ -115,60 +100,84 @@ export default function WardMap() {
         layer.setStyle(
           currentFilters.color
             ? {
-                weight: 4,
-                fillColor: setColor(routeMatch),
-                color: setColor(routeMatch),
-                fillOpacity: 1,
-              }
+              weight: 4,
+              fillColor: setColor(routeMatch),
+              color: setColor(routeMatch),
+              fillOpacity: 1,
+            }
             : style
         );
     }
   }
 
-  const wardStyle = {
-    weight: 1,
-    fillOpacity: 0.2,
-    color: "white",
-  };
 
-  function onEachWardFeature(feature, layer) {
-    if (feature.properties) {
-      const { ward, median_percentiles } = feature.properties;
-      layer.bindTooltip(`Ward ${ward}`, {
-        sticky: true,
-      });
-      layer.setStyle(
-        wards.selectedWard || !currentFilters.color
-          ? wardStyle
-          : {
+  const WardBoundaries = () => {
+
+    const wardStyle = {
+      weight: 1,
+      fillOpacity: 0.2,
+      color: "white",
+    };
+
+    function onEachWardFeature(feature, layer) {
+      if (feature.properties) {
+        const { ward, median_percentiles } = feature.properties;
+        layer.bindTooltip(`Ward ${ward}`, {
+          sticky: true,
+        });
+        layer.setStyle(
+          wards.selectedWard || !currentFilters.color
+            ? wardStyle
+            : {
               ...wardStyle,
               color: setColor(median_percentiles * 100),
             }
-      );
-
-      layer.on({
-        click: () => onClickWard(feature),
-        mouseover: highlightWard,
-        mouseout: resetHighlightWard,
-      });
+        );
+      }
     }
-  }
 
-  function highlightWard(e) {
-    let layer = e.target;
+    const map = useMapEvents({
+      onClickWard(feature) {
+        setCurrentFilters((prevfilters) => {
+          return {
+            ...prevfilters,
+            busLines: true,
+            wards: {
+              ...prevfilters.wards,
+              selectedWard: feature.properties.ward,
+            },
+          };
+        });
+      },
+      highlightWard(e) {
+        let layer = e.target;
 
-    layer.setStyle({
-      fillOpacity: 0.7,
+        layer.setStyle({
+          fillOpacity: 0.7,
+        });
+      },
+      resetHighlightWard(e) {
+        let layer = e.target;
+
+        layer.setStyle({
+          fillOpacity: 0.2,
+        });
+      }
     });
-  }
 
-  function resetHighlightWard(e) {
-    let layer = e.target;
-
-    layer.setStyle({
-      fillOpacity: 0.2,
-    });
-  }
+    return (wardRankings.features.map(ward => (
+      <GeoJSON
+        data={ward}
+        onEachFeature={onEachWardFeature}
+        key={ward.properties.ward}
+        eventHandlers={{
+          click: () => onClickBusRoute(),
+          mouseover: highlightFeature,
+          mouseout: (e) => resetHighlight(e, currentFilters)
+        }}
+      />
+    )));
+  };
 
   return (
     <div className="map">
@@ -209,21 +218,17 @@ export default function WardMap() {
           attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
         />
-        {currentFilters.wards.wardsShowing && (
-          <GeoJSON
-            data={wardRankings.features}
-            onEachFeature={onEachWardFeature}
-            key={JSON.stringify(currentFilters)}
-          />
-        )}
+        {currentFilters.wards.wardsShowing && <WardBoundaries/>}
         {currentFilters.busLines && (
-          <GeoJSON
-            data={mapToDisplay}
-            onEachFeature={onEachRouteFeature}
-            //map will only re-render on key change, so use current filter string as key
-            key={JSON.stringify(currentFilters)}
-          />
-        )}
+          mapToDisplay.map(route => (
+            <GeoJSON
+              data={route}
+              onEachFeature={onEachRouteFeature}
+              //map will only re-render on key change, so use current filter string as key
+              key={route.id}
+            />
+          )
+          ))}
       </MapContainer>
     </div>
   );
