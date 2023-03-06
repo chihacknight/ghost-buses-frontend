@@ -16,6 +16,12 @@ const InteractiveMap = () => {
         route or use the search bar to open route-specific details.</li>
         <li>Use the filter to compare the performance of different bus lines
         across Chicago.</li>
+        <li>Note: From November 2022 until early March 2023 we showed the Fulleron #74 bus on the map.
+          In early March 2023 we removed it because we discovered that a data bug (in the source
+          data from the CTA) for that route is more widespread than we thought and it threw the accuracy of the data displayed for 
+          the #74 into question. We may add the #74 back to the map if we find a way to address
+          the bug.
+        </li>
       </ul>
       <h3> See a Bug? Have an Idea?</h3>
       <p>
