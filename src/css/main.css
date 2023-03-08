@@ -966,6 +966,13 @@ footer .footer-container ul li a:hover, footer .footer-container ul li a:focus {
     align-items: flex-start;
   }
 }
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1.6;
 }

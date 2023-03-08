@@ -35,9 +35,13 @@ export default function Map() {
       !currentFilters.reliability.top10 || route.properties.ranking <= 10;
     const bottomTen =
       !currentFilters.reliability.bottom10 || route.properties.ranking >= 114;
-    return topTen && bottomTen;
-  };
 
+    if (currentFilters.reliability.top10 && currentFilters.reliability.bottom10){
+        return topTen || bottomTen;
+    } else {
+        return topTen && bottomTen;
+    }
+  };
   const availableRoutes = resultsData.features
     .filter(filterMapRoutes)
     .map((route) => route.properties.route_id)
