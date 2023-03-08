@@ -119,6 +119,7 @@ export default function Map() {
 
   const heatmap = ["#0852C1", "#8E47F3", "#D84091", "#EB4F12", "#FFED39"];
 
+
   function setColor(route) {
     const percentileIndex = findPercentileIndex(route);
     if (percentileIndex === 0 || percentileIndex === 1) {
@@ -191,12 +192,12 @@ export default function Map() {
 
   return (
     <div className="map">
-      <h2>Map/Data</h2>
+      
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
       )}
       <MapContainer
-        center={[41.881832, -87.623177]}
+        center={[41.881832, -87.691916]}
         zoom={11}
         scrollWheelZoom={false}
       >
