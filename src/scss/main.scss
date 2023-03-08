@@ -69,8 +69,8 @@ h1 {
 }
 
 h2 {
-   font-size: 1.4rem;
-  
+  font-size: 1.4rem;
+
   font-weight: 900;
 }
 
@@ -105,4 +105,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.note {
+  background: rgba($cta-blue, 0.2);
+  padding: 0.25em 1.5em;
+  margin: 0 auto;
+  width: 90%;
+  border-radius: 8px;
 }
