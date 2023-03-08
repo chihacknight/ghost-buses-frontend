@@ -611,8 +611,10 @@ header .h1-container .subtitle-container img {
   border-radius: 10px;
 }
 .search-container input {
-  padding: 10px;
   border: none;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .search-container .results-container {
   max-height: 400px;
