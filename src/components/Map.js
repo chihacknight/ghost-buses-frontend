@@ -32,14 +32,18 @@ export default function Map() {
     }
 
     const topTen =
-      !currentFilters.reliability.top10 || route.ratio_properties.ranking <= 10;
+      !currentFilters.reliability.top10 || route.properties.ratio_ranking <= 10;
     const bottomTen =
-      !currentFilters.reliability.bottom10 || route.ratio_properties.ranking >= 114;
+      !currentFilters.reliability.bottom10 ||
+      route.properties.ratio_ranking >= 114;
 
-    if (currentFilters.reliability.top10 && currentFilters.reliability.bottom10){
-        return topTen || bottomTen;
+    if (
+      currentFilters.reliability.top10 &&
+      currentFilters.reliability.bottom10
+    ) {
+      return topTen || bottomTen;
     } else {
-        return topTen && bottomTen;
+      return topTen && bottomTen;
     }
   };
   const availableRoutes = resultsData.features
@@ -80,7 +84,10 @@ export default function Map() {
       className="search-result"
       onClick={() => onClickBusRoute(result)}
     >
-      <p><span>{result.properties.route_id}</span>{result.properties.route_long_name}</p>
+      <p>
+        <span>{result.properties.route_id}</span>
+        {result.properties.route_long_name}
+      </p>
     </div>
   ));
 
@@ -118,7 +125,6 @@ export default function Map() {
   };
 
   const heatmap = ["#0852C1", "#8E47F3", "#D84091", "#EB4F12", "#FFED39"];
-
 
   function setColor(route) {
     const percentileIndex = findPercentileIndex(route);
@@ -192,7 +198,6 @@ export default function Map() {
 
   return (
     <div className="map">
-      
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
       )}
