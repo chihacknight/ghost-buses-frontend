@@ -47,12 +47,17 @@
   bottom: 40px;
   padding: 1em;
 
+  h4 {
+      text-align: center;
+    }
+
   ul {
     list-style: none;
     padding: 0 1em;
 
     li {
       display: flex;
+      gap: 10px;
       justify-content: space-between;
       span.color-key {
         height: 15px;
@@ -79,4 +84,9 @@
       }
     }
   }
+}
+
+.percentile-text {
+  text-align: right;
+  width: 100%;
 }
