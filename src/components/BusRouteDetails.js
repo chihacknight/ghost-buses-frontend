@@ -95,10 +95,10 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
                 <img src={busIcon} alt="representation of CTA bus" />
               ))}
 
-                {[...Array(busFraction[0])].map((x) => (
-                  <img src={ghostIcon} alt="representation of CTA bus" />
-                ))}
-              </div>
+              {[...Array(busFraction[0])].map((x) => (
+                <img src={ghostIcon} alt="representation of CTA bus" />
+              ))}
+            </div>
           </div>
         ) : (
           <div className="grid-square bus-graphic">
@@ -117,8 +117,9 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
         <div className="grid-square fraction">
           <div className="bus-graphic-text">
             <p>
-              This bus ranks <span>{selectedRoute[0].properties.ranking}</span>{" "}
-              in reliability
+              This bus ranks{" "}
+              <span>{selectedRoute[0].properties.ratio_ranking}</span> in
+              reliability
             </p>
             <p>
               out of <span>124</span> Chicago Bus lines
