@@ -32,9 +32,9 @@ export default function Map() {
     }
 
     const topTen =
-      !currentFilters.reliability.top10 || route.properties.ranking <= 10;
+      !currentFilters.reliability.top10 || route.ratio_properties.ranking <= 10;
     const bottomTen =
-      !currentFilters.reliability.bottom10 || route.properties.ranking >= 114;
+      !currentFilters.reliability.bottom10 || route.ratio_properties.ranking >= 114;
 
     if (currentFilters.reliability.top10 && currentFilters.reliability.bottom10){
         return topTen || bottomTen;
