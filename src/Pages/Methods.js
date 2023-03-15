@@ -137,11 +137,14 @@ const Methods = () => {
       </p>
       <p>
         This is an all-volunteer project, and for our current launch we have not done granular row-level 
-        data cleaning. We observed, for example, that for a small number of trips on the 74 Fullerton bus, 
-        the trip ID was missing and was only listed as a series of asterisks (like ********). We have not 
+        data cleaning. We observed, for example, that for a small number of trips on the 66 Chicago bus, 
+        the trip ID was missing in the source data from the API and was only listed as a series of asterisks (like ********). We have not 
         added any special handling or cleaning for that, so we may be slightly undercounting the number of 
-        actual trips that occurred on that route. We have no reason to believe that these issues are widespread 
-        or common enough to affect overall data trends or high-level conclusions.
+        actual trips that occurred on that route. We saw the same issue on the #74 Fullerton bus and assumed
+        it was not widespread; however, after the data had been displayed on the site for several months
+        we investigated further and realized that the data issue is common enough for the #74 that it made
+        our display inaccurate. We have removed the #74 bus for the time being; we are not sure whether we 
+        will find a valid method to overcome the issue to reinstate the #74 bus on our map. 
       </p>
       <p>
         If you would like to help us improve our data cleaning, we would love to have you! 
