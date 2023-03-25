@@ -48,7 +48,7 @@ function reduce(numerator, denominator) {
 
 
 
-const RouteInfo = () => {
+const RouteStats = () => {
 
   let { route } = useParams();
 
@@ -68,4 +68,4 @@ const RouteInfo = () => {
   );
 };
 
-export default RouteInfo;
+export default RouteStats;

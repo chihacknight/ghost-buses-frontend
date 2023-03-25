@@ -12,7 +12,7 @@ import InteractiveMap from "./Pages/InteractiveMap";
 import FurtherReading from "./Pages/FurtherReading";
 import Methods from "./Pages/Methods";
 import HowToHelp from "./Pages/HowToHelp";
-import RouteInfo from "./Pages/RouteInfo";
+import RouteStats from "./Pages/RouteStats";
 
 const App = () => {
   return (
@@ -30,7 +30,7 @@ const App = () => {
             <Route path="/further-reading" element={<FurtherReading />} />
             <Route path="/methods" element={<Methods />} />
             <Route path="/how-to-help" element={<HowToHelp />} />
-            <Route path="/route-info/:route" element={<RouteInfo />} />
+            <Route path="/route-stats/:route" element={<RouteStats />} />
           </Routes>
         </main>
 

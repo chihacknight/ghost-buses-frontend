@@ -96,7 +96,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
         />
 
         <div className="btn-container">
-          <Link to={"/route-info/" + selectedRoute[0].properties.route_id}>
+          <Link to={"/route-stats/" + selectedRoute[0].properties.route_id}>
             <button className="action-btn">
               More Stats!
             </button>
