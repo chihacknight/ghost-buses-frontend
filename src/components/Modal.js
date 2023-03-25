@@ -1,5 +1,6 @@
 import React from "react";
 import BusRouteDetails from "./BusRouteDetails";
+import { Link } from "react-router-dom";
 
 export default function Modal({ selectedRoute, closeModal, }) {
 
@@ -41,7 +42,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
   //   (saturdayAcc > 0 ? 1 : 0) +
   //   (sundayAcc > 0 ? 1 : 0) +
   //   (weekdayAcc > 0 ? 1 : 0);
-  const totalAcc = (selectedRoute[0].properties.ratio)*100;
+  const totalAcc = (selectedRoute[0].properties.ratio) * 100;
 
   //round the percentages to the nearest ten
 
@@ -68,11 +69,11 @@ export default function Modal({ selectedRoute, closeModal, }) {
 
   //fraction of buses on average that are "ghost buses"
 
-  const calcBusFraction = (acc)  => {
+  const calcBusFraction = (acc) => {
     let fraction
     if (acc > 22 && acc < 27) {
       fraction = [3, 4]
-    } else if (acc > 72 && acc < 77){
+    } else if (acc > 72 && acc < 77) {
       fraction = [1, 4]
     } else {
       fraction = reduce((100 - round10(Math.round(acc))), 100);
@@ -80,7 +81,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
 
     return fraction
   }
-  
+
   const busFraction = calcBusFraction(totalAcc.toFixed(0))
   return (
     <div className="modal" onClick={closeModal}>
@@ -92,8 +93,16 @@ export default function Modal({ selectedRoute, closeModal, }) {
           selectedRoute={selectedRoute}
           totalAcc={totalAcc}
           busFraction={busFraction}
-
         />
+
+        <div className="btn-container">
+          <Link to={"/route-info/" + selectedRoute[0].properties.route_id}>
+            <button className="action-btn">
+              More Stats!
+            </button>
+          </Link>
+        </div>
+
         <p className="modal-footnote">
           * = weekday ridership taken from{" "}
           <a
@@ -104,6 +113,8 @@ export default function Modal({ selectedRoute, closeModal, }) {
             CTA Ridership Report
           </a>{" "}
         </p>
+
+
       </div>
     </div>
   );
