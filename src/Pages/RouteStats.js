@@ -1,8 +1,15 @@
 import resultsData from "../Routes/data.json";
+import ridershipData from "../Routes/july2022_cta_ridership_data_day_type_summary.json";
 
 import React from "react";
-import BusRouteDetails from "../components/BusRouteDetails";
 import { useParams } from "react-router-dom";
+import findPercentileIndex from "../utils/percentileKeys";
+
+import RidershipGraphic from "../components/stat-visuals/RidershipGraphic";
+import GhostingGraphic from "../components/stat-visuals/GhostingGraphic";
+import ReliabilityRankGraphic from "../components/stat-visuals/ReliabilityRankGraphic";
+import PercentileGraphic from "../components/stat-visuals/PercentileGraphic";
+
 
 //customized; goes off route id
 function findDataForRoute(route) {
@@ -56,15 +63,57 @@ const RouteStats = () => {
   const totalAcc = (selectedRoute[0].properties.ratio) * 100;
   const busFraction = calcBusFraction(totalAcc.toFixed(0))
 
+  const selectedRouteRidership = ridershipData.filter(
+    (x) => x.route_id === selectedRoute[0].properties.route_id
+  );
+
+  const averageRidershipPerWeekday = selectedRouteRidership.find(
+    (x) => x.day_type === "weekday"
+  );
+
+  const percentileIndex = findPercentileIndex(selectedRoute[0]);
+
   return (
     <div className="page-container">
+      <div className="route-title">
+        <h1>
+          <span className="bus-number">
+            {selectedRoute[0].properties.route_id}
+          </span>{" "}
+        </h1>
+        <h2>
+          {selectedRoute[0].properties.route_long_name}
+        </h2>
+      </div>
 
-      <BusRouteDetails
-        selectedRoute={selectedRoute}
-        totalAcc={totalAcc}
-        busFraction={busFraction}
-      />
-    </div>
+      <div className="stats-list">
+
+        {/* TO DO: Add static map zoomed in on route. Grab route map off CTA website? */}
+
+        <RidershipGraphic
+          ridershipCount={averageRidershipPerWeekday.avg_riders}
+          intervalName="weekday" />
+
+        <PercentileGraphic percentileIndex={percentileIndex} />
+
+        <GhostingGraphic busFraction={busFraction} />
+
+        <ReliabilityRankGraphic rank={selectedRoute[0].properties.ratio_ranking} />
+
+      </div>
+
+      <p className="footnote">
+        * = weekday ridership taken from{" "}
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.transitchicago.com/assets/1/6/Monthly_Ridership_2022-7(Final).pdf"
+        >
+          CTA Ridership Report
+        </a>{" "}
+      </p>
+
+    </div >
   );
 };
 
