@@ -1,9 +1,10 @@
 import resultsData from "../Routes/data.json";
 import ridershipData from "../Routes/july2022_cta_ridership_data_day_type_summary.json";
 
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import findPercentileIndex from "../utils/percentileKeys";
+import Search from "../components/Search";
 
 import RidershipGraphic from "../components/stat-visuals/RidershipGraphic";
 import GhostingGraphic from "../components/stat-visuals/GhostingGraphic";
@@ -57,6 +58,48 @@ function reduce(numerator, denominator) {
 
 const RouteStats = () => {
 
+  // Search functions (need to be refactored)
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const onChangeSearch = (e) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+  const searchResults = resultsData.features
+    .filter((route) => {
+      return (
+        String(route.properties.route_id) +
+        route.properties.route_long_name.toLowerCase()
+      ).includes(searchTerm);
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("South");
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("West");
+    })
+    .filter((route) => {
+      return route.properties.day_type === "wk";
+    });;
+
+  const searchResultsElements = searchResults.map((result) => (
+    <div
+      key={result.properties.route_id}
+      className="search-result"
+      onClick={() => navigate('/route-stats/' + result.properties.route_id, { replace: true })}
+    >
+      <p>
+        <span>{result.properties.route_id}</span>
+        {result.properties.route_long_name}
+      </p>
+    </div>
+  ));
+
+  // End of search code
+
+
+
   let { route } = useParams();
 
   let selectedRoute = findDataForRoute(route)
@@ -84,6 +127,11 @@ const RouteStats = () => {
         <h2>
           {selectedRoute[0].properties.route_long_name}
         </h2>
+        <Search
+          onChangeSearch={onChangeSearch}
+          searchTerm={searchTerm}
+          searchResultsElements={searchResultsElements}
+        />
       </div>
 
       <div className="stats-list">

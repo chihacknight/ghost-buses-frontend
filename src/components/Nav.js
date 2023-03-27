@@ -9,6 +9,7 @@ const Nav = () => {
     { title: "Home", link: "/" },
     { title: "About Us", link: "/about" },
     { title: "Map", link: "/map" },
+    { title: "Route Statistics", link: "/route-stats/1" },
     { title: "Methods", link: "/methods" },
     { title: "Further Readings", link: "/further-reading" },
     { title: "How To Help", link: "/how-to-help" },
