@@ -1,16 +1,33 @@
 .search-container {
-  padding: 6px;
   background-color: white;
   border-radius: 10px;
+  width: 200px;
 
   input {
     border: none;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 16px;
     width: 100%;
     box-sizing: border-box;
+    outline: none;
+
+    &.close{
+      border-radius: 10px;
+    }
+
+    &.open{
+      border-radius: 10px 10px 0 0;
+    }
   }
 
+
   .results-container {
+    position: absolute;
+    z-index: 100;
+
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+
     max-height: 400px;
     width: 200px;
     overflow-y: scroll;
