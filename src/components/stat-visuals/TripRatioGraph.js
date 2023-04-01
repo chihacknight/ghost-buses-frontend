@@ -3,6 +3,21 @@ import Plot from 'react-plotly.js';
 
 import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes_2022-05-20_to_2023-03-11.json";
 
+
+function rollingAverage(values, windowSize) {
+    const result = [];
+    for (let i = 0; i < values.length; i++) {
+        let sum = 0;
+        let count = 0;
+        for (let j = Math.max(0, i - windowSize + 1); j <= i; j++) {
+            sum += values[j];
+            count++;
+        }
+        result.push(sum / count);
+    }
+    return result;
+}
+
 function TripRatioGraph({ route_id }) {
 
     var routeTripData = tripData.filter(datapoint => datapoint.route_id == route_id);
@@ -10,6 +25,7 @@ function TripRatioGraph({ route_id }) {
     var tripsActual = routeTripData.map(datapoint => datapoint.trip_count_rt);
     var tripsScheduled = routeTripData.map(datapoint => datapoint.trip_count_sched);
     var ratio = routeTripData.map(datapoint => datapoint.ratio);
+    var ratio_2wkAvg = rollingAverage(ratio, 14);
 
     const data_trips = [
         {
@@ -39,6 +55,15 @@ function TripRatioGraph({ route_id }) {
             x: timestamps,
             xaxis: "x",
             y: ratio,
+            yaxis: "y",
+            type: "scatter",
+        },
+        {
+            mode: "lines",
+            name: "2 Week Rolling Avg.",
+            x: timestamps,
+            xaxis: "x",
+            y: ratio_2wkAvg,
             yaxis: "y",
             type: "scatter",
         },
