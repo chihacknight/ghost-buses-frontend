@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from 'react';
 import Plot from 'react-plotly.js';
 
 import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes_2022-05-20_to_2023-03-11.json";
@@ -18,14 +19,59 @@ function rollingAverage(values, windowSize) {
     return result;
 }
 
+function isWeekday(dateString) {
+    const date = new Date(dateString + 'T00:00:00');
+    const dayOfWeek = date.getDay();
+    return dayOfWeek >= 1 && dayOfWeek <= 5;
+}
+
+function isWeekend(dateString) {
+    return !isWeekday(dateString);
+}
+
+
+
 function TripRatioGraph({ route_id }) {
 
-    var routeTripData = tripData.filter(datapoint => datapoint.route_id == route_id);
-    var timestamps = routeTripData.map(datapoint => datapoint.date);
-    var tripsActual = routeTripData.map(datapoint => datapoint.trip_count_rt);
-    var tripsScheduled = routeTripData.map(datapoint => datapoint.trip_count_sched);
-    var ratio = routeTripData.map(datapoint => datapoint.ratio);
-    var ratio_2wkAvg = rollingAverage(ratio, 14);
+    var routeTripData_all = tripData.filter(datapoint => datapoint.route_id == route_id);
+    var routeTripData_weekday = routeTripData_all.filter(datapoint => isWeekday(datapoint.date));
+    var routeTripData_weekend = routeTripData_all.filter(datapoint => isWeekend(datapoint.date));
+    var timestamps;
+    var tripsActual;
+    var tripsScheduled;
+    var ratio;
+    var ratio_2wkAvg;
+
+
+    const [routeTripData, setRouteTripData] = useState(routeTripData_all);
+    updateData();
+
+    function updateData() {
+        timestamps = routeTripData.map(datapoint => datapoint.date);
+        tripsActual = routeTripData.map(datapoint => datapoint.trip_count_rt);
+        tripsScheduled = routeTripData.map(datapoint => datapoint.trip_count_sched);
+        ratio = routeTripData.map(datapoint => datapoint.ratio);
+        ratio_2wkAvg = rollingAverage(ratio, 14);
+
+        console.log(routeTripData);
+    };
+
+    function onClickAllData() {
+        setRouteTripData(routeTripData_all);
+        updateData();
+    }
+
+    function onClickWeekdayData() {
+        setRouteTripData(routeTripData_weekday);
+        updateData();
+    }
+
+    function onClickWeekendData() {
+        setRouteTripData(routeTripData_weekend);
+        updateData();
+    }
+
+
 
     const data_trips = [
         {
@@ -135,16 +181,27 @@ function TripRatioGraph({ route_id }) {
 
     return (
         <div className="trip-performance-graph">
+
+            <button onClick={onClickAllData}>
+                All data
+            </button>
+            <button onClick={onClickWeekdayData}>
+                Weekdays Only
+            </button>
+            <button onClick={onClickWeekendData}>
+                Weekends Only
+            </button>
+
             <Plot
                 data={data_ratio}
                 layout={layout_ratio}
                 config={{ displayModeBar: false }}
             />
-            
+
             <Plot
                 data={data_trips}
                 layout={layout_trips}
-                config={{displayModeBar: false}}
+                config={{ displayModeBar: false }}
             />
         </div>
     );
