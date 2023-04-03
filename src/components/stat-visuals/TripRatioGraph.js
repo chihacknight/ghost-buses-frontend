@@ -52,8 +52,6 @@ function TripRatioGraph({ route_id }) {
         tripsScheduled = routeTripData.map(datapoint => datapoint.trip_count_sched);
         ratio = routeTripData.map(datapoint => datapoint.ratio);
         ratio_2wkAvg = rollingAverage(ratio, 14);
-
-        console.log(routeTripData);
     };
 
     function onClickAllData() {
