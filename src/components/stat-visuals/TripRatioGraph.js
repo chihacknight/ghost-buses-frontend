@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from 'react';
+import { React, useState, useEffect} from 'react';
 import Plot from 'react-plotly.js';
 
 import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes_2022-05-20_to_2023-03-11.json";
@@ -47,6 +46,13 @@ function TripRatioGraph({ route_id }) {
     const [routeTripData, setRouteTripData] = useState(routeTripData_all);
     const [dataSelection, setDataSelection] = useState("All");
     updateData();
+
+    useEffect(()=> {
+        routeTripData_all = tripData.filter(datapoint => datapoint.route_id == route_id);
+        routeTripData_weekday = routeTripData_all.filter(datapoint => isWeekday(datapoint.date));
+        routeTripData_weekend = routeTripData_all.filter(datapoint => isWeekend(datapoint.date));
+        onClickAllData();
+    }, [route_id])
 
     function updateData() {
         timestamps = routeTripData.map(datapoint => datapoint.date);
