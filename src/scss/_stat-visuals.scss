@@ -101,4 +101,31 @@
       padding: 7px 0;
     }
   }
+
+}
+
+.trip-performance-graph {
+
+  .data-select-button {
+    padding: 13px 25px;
+    margin-top: 20px;
+    background-color: gray;
+    border: none;
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+    @include transitionHover;
+
+    &:hover{
+      background-color: $blue-button;
+      @include transitionHover;
+    }
+
+    &-selected{
+      @extend .data-select-button;
+      background-color: $blue-button;
+    }
+
+  }
+
 }
