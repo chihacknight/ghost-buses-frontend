@@ -42,8 +42,10 @@ function TripRatioGraph({ route_id }) {
     var ratio;
     var ratio_2wkAvg;
 
-
+    
+    
     const [routeTripData, setRouteTripData] = useState(routeTripData_all);
+    const [dataSelection, setDataSelection] = useState("All");
     updateData();
 
     function updateData() {
@@ -57,16 +59,19 @@ function TripRatioGraph({ route_id }) {
     function onClickAllData() {
         setRouteTripData(routeTripData_all);
         updateData();
+        setDataSelection("All");
     }
 
     function onClickWeekdayData() {
         setRouteTripData(routeTripData_weekday);
         updateData();
+        setDataSelection("Weekdays");
     }
 
     function onClickWeekendData() {
         setRouteTripData(routeTripData_weekend);
         updateData();
+        setDataSelection("Weekends");
     }
 
 
@@ -180,14 +185,17 @@ function TripRatioGraph({ route_id }) {
     return (
         <div className="trip-performance-graph">
 
-            <button onClick={onClickAllData}>
+            <button onClick={onClickAllData} 
+                className={dataSelection === "All" ? "data-select-button-selected" : "data-select-button"}>
                 All data
             </button>
-            <button onClick={onClickWeekdayData}>
-                Weekdays Only
+            <button onClick={onClickWeekdayData} 
+                className={dataSelection === "Weekdays" ? "data-select-button-selected" : "data-select-button"}>
+                Weekdays
             </button>
-            <button onClick={onClickWeekendData}>
-                Weekends Only
+            <button onClick={onClickWeekendData} 
+                className={dataSelection === "Weekends" ? "data-select-button-selected" : "data-select-button"}>
+                Weekends
             </button>
 
             <Plot
