@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="page-container">
-      <h1> What is a Ghost Bus?</h1>
+      <h1 style={{textAlign: "center"}}> What is a Ghost Bus?</h1>
       <p>
         You’re waiting to catch your bus. The schedule app says it’ll be there
         in two minutes. You wait, and no bus comes. Now you’re stranded. Should
