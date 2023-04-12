@@ -1,4 +1,4 @@
-import { React, useState, useEffect} from 'react';
+import { React, useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 
 import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes_2022-05-20_to_2023-03-11.json";
@@ -41,17 +41,17 @@ function TripRatioGraph({ route_id }) {
     var ratio;
     var ratio_2wkAvg;
 
-    
-    
+
+
     const [routeTripData, setRouteTripData] = useState(routeTripData_all);
-    const [dataSelection, setDataSelection] = useState("All");
+    const [dataSelection, setDataSelection] = useState("Weekdays");
     updateData();
 
-    useEffect(()=> {
+    useEffect(() => {
         routeTripData_all = tripData.filter(datapoint => datapoint.route_id == route_id);
         routeTripData_weekday = routeTripData_all.filter(datapoint => isWeekday(datapoint.date));
         routeTripData_weekend = routeTripData_all.filter(datapoint => isWeekend(datapoint.date));
-        onClickAllData();
+        onClickWeekdayData();
     }, [route_id])
 
     function updateData() {
@@ -191,17 +191,18 @@ function TripRatioGraph({ route_id }) {
     return (
         <div className="trip-performance-graph">
 
-            <button onClick={onClickAllData} 
-                className={dataSelection === "All" ? "data-select-button-selected" : "data-select-button"}>
-                All data
-            </button>
-            <button onClick={onClickWeekdayData} 
+
+            <button onClick={onClickWeekdayData}
                 className={dataSelection === "Weekdays" ? "data-select-button-selected" : "data-select-button"}>
                 Weekdays
             </button>
-            <button onClick={onClickWeekendData} 
+            <button onClick={onClickWeekendData}
                 className={dataSelection === "Weekends" ? "data-select-button-selected" : "data-select-button"}>
                 Weekends
+            </button>
+            <button onClick={onClickAllData}
+                className={dataSelection === "All" ? "data-select-button-selected" : "data-select-button"}>
+                All data
             </button>
 
             <Plot
