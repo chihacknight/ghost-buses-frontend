@@ -28,13 +28,26 @@ function isWeekend(dateString) {
     return !isWeekday(dateString);
 }
 
+function isSaturday(dateString) {
+    const date = new Date(dateString + 'T00:00:00');
+    const dayOfWeek = date.getDay();
+    return dayOfWeek === 6;
+}
+
+function isSunday(dateString) {
+    const date = new Date(dateString + 'T00:00:00');
+    const dayOfWeek = date.getDay();
+    return dayOfWeek === 0;
+}
+
 
 
 function TripRatioGraph({ route_id }) {
 
-    var routeTripData_all = tripData.filter(datapoint => datapoint.route_id == route_id);
+    var routeTripData_all = tripData.filter(datapoint => datapoint.route_id === route_id);
     var routeTripData_weekday = routeTripData_all.filter(datapoint => isWeekday(datapoint.date));
-    var routeTripData_weekend = routeTripData_all.filter(datapoint => isWeekend(datapoint.date));
+    var routeTripData_saturday = routeTripData_all.filter(datapoint => isSaturday(datapoint.date));
+    var routeTripData_sunday = routeTripData_all.filter(datapoint => isSunday(datapoint.date));
     var timestamps;
     var tripsActual;
     var tripsScheduled;
@@ -48,9 +61,10 @@ function TripRatioGraph({ route_id }) {
     updateData();
 
     useEffect(() => {
-        routeTripData_all = tripData.filter(datapoint => datapoint.route_id == route_id);
+        routeTripData_all = tripData.filter(datapoint => datapoint.route_id === route_id);
         routeTripData_weekday = routeTripData_all.filter(datapoint => isWeekday(datapoint.date));
-        routeTripData_weekend = routeTripData_all.filter(datapoint => isWeekend(datapoint.date));
+        routeTripData_saturday = routeTripData_all.filter(datapoint => isSaturday(datapoint.date));
+        routeTripData_sunday = routeTripData_all.filter(datapoint => isSunday(datapoint.date));
         onClickWeekdayData();
     }, [route_id])
 
@@ -74,10 +88,16 @@ function TripRatioGraph({ route_id }) {
         setDataSelection("Weekdays");
     }
 
-    function onClickWeekendData() {
-        setRouteTripData(routeTripData_weekend);
+    function onClickSaturdayData() {
+        setRouteTripData(routeTripData_saturday);
         updateData();
-        setDataSelection("Weekends");
+        setDataSelection("Saturdays");
+    }
+
+    function onClickSundayData() {
+        setRouteTripData(routeTripData_sunday);
+        updateData();
+        setDataSelection("Sundays");
     }
 
 
@@ -112,6 +132,8 @@ function TripRatioGraph({ route_id }) {
             y: ratio,
             yaxis: "y",
             type: "scatter",
+            visible: 'legendonly',
+            showLegend: true,
         },
         {
             mode: "lines",
@@ -158,6 +180,7 @@ function TripRatioGraph({ route_id }) {
     const layout_ratio = {
         responsive: true,
         autosize: true,
+        showlegend: true,
         title: 'Schedule Attainment',
         yaxis: {
             title: 'Ratio of Actual vs. Scheduled Trips',
@@ -196,9 +219,13 @@ function TripRatioGraph({ route_id }) {
                 className={dataSelection === "Weekdays" ? "data-select-button-selected" : "data-select-button"}>
                 Weekdays
             </button>
-            <button onClick={onClickWeekendData}
-                className={dataSelection === "Weekends" ? "data-select-button-selected" : "data-select-button"}>
-                Weekends
+            <button onClick={onClickSaturdayData}
+                className={dataSelection === "Saturdays" ? "data-select-button-selected" : "data-select-button"}>
+                Saturdays
+            </button>
+            <button onClick={onClickSundayData}
+                className={dataSelection === "Sundays" ? "data-select-button-selected" : "data-select-button"}>
+                Sundays
             </button>
             <button onClick={onClickAllData}
                 className={dataSelection === "All" ? "data-select-button-selected" : "data-select-button"}>
