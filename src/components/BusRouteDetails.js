@@ -17,26 +17,24 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
     (x) => x.day_type === "weekday"
   );
 
-  const percentileIndex = findPercentileIndex(selectedRoute[0]);
-
   return (
     <div className="bus-route-details">
-      <h3>
+      <h3 className="routeName">
         <span className="bus-number">
           {selectedRoute[0].properties.route_id}
         </span>{" "}
         {selectedRoute[0].properties.route_long_name}
       </h3>
       <div className="grid">
-
         <div className="grid-square ridership">
           <RidershipGraphic
             ridershipCount={averageRidershipPerWeekday.avg_riders}
-            intervalName="weekday" />
+            intervalName="weekday"
+          />
         </div>
 
         <div className="grid-square percentile">
-          <PercentileGraphic percentileIndex={percentileIndex} />
+          <PercentileGraphic selectedRoute={selectedRoute[0]} />
         </div>
 
         <div className="grid-square bus-graphic">
@@ -44,9 +42,10 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
         </div>
 
         <div className="grid-square fraction">
-          <ReliabilityRankGraphic rank={selectedRoute[0].properties.ratio_ranking} />
+          <ReliabilityRankGraphic
+            rank={selectedRoute[0].properties.ratio_ranking}
+          />
         </div>
-
       </div>
     </div>
   );

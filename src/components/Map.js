@@ -61,32 +61,13 @@ export default function Map() {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
-  const searchResults = resultsData.features
-    .filter((route) => {
-      return (
-        String(route.properties.route_id) +
-        route.properties.route_long_name.toLowerCase()
-      ).includes(searchTerm);
-    })
-    .filter((route) => {
-      return !route.properties.direction.includes("South");
-    })
-    .filter((route) => {
-      return !route.properties.direction.includes("West");
-    })
-    .filter((route) => {
-      return route.properties.day_type === "wk";
-    });
-
-
   // modal functionality
 
   // clicking a bus route opens the modal
 
   function findDataForRoute(route_id) {
     const results = resultsData.features.filter(
-      (data) =>
-        String(data.properties.route_id) === String(route_id)
+      (data) => String(data.properties.route_id) === String(route_id)
     );
     return results;
   }
@@ -148,11 +129,11 @@ export default function Map() {
         layer.setStyle(
           currentFilters.color
             ? {
-              weight: 4,
-              fillColor: setColor(routeMatch),
-              color: setColor(routeMatch),
-              fillOpacity: 1,
-            }
+                weight: 4,
+                fillColor: setColor(routeMatch),
+                color: setColor(routeMatch),
+                fillOpacity: 1,
+              }
             : style
         );
     }
@@ -175,11 +156,11 @@ export default function Map() {
     layer.setStyle(
       currentFilters.color
         ? {
-          color: setColor(routeMatch),
-          fillColor: setColor(routeMatch),
-          weight: 3,
-          fillOpacity: 1,
-        }
+            color: setColor(routeMatch),
+            fillColor: setColor(routeMatch),
+            weight: 3,
+            fillOpacity: 1,
+          }
         : style
     );
   }
@@ -203,7 +184,6 @@ export default function Map() {
         <Search
           onChangeSearch={onChangeSearch}
           searchTerm={searchTerm}
-          searchResults={searchResults}
           onSelect={(route_id) => onClickBusRoute(route_id)}
         />
 

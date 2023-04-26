@@ -9,32 +9,31 @@ import Search from "../components/Search";
 import RidershipGraphic from "../components/stat-visuals/RidershipGraphic";
 import GhostingGraphic from "../components/stat-visuals/GhostingGraphic";
 import ReliabilityRankGraphic from "../components/stat-visuals/ReliabilityRankGraphic";
-import PercentileGraphic from "../components/stat-visuals/PercentileGraphic";
+import { percentileStatistic } from "../components/stat-visuals/PercentileGraphic";
 import TripRatioGraph from "../components/stat-visuals/TripRatioGraph";
-
+import { RidershipFootnote } from "../components/RidershipFootnote";
 
 //customized; goes off route id
 function findDataForRoute(route) {
   const results = resultsData.features.filter(
-    (data) =>
-      String(data.properties.route_id) === route
+    (data) => String(data.properties.route_id) === route
   );
   return results;
 }
 
 //copy-pasted from modal component; need to refactor
 const calcBusFraction = (acc) => {
-  let fraction
+  let fraction;
   if (acc > 22 && acc < 27) {
-    fraction = [3, 4]
+    fraction = [3, 4];
   } else if (acc > 72 && acc < 77) {
-    fraction = [1, 4]
+    fraction = [1, 4];
   } else {
-    fraction = reduce((100 - round10(Math.round(acc))), 100);
+    fraction = reduce(100 - round10(Math.round(acc)), 100);
   }
 
-  return fraction
-}
+  return fraction;
+};
 
 function round10(x) {
   let digits = x.toString().split("");
@@ -55,10 +54,7 @@ function reduce(numerator, denominator) {
   return [numerator / gcd, denominator / gcd];
 }
 
-
-
 const RouteStats = () => {
-
   // Search functions (need to be refactored)
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
@@ -67,34 +63,13 @@ const RouteStats = () => {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
-  const searchResults = resultsData.features
-    .filter((route) => {
-      return (
-        String(route.properties.route_id) +
-        route.properties.route_long_name.toLowerCase()
-      ).includes(searchTerm);
-    })
-    .filter((route) => {
-      return !route.properties.direction.includes("South");
-    })
-    .filter((route) => {
-      return !route.properties.direction.includes("West");
-    })
-    .filter((route) => {
-      return route.properties.day_type === "wk";
-    });;
-
- 
-
   // End of search code
-
-
 
   let { route } = useParams();
 
-  let selectedRoute = findDataForRoute(route)
-  const totalAcc = (selectedRoute[0].properties.ratio) * 100;
-  const busFraction = calcBusFraction(totalAcc.toFixed(0))
+  let selectedRoute = findDataForRoute(route);
+  const totalAcc = selectedRoute[0].properties.ratio * 100;
+  const busFraction = calcBusFraction(totalAcc.toFixed(0));
 
   const selectedRouteRidership = ridershipData.filter(
     (x) => x.route_id === selectedRoute[0].properties.route_id
@@ -106,56 +81,58 @@ const RouteStats = () => {
 
   const percentileIndex = findPercentileIndex(selectedRoute[0]);
 
+  console.log(searchTerm);
+
   return (
-    <div className="page-container">
-      <div className="route-title">
-        <h1>
-          <span className="bus-number">
-            {selectedRoute[0].properties.route_id}
-          </span>{" "}
-        </h1>
-        <h2>
-          {selectedRoute[0].properties.route_long_name}
-        </h2>
-        <Search
-          onChangeSearch={onChangeSearch}
-          searchTerm={searchTerm}
-          searchResults={searchResults}
-          onSelect={(route) => navigate('/route-stats/' + route, { replace: true })}
-        />
+    <div className="page-container route-stat-page">
+      <h1>Data by Route</h1>
+      <Search
+        fullWidth
+        onChangeSearch={onChangeSearch}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        onSelect={(route) =>
+          navigate("/route-stats/" + route, { replace: true })
+        }
+      />
+
+      <h2 className="routeName">
+        <span className="bus-number">
+          {selectedRoute[0].properties.route_id}
+        </span>{" "}
+        {selectedRoute[0].properties.route_long_name}
+      </h2>
+      <div className="route-stats-container">
+        <div className="route-fast-facts">
+          <h3>Fast Facts</h3>
+          <ul>
+            <li>{percentileStatistic(percentileIndex)}</li>
+            <li>
+              {busFraction[0]} in every {busFraction[1]} buses is ghosting CTA
+              riders
+            </li>
+            <li>
+              This bus ranks {selectedRoute[0].properties.ratio_ranking} in
+              reliability out of 124 bus lines{" "}
+            </li>
+            <li>
+              <RidershipGraphic
+                noStyling
+                ridershipCount={averageRidershipPerWeekday.avg_riders}
+                intervalName="weekday"
+              />
+            </li>
+          </ul>
+          {RidershipFootnote}
+        </div>
+        <div className="route-bus-image"></div>
+        <div className="stats-list">
+          {/* TO DO: Add static map zoomed in on route. Grab route map off CTA website? */}
+
+          <TripRatioGraph route_id={selectedRoute[0].properties.route_id} />
+        </div>
       </div>
-
-      <div className="stats-list">
-
-        {/* TO DO: Add static map zoomed in on route. Grab route map off CTA website? */}
-        
-        <TripRatioGraph 
-          route_id={selectedRoute[0].properties.route_id}/>
-
-        <RidershipGraphic
-          ridershipCount={averageRidershipPerWeekday.avg_riders}
-          intervalName="weekday" />
-
-        <PercentileGraphic percentileIndex={percentileIndex} />
-
-        <GhostingGraphic busFraction={busFraction} />
-
-        <ReliabilityRankGraphic rank={selectedRoute[0].properties.ratio_ranking} />
-
-      </div>
-
-      <p className="footnote">
-        * = weekday ridership taken from{" "}
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://www.transitchicago.com/assets/1/6/Monthly_Ridership_2022-7(Final).pdf"
-        >
-          CTA Ridership Report
-        </a>{" "}
-      </p>
-
-    </div >
+    </div>
   );
 };
 

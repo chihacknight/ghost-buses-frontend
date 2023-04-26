@@ -20,8 +20,6 @@
   }
 }
 
-
-
 .ridership,
 .fraction {
   @include flex-center;
@@ -29,9 +27,7 @@
 
 .fraction {
   .bus-graphic-text {
-
-
-    p {
+    span {
       font-size: 1.1rem;
       font-weight: 700;
       padding: 1em 0;
@@ -43,6 +39,22 @@
 
     span {
       color: $cta-blue;
+    }
+  }
+}
+
+.ridership {
+  .bus-graphic-text {
+    display: flex;
+    flex-direction: column;
+    span {
+      color: black;
+      font-size: 1rem;
+
+      &:nth-of-type(2) {
+        color: $cta-red;
+        font-size: 3rem;
+      }
     }
   }
 }
@@ -101,31 +113,42 @@
       padding: 7px 0;
     }
   }
-
 }
 
 .trip-performance-graph {
-
-  .data-select-button {
-    padding: 13px 25px;
-    margin-top: 20px;
-    background-color: gray;
-    border: none;
-    color: white;
-    border-radius: 100px;
-    cursor: pointer;
-    @include transitionHover;
-
-    &:hover{
-      background-color: $blue-button;
-      @include transitionHover;
-    }
-
-    &-selected{
-      @extend .data-select-button;
-      background-color: $blue-button;
-    }
-
+  .plot-container {
+    border: 1px solid #bebebe;
   }
 
+  .note {
+    width: 85%;
+    padding: 1em;
+    margin-top: 1em;
+  }
+  .button-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 1em;
+    .data-select-button {
+      padding: 13px 25px;
+      background-color: gray;
+      border: none;
+      color: white;
+      border-radius: 100px;
+      cursor: pointer;
+      @include transitionHover;
+
+      &:hover {
+        background-color: $blue-button;
+        @include transitionHover;
+      }
+
+      &-selected {
+        @extend .data-select-button;
+        background-color: $blue-button;
+      }
+    }
+  }
 }

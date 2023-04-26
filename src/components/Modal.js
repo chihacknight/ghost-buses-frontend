@@ -1,11 +1,9 @@
 import React from "react";
 import BusRouteDetails from "./BusRouteDetails";
 import { Link } from "react-router-dom";
+import { RidershipFootnote } from "./RidershipFootnote";
 
-export default function Modal({ selectedRoute, closeModal, }) {
-
-
-
+export default function Modal({ selectedRoute, closeModal }) {
   // take all the ratios from the data and average out each line's mean bus reliablility
 
   // most recent data only shows relability ("acc") for weekday bus lines, so setting totalAcc to the lines ratio. Leaving below code in because this is a short term change and i dont want to re-write it!!
@@ -42,7 +40,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
   //   (saturdayAcc > 0 ? 1 : 0) +
   //   (sundayAcc > 0 ? 1 : 0) +
   //   (weekdayAcc > 0 ? 1 : 0);
-  const totalAcc = (selectedRoute[0].properties.ratio) * 100;
+  const totalAcc = selectedRoute[0].properties.ratio * 100;
 
   //round the percentages to the nearest ten
 
@@ -70,19 +68,19 @@ export default function Modal({ selectedRoute, closeModal, }) {
   //fraction of buses on average that are "ghost buses"
 
   const calcBusFraction = (acc) => {
-    let fraction
+    let fraction;
     if (acc > 22 && acc < 27) {
-      fraction = [3, 4]
+      fraction = [3, 4];
     } else if (acc > 72 && acc < 77) {
-      fraction = [1, 4]
+      fraction = [1, 4];
     } else {
-      fraction = reduce((100 - round10(Math.round(acc))), 100);
+      fraction = reduce(100 - round10(Math.round(acc)), 100);
     }
 
-    return fraction
-  }
+    return fraction;
+  };
 
-  const busFraction = calcBusFraction(totalAcc.toFixed(0))
+  const busFraction = calcBusFraction(totalAcc.toFixed(0));
   return (
     <div className="modal" onClick={closeModal}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
@@ -97,24 +95,11 @@ export default function Modal({ selectedRoute, closeModal, }) {
 
         <div className="btn-container">
           <Link to={"/route-stats/" + selectedRoute[0].properties.route_id}>
-            <button className="action-btn">
-              More Stats!
-            </button>
+            <button className="action-btn">More Stats!</button>
           </Link>
         </div>
 
-        <p className="modal-footnote">
-          * = weekday ridership taken from{" "}
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.transitchicago.com/assets/1/6/Monthly_Ridership_2022-7(Final).pdf"
-          >
-            CTA Ridership Report
-          </a>{" "}
-        </p>
-
-
+        {RidershipFootnote}
       </div>
     </div>
   );
