@@ -5,10 +5,9 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import findPercentileIndex from "../utils/percentileKeys";
 import Search from "../components/Search";
+import MapTile from "../components/MapTile";
 
 import RidershipGraphic from "../components/stat-visuals/RidershipGraphic";
-import GhostingGraphic from "../components/stat-visuals/GhostingGraphic";
-import ReliabilityRankGraphic from "../components/stat-visuals/ReliabilityRankGraphic";
 import { percentileStatistic } from "../components/stat-visuals/PercentileGraphic";
 import TripRatioGraph from "../components/stat-visuals/TripRatioGraph";
 import { RidershipFootnote } from "../components/RidershipFootnote";
@@ -81,8 +80,6 @@ const RouteStats = () => {
 
   const percentileIndex = findPercentileIndex(selectedRoute[0]);
 
-  console.log(searchTerm);
-
   return (
     <div className="page-container route-stat-page">
       <h1>Data by Route</h1>
@@ -125,7 +122,9 @@ const RouteStats = () => {
           </ul>
           {RidershipFootnote}
         </div>
-        <div className="route-bus-image"></div>
+        <div className="route-map-tile">
+          <MapTile route_id={selectedRoute[0].properties.route_id} />
+        </div>
         <div className="stats-list">
           {/* TO DO: Add static map zoomed in on route. Grab route map off CTA website? */}
 
