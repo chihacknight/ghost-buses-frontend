@@ -83,7 +83,18 @@ const RouteStats = () => {
       return route.properties.day_type === "wk";
     });;
 
- 
+  const searchResultsElements = searchResults.map((result) => (
+    <div
+      key={result.properties.route_id}
+      className="search-result"
+      onClick={() => navigate('/route-stats/' + result.properties.route_id, { replace: true })}
+    >
+      <p>
+        <span>{result.properties.route_id}</span>
+        {result.properties.route_long_name}
+      </p>
+    </div>
+  ));
 
   // End of search code
 
@@ -119,8 +130,7 @@ const RouteStats = () => {
         <Search
           onChangeSearch={onChangeSearch}
           searchTerm={searchTerm}
-          searchResults={searchResults}
-          onSelect={(route) => navigate('/route-stats/' + route, { replace: true })}
+          searchResultsElements={searchResultsElements}
         />
       </div>
 

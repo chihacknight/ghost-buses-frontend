@@ -78,21 +78,33 @@ export default function Map() {
       return route.properties.day_type === "wk";
     });
 
+  const searchResultsElements = searchResults.map((result) => (
+    <div
+      key={result.id}
+      className="search-result"
+      onClick={() => onClickBusRoute(result)}
+    >
+      <p>
+        <span>{result.properties.route_id}</span>
+        {result.properties.route_long_name}
+      </p>
+    </div>
+  ));
 
   // modal functionality
 
   // clicking a bus route opens the modal
 
-  function findDataForRoute(route_id) {
+  function findDataForRoute(feature) {
     const results = resultsData.features.filter(
       (data) =>
-        String(data.properties.route_id) === String(route_id)
+        String(data.properties.route_id) === String(feature.properties.route_id)
     );
     return results;
   }
 
-  const onClickBusRoute = (route_id) => {
-    setSelectedRoute(findDataForRoute(route_id));
+  const onClickBusRoute = (feature) => {
+    setSelectedRoute(findDataForRoute(feature));
     document.body.style.overflow = "hidden";
   };
 
@@ -137,22 +149,22 @@ export default function Map() {
       });
 
       layer.on({
-        click: () => onClickBusRoute(feature.properties.route_id),
+        click: () => onClickBusRoute(feature),
         mouseover: highlightFeature,
         mouseout: resetHighlight,
       });
 
-      const routeMatch = findDataForRoute(feature.properties.route_id)[0];
+      const routeMatch = findDataForRoute(feature)[0];
 
       routeMatch &&
         layer.setStyle(
           currentFilters.color
             ? {
-              weight: 4,
-              fillColor: setColor(routeMatch),
-              color: setColor(routeMatch),
-              fillOpacity: 1,
-            }
+                weight: 4,
+                fillColor: setColor(routeMatch),
+                color: setColor(routeMatch),
+                fillOpacity: 1,
+              }
             : style
         );
     }
@@ -175,11 +187,11 @@ export default function Map() {
     layer.setStyle(
       currentFilters.color
         ? {
-          color: setColor(routeMatch),
-          fillColor: setColor(routeMatch),
-          weight: 3,
-          fillOpacity: 1,
-        }
+            color: setColor(routeMatch),
+            fillColor: setColor(routeMatch),
+            weight: 3,
+            fillOpacity: 1,
+          }
         : style
     );
   }
@@ -203,8 +215,7 @@ export default function Map() {
         <Search
           onChangeSearch={onChangeSearch}
           searchTerm={searchTerm}
-          searchResults={searchResults}
-          onSelect={(route_id) => onClickBusRoute(route_id)}
+          searchResultsElements={searchResultsElements}
         />
 
         <TileLayer
