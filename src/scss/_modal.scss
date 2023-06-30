@@ -14,7 +14,7 @@
       position: relative;
       border-radius: 15px;
       width: 80%;
-      max-height: 80vh;
+      max-height: 90vh;
       margin-top: 2em;
       max-width: 600px;
       padding: 2em;
@@ -102,12 +102,5 @@
           }
         }
       }
-    }
-  }
-
-  @media (min-width: $desktop-bp) {
-    .modal-container {
-      overflow: hidden;
-      margin-top: 0
     }
   }
