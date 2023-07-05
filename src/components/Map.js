@@ -61,19 +61,50 @@ export default function Map() {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
+  const searchResults = resultsData.features
+    .filter((route) => {
+      return (
+        String(route.properties.route_id) +
+        route.properties.route_long_name.toLowerCase()
+      ).includes(searchTerm);
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("South");
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("West");
+    })
+    .filter((route) => {
+      return route.properties.day_type === "wk";
+    });
+
+  const searchResultsElements = searchResults.map((result) => (
+    <div
+      key={result.id}
+      className="search-result"
+      onClick={() => onClickBusRoute(result)}
+    >
+      <p>
+        <span>{result.properties.route_id}</span>
+        {result.properties.route_long_name}
+      </p>
+    </div>
+  ));
+
   // modal functionality
 
   // clicking a bus route opens the modal
 
-  function findDataForRoute(route_id) {
+  function findDataForRoute(feature) {
     const results = resultsData.features.filter(
-      (data) => String(data.properties.route_id) === String(route_id)
+      (data) =>
+        String(data.properties.route_id) === String(feature.properties.route_id)
     );
     return results;
   }
 
-  const onClickBusRoute = (route_id) => {
-    setSelectedRoute(findDataForRoute(route_id));
+  const onClickBusRoute = (feature) => {
+    setSelectedRoute(findDataForRoute(feature));
     document.body.style.overflow = "hidden";
   };
 
@@ -118,12 +149,12 @@ export default function Map() {
       });
 
       layer.on({
-        click: () => onClickBusRoute(feature.properties.route_id),
+        click: () => onClickBusRoute(feature),
         mouseover: highlightFeature,
         mouseout: resetHighlight,
       });
 
-      const routeMatch = findDataForRoute(feature.properties.route_id)[0];
+      const routeMatch = findDataForRoute(feature)[0];
 
       routeMatch &&
         layer.setStyle(
@@ -184,7 +215,7 @@ export default function Map() {
         <Search
           onChangeSearch={onChangeSearch}
           searchTerm={searchTerm}
-          onSelect={(route_id) => onClickBusRoute(route_id)}
+          searchResultsElements={searchResultsElements}
         />
 
         <TileLayer

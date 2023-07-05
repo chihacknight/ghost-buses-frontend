@@ -62,6 +62,36 @@ const RouteStats = () => {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
+  const searchResults = resultsData.features
+    .filter((route) => {
+      return (
+        String(route.properties.route_id) +
+        route.properties.route_long_name.toLowerCase()
+      ).includes(searchTerm);
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("South");
+    })
+    .filter((route) => {
+      return !route.properties.direction.includes("West");
+    })
+    .filter((route) => {
+      return route.properties.day_type === "wk";
+    });;
+
+  const searchResultsElements = searchResults.map((result) => (
+    <div
+      key={result.properties.route_id}
+      className="search-result"
+      onClick={() => navigate('/route-stats/' + result.properties.route_id, { replace: true })}
+    >
+      <p>
+        <span>{result.properties.route_id}</span>
+        {result.properties.route_long_name}
+      </p>
+    </div>
+  ));
+
   // End of search code
 
   let { route } = useParams();
