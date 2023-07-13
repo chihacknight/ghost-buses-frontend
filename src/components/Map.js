@@ -180,7 +180,6 @@ export default function Map() {
       fillOpacity: 1,
     });
     layer.bringToFront();
-    console.log("here we are")
   }
 
   function resetHighlight(e) {
