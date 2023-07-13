@@ -179,6 +179,8 @@ export default function Map() {
       color: "#fff",
       fillOpacity: 1,
     });
+    layer.bringToFront();
+    console.log("here we are")
   }
 
   function resetHighlight(e) {
