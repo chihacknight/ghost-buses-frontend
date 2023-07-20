@@ -7,7 +7,7 @@
     text-decoration: none;
     font-weight: 700;
 
-    &:hover, &:focus {
+    &:not(.leaflet-control-zoom-in):not(.leaflet-control-zoom-out):hover, &:not(.leaflet-control-zoom-in):not(.leaflet-control-zoom-out):focus {
       color: $blue-button;
       text-decoration: underline;
     }
