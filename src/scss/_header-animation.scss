@@ -9,6 +9,7 @@ header {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    z-index: 1000;
     @include transitionHover;
 
     &:hover, &:focus {
@@ -22,7 +23,7 @@ header {
   }
 
   .svg-container {
-    padding-top: 1em;
+    padding-top: 0em;
     position: relative;
     height: 200px;
     background: url(../assets/Vector.png);
