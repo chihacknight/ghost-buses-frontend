@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
-import resultsData from "../Routes/data.json";
+import resultsData from "../Routes/data_2022-05-20_to_2023-07-02.json";
 import Search from "./Search";
 import Modal from "./Modal";
 import Filter from "./Filter";

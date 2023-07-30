@@ -1,4 +1,4 @@
-import resultsData from "../Routes/data.json";
+import resultsData from "../Routes/data_2022-05-20_to_2023-07-02.json";
 import ridershipData from "../Routes/july2022_cta_ridership_data_day_type_summary.json";
 
 import React, { useState } from "react";
