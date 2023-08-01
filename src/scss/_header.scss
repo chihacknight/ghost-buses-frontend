@@ -1,7 +1,8 @@
 header {
   position: relative;
-  margin-bottom: 4em;
-  padding-top: 17em;
+  margin-bottom: 0em;
+  margin-top: 5em;
+  padding-top: 1em;
   margin-top: 0;
   width: 100%;
 
@@ -17,10 +18,10 @@ header {
 
   .h1-container {
     position: absolute;
-    margin-top: 10em;
+    margin-top: 5em;
     right: 25%;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     h1 {
       display: none;
     }
@@ -50,10 +51,26 @@ header {
 
 @media (min-width: $desktop-bp) {
   header {
-    padding-top: 12em;
+    padding-top: 1em;
+
 
     .h1-container {
-      margin-top: 4em;
+      margin-top: 1em;
+    }
+  }
+
+  .mobile-bar {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-bp) {
+  header {
+    padding-top: 1em;
+    margin-top: 0em;
+
+    .h1-container {
+      margin-top: 1em;
     }
   }
 
