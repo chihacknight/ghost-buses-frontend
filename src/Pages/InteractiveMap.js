@@ -2,14 +2,14 @@ import React from "react";
 import Map from "../components/Map";
 import results from "../Routes/data.json"
 
-var start_date = results.date_range.start_date
-var end_date = results.date_range.end_date
+var start = results.dates.start
+var end = results.dates.end
 
 const InteractiveMap = () => {
   return (
     <div className="page-container">
       <h1>Interactive Map</h1>
-      <div className="map-title">Data from {start_date} to {end_date} </div>
+      <div className="map-title">Data from {start} to {end} </div>
       <Map />
 
       <h2>Welcome to the Map Beta!</h2>
