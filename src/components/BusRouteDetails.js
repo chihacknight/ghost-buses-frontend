@@ -1,6 +1,6 @@
 import React from "react";
+import { useRidership } from "../components/Context";
 
-import ridershipData from "../Routes/july2022_cta_ridership_data_day_type_summary.json";
 
 import findPercentileIndex from "../utils/percentileKeys";
 import RidershipGraphic from "./stat-visuals/RidershipGraphic";
@@ -9,6 +9,7 @@ import GhostingGraphic from "./stat-visuals/GhostingGraphic";
 import ReliabilityRankGraphic from "./stat-visuals/ReliabilityRankGraphic";
 
 function BusRouteDetails({ selectedRoute, busFraction }) {
+  const { ridershipData } = useRidership();
   const selectedRouteRidership = ridershipData.filter(
     (x) => x.route_id === selectedRoute[0].properties.route_id
   );
