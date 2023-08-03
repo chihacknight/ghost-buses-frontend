@@ -1,14 +1,5 @@
 import React from "react";
 import Map from "../components/Map";
-import { RidershipProvider} from "../components/Context.js";
-import { ResultsProvider } from "../components/Context.js";
-
-//These two files are currently coupled in various components directly to the data.
-//The first step in decoupling them is to move them into the Map component and then
-//use a context provider to pass the data to the other components that need it.
-//In our case, these will be children of MapContainer and Modal.
-import resultsData from "../Routes/data.json";
-import ridershipData from "../Routes/july2022_cta_ridership_data_day_type_summary.json";
 
 
 
@@ -20,11 +11,9 @@ const InteractiveMap = () => {
   return (
     <div className="page-container">
       <h1>Interactive Map</h1>
-      <RidershipProvider value={{ridershipData}}>
-      <ResultsProvider value={{resultsData}}>
-        <Map />
-      </ResultsProvider>
-      </RidershipProvider>
+
+      <Map />
+
 
       <h2>Welcome to the Map Beta!</h2>
       <p>Use the map above to explore Chicago's bus lines.</p>

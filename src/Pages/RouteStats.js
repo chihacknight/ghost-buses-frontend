@@ -1,5 +1,5 @@
-import {useResults} from  "../components/Context"
-import {useRidership} from "../components/Context"
+import { useResults } from  "../components/Context.js"
+import { useRidership } from "../components/Context.js"
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import findPercentileIndex from "../utils/percentileKeys";
@@ -48,9 +48,11 @@ function reduce(numerator, denominator) {
 
 
 
-const RouteStats = () => {
-  const resultsData = useResults();
-  const ridershipData = useRidership();
+const RouteStats = () => {  
+  const { resultsData } = useResults();
+  const { ridershipData } = useRidership();
+
+
   
 
   // Search functions (need to be refactored)
