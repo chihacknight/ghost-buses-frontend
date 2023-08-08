@@ -5,11 +5,20 @@ import results from "../Routes/data.json"
 var start = results.dates.start
 var end = results.dates.end
 
+function formatDate(date) {
+  var formatted = new Date(date+'T00:00:00')
+  return formatted.toLocaleDateString('en', {
+    'year': 'numeric', 'month': 'long', 'day': 'numeric'})
+}
+
+var startFormatted = formatDate(start)
+var endFormatted = formatDate(end)
+
 const InteractiveMap = () => {
   return (
     <div className="page-container">
       <h1>Interactive Map</h1>
-      <div className="map-title">Data from {start} to {end} </div>
+      <div className="map-title">Data from {startFormatted} to {endFormatted} </div>
       <Map />
 
       <h2>Welcome to the Map Beta!</h2>
