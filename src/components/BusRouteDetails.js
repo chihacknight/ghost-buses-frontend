@@ -7,6 +7,9 @@ import RidershipGraphic from "./stat-visuals/RidershipGraphic";
 import PercentileGraphic from "./stat-visuals/PercentileGraphic";
 import GhostingGraphic from "./stat-visuals/GhostingGraphic";
 import ReliabilityRankGraphic from "./stat-visuals/ReliabilityRankGraphic";
+import busIcon from "../assets/bus-icon.png";
+import ghostIcon from "../assets/bxs_ghost.png";
+
 
 function BusRouteDetails({ selectedRoute, busFraction }) {
   const selectedRouteRidership = ridershipData.filter(

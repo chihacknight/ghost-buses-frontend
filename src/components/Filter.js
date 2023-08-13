@@ -1,4 +1,5 @@
 import React from "react";
+import RankingLegend from "./RankingLegend";
 
 const Filter = ({
   currentFilters,
