@@ -1,17 +1,24 @@
 import React from "react";
 import Map from "../components/Map";
+import {useResults} from "../components/Context";
 
+
+
+function formatDate(date) {
+  var formatted = new Date(date+'T00:00:00')
+  return formatted.toLocaleDateString('en', {
+    'year': 'numeric', 'month': 'long', 'day': 'numeric'})
+}
 
 
 const InteractiveMap = () => {
-  //At some point, some form of the next line will be needed to obtain the data which
-  //will be passed to the context provider.
-  // const data = [resultsData, ridershipData];
+
+  const { resultsData } = useResults();
 
   return (
     <div className="page-container">
       <h1>Interactive Map</h1>
-
+<div className="map-title">Data from {formatDate(resultsData.dates.start)} to {formatDate(resultsData.dates.end)} </div>
       <Map />
 
 
