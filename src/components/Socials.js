@@ -1,20 +1,28 @@
 import React from "react";
 
-
 export default function Socials() {
   return (
     <div className="social-sidebar">
-      <a href="https://twitter.com/ghostbuses">
+      <a
+        href="https://twitter.com/ghostbuses"
+        aria-label="Ghost Buses Twitter link"
+      >
         <div className="social-icon twitter">
           <i className="fa-brands fa-twitter"></i>
         </div>
       </a>
-      <a href="https://github.com/chihacknight/chn-ghost-buses">
+      <a
+        href="https://github.com/chihacknight/chn-ghost-buses"
+        aria-label="Ghost Buses GitHub link"
+      >
         <div className="social-icon github">
           <i className="fa-brands fa-github"></i>
         </div>
       </a>
-      <a href="https://chihacknight.org/">
+      <a
+        href="https://chihacknight.org/"
+        aria-label="Chi Hack Night website link"
+      >
         <div className="social-icon chn">
           <svg
             version="1.0"

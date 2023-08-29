@@ -54,6 +54,7 @@ const InteractiveMap = () => {
           href="https://github.com/chihacknight/breakout-groups/issues/217"
           target="_blank"
           rel="noreferrer"
+          aria-label="Breakout group information link"
         >
           <button className="action-btn">Breakout group information</button>
         </a>
@@ -61,6 +62,7 @@ const InteractiveMap = () => {
           href="https://github.com/chihacknight/ghost-buses-frontend"
           target="_blank"
           rel="noreferrer"
+          aria-label="Frontend Repository link"
         >
           <button className="action-btn">Frontend Repository</button>
         </a>
@@ -68,6 +70,7 @@ const InteractiveMap = () => {
           href="https://github.com/chihacknight/chn-ghost-buses/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Data Repository link"
         >
           <button className="action-btn">Data Repository</button>
         </a>
@@ -75,6 +78,7 @@ const InteractiveMap = () => {
           href="https://twitter.com/ghostbuses"
           target="_blank"
           rel="noreferrer"
+          aria-label="Ghost Buses Twitter link"
         >
           <button className="action-btn">Ghost Bus Twitter</button>
         </a>
