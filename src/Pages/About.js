@@ -44,6 +44,12 @@ const About = () => {
           </button>
         </a>
       </div>
+      <div className="gb-impact">
+        <h2>About Our Impact</h2>
+        <p>
+          During the time Ghost Buses has existed, we've always been open to providing people and organizations access to our data to aid their causes towards a more informed and improved Chicago transit system. Some of those include:
+        </p>
+      </div>
     </div>
   );
 };
