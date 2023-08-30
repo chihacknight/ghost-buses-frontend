@@ -10,6 +10,7 @@ import RidershipGraphic from "../components/stat-visuals/RidershipGraphic";
 import GhostingGraphic from "../components/stat-visuals/GhostingGraphic";
 import ReliabilityRankGraphic from "../components/stat-visuals/ReliabilityRankGraphic";
 import PercentileGraphic from "../components/stat-visuals/PercentileGraphic";
+import TripRatioGraph from "../components/stat-visuals/TripRatioGraph";
 
 
 //customized; goes off route id
@@ -137,6 +138,9 @@ const RouteStats = () => {
       <div className="stats-list">
 
         {/* TO DO: Add static map zoomed in on route. Grab route map off CTA website? */}
+        
+        <TripRatioGraph 
+          route_id={selectedRoute[0].properties.route_id}/>
 
         <RidershipGraphic
           ridershipCount={averageRidershipPerWeekday.avg_riders}

@@ -104,3 +104,20 @@
       }
     }
   }
+
+
+.routeName {
+  font-size: 1.2rem;
+  color: $text-color;
+  font-style: inherit;
+  letter-spacing: 1px;
+
+  span {
+    color: white;
+    background-color: $cta-red;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-right: 7px;
+  }
+}
+
