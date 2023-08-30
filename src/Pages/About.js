@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="page-container about">
       <div className="chn-details">
-        <h2> About Chi Hack Night</h2>
+        <h2>About Chi Hack Night</h2>
         <p>
           Chi Hack Night is a free, weekly event in Chicago to build, share, and
           learn about tools to serve the public good. Chi Hack Night relies on
