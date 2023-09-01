@@ -47,8 +47,27 @@ const About = () => {
       <div className="gb-impact">
         <h2>About Our Impact</h2>
         <p>
-          During the time Ghost Buses has existed, we've always been open to providing people and organizations access to our data to aid their causes towards a more informed and improved Chicago transit system. Some of those include:
+          During the time Ghost Buses has existed, we've always been open to providing people and organizations access to our data to aid their causes towards a more informed and improved Chicago transit system. Some of them include:
         </p>
+        <ul>
+          <li>Commuters Take Action hosted a
+            <a
+              href="https://twitter.com/ctaaction/status/1615451583117942796?s=20"
+              target="_blank"
+              rel="noreferrer"> stickering campaign.
+            </a>
+          </li>
+          <li>Active Transportation Alliance advocated for communters by showing ghost buses along
+            <a
+              href="https://twitter.com/activetrans/status/1587115639516323842?s=20"
+              target="_blank"
+              rel="noreferrer"> specific routes.
+            </a>
+          </li>
+          <li>Ethan</li>
+          <li>Kristen</li>
+          <li>Guy who DM'd on Twitter</li>
+        </ul>
       </div>
     </div>
   );
