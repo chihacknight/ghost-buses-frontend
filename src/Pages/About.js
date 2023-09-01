@@ -50,11 +50,11 @@ const About = () => {
           During the time Ghost Buses has existed, we've always been open to providing people and organizations access to our data to aid their causes towards a more informed and improved Chicago transit system. Some of them include:
         </p>
         <ul>
-          <li>Commuters Take Action hosted a
+          <li>Commuters Take Action hosted a stickering campaign to highlight the
             <a
               href="https://twitter.com/ctaaction/status/1615451583117942796?s=20"
               target="_blank"
-              rel="noreferrer"> stickering campaign.
+              rel="noreferrer"> least reliable bus routes.
             </a>
           </li>
           <li>Active Transportation Alliance advocated for communters by showing ghost buses along
