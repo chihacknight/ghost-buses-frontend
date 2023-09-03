@@ -57,7 +57,7 @@ const About = () => {
               rel="noreferrer"> least reliable bus routes.
             </a>
           </li>
-          <li>Active Transportation Alliance advocated for communters by showing ghost buses along
+          <li>Active Transportation Alliance advocated for communters by revealing ghost buses along
             <a
               href="https://twitter.com/activetrans/status/1587115639516323842?s=20"
               target="_blank"
