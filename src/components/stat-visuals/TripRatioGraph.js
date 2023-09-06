@@ -3,7 +3,6 @@ import Plot from 'react-plotly.js';
 
 import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes_2022-05-20_to_2023-07-02.json";
 
-
 function rollingAverage(values, windowSize) {
     const result = [];
     for (let i = 0; i < values.length; i++) {
@@ -236,12 +235,14 @@ function TripRatioGraph({ route_id }) {
                 data={data_ratio}
                 layout={layout_ratio}
                 config={{ displayModeBar: false }}
+                useResizeHandler={true}
             />
 
             <Plot
                 data={data_trips}
                 layout={layout_trips}
                 config={{ displayModeBar: false }}
+                useResizeHandler={true}
             />
         </div>
     );
