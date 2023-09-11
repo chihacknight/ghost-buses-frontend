@@ -202,23 +202,22 @@ export default function Map() {
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
       )}
+      <Filter
+        filterOpen={filterOpen}
+        setFilterOpen={setFilterOpen}
+        currentFilters={currentFilters}
+        setCurrentFilters={setCurrentFilters}
+      />
+      <Search
+        onChangeSearch={onChangeSearch}
+        searchTerm={searchTerm}
+        searchResultsElements={searchResultsElements}
+      />
       <MapContainer
         center={[41.881832, -87.691916]}
         zoom={11}
         scrollWheelZoom={false}
       >
-        <Filter
-          filterOpen={filterOpen}
-          setFilterOpen={setFilterOpen}
-          currentFilters={currentFilters}
-          setCurrentFilters={setCurrentFilters}
-        />
-        <Search
-          onChangeSearch={onChangeSearch}
-          searchTerm={searchTerm}
-          searchResultsElements={searchResultsElements}
-        />
-
         <TileLayer
           attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
