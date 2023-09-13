@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
-import resultsData from "../Routes/data.json";
 import Search from "./Search";
 import Modal from "./Modal";
 import Filter from "./Filter";
 import findPercentileIndex from "../utils/percentileKeys";
 
+import {useResults} from "./Context";
+
 export default function Map() {
+  const { resultsData } = useResults();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRoute, setSelectedRoute] = useState();
 

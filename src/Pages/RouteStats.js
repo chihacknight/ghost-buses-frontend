@@ -1,6 +1,5 @@
-import resultsData from "../Routes/data.json";
-import ridershipData from "../Routes/july2022_cta_ridership_data_day_type_summary.json";
-
+import { useResults } from  "../components/Context.js"
+import { useRidership } from "../components/Context.js"
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import findPercentileIndex from "../utils/percentileKeys";
@@ -13,14 +12,7 @@ import PercentileGraphic from "../components/stat-visuals/PercentileGraphic";
 import TripRatioGraph from "../components/stat-visuals/TripRatioGraph";
 
 
-//customized; goes off route id
-function findDataForRoute(route) {
-  const results = resultsData.features.filter(
-    (data) =>
-      String(data.properties.route_id) === route
-  );
-  return results;
-}
+
 
 //copy-pasted from modal component; need to refactor
 const calcBusFraction = (acc) => {
@@ -57,7 +49,12 @@ function reduce(numerator, denominator) {
 
 
 
-const RouteStats = () => {
+const RouteStats = () => {  
+  const { resultsData } = useResults();
+  const { ridershipData } = useRidership();
+
+
+  
 
   // Search functions (need to be refactored)
   const [searchTerm, setSearchTerm] = useState("");
@@ -103,7 +100,11 @@ const RouteStats = () => {
 
   let { route } = useParams();
 
-  let selectedRoute = findDataForRoute(route)
+
+
+  let selectedRoute = resultsData.features.filter(
+    (data) => String(data.properties.route_id) === route
+  )
   const totalAcc = (selectedRoute[0].properties.ratio) * 100;
   const busFraction = calcBusFraction(totalAcc.toFixed(0))
 
