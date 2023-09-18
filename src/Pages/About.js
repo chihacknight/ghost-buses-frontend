@@ -47,7 +47,7 @@ const About = () => {
       <div className="gb-impact">
         <h2>About Our Impact</h2>
         <p>
-          During the time Ghost Buses has existed, we've always been open to providing people and organizations access to our data to aid their causes towards a more informed and improved Chicago transit system. Some of them include:
+          Throughout the time Ghost Buses has existed, we've been open to providing people and organizations access to our data to aid others with their causes or purposes. Some towards a more informed and improved Chicago transit system, others towards learning and growth using relatable data. Some of them include:
         </p>
         <ul>
           <li>Commuters Take Action hosted a stickering campaign to highlight the
@@ -64,8 +64,8 @@ const About = () => {
               rel="noreferrer"> specific routes.
             </a>
           </li>
-          <li>Ethan</li>
-          <li>Kristen</li>
+          <li>Ethan A. composed a data analysis paper.</li>
+          <li>Kristen H. analyzed actual and scheduled headways as a learning exercise.</li>
           <li>Guy who DM'd on Twitter</li>
         </ul>
       </div>
