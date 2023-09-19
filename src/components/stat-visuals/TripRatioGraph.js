@@ -23,10 +23,11 @@ function isWeekday(dateString) {
     const dayOfWeek = date.getDay();
     return dayOfWeek >= 1 && dayOfWeek <= 5;
 }
-
-function isWeekend(dateString) {
-    return !isWeekday(dateString);
-}
+// This has been commented out because it is not used in the current version of the app. But I do not know if it will 
+// be needed in the future, so I am leaving it here for now.
+// function isWeekend(dateString) {
+//     return !isWeekday(dateString);
+// }
 
 function isSaturday(dateString) {
     const date = new Date(dateString + 'T00:00:00');
