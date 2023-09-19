@@ -18,7 +18,8 @@ const InteractiveMap = () => {
   return (
     <div className="page-container">
       <h1>Interactive Map</h1>
-<div className="map-title">Data from {formatDate(resultsData.dates.start)} to {formatDate(resultsData.dates.end)} </div>
+    <div className="map-title">Data from {formatDate(resultsData.dates.start)} to {formatDate(resultsData.dates.end)} </div>
+    <div className="map-text">Data updated periodically</div>
       <Map />
 
 
