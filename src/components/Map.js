@@ -53,6 +53,8 @@ export default function Map() {
     .map((route) => route.properties.route_id)
     .filter((v, i, a) => a.indexOf(v) === i);
 
+    console.log(mapRoutes)
+
   const mapToDisplay = mapRoutes.features.filter((route) =>
     availableRoutes.includes(route.properties.route_id)
   );
