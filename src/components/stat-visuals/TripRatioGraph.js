@@ -147,11 +147,18 @@ function TripRatioGraph({ route_id }) {
 
     const layout_trips = {
         responsive: true,
+        showLegend: false,
         autosize: true,
         title: 'Actual vs. Scheduled Trips',
+        legend: {
+            xanchor: 'right',
+            x: 1,
+            y: 1
+        },
         yaxis: {
             title: "Trips"
         },
+        
         annotations: [
             {
                 x: "2022-11-01",
@@ -180,6 +187,11 @@ function TripRatioGraph({ route_id }) {
         responsive: true,
         autosize: true,
         showlegend: true,
+        legend: {
+            xanchor: 'right',
+            x: 1,
+            y: 1
+        },
         title: 'Schedule Attainment',
         yaxis: {
             title: 'Ratio of Actual vs. Scheduled Trips',
