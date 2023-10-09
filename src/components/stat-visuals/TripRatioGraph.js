@@ -154,7 +154,7 @@ function TripRatioGraph({ route_id }) {
         legend: {
             xanchor: 'right',
             x: 1,
-            y: 1
+            y: 1.15
         },
         yaxis: {
             title: "Trips"
@@ -191,7 +191,7 @@ function TripRatioGraph({ route_id }) {
         legend: {
             xanchor: 'right',
             x: 1,
-            y: 1
+            y: 1.15
         },
         title: 'Schedule Attainment',
         yaxis: {
