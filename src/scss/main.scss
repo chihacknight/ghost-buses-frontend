@@ -120,12 +120,7 @@ code {
 
 @media (max-width: $tablet-bp) {
   .js-plotly-plot {
-    @include flex-center;
-    width: 90%;
-  }
-
-  .plot-container {
-    width: 90%;
+    width: 100%;
   }
 }
 
