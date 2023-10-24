@@ -116,3 +116,12 @@ code {
   width: 90%;
   border-radius: 8px;
 }
+
+
+@media (max-width: $tablet-bp) {
+  .js-plotly-plot {
+    width: 100%;
+  }
+}
+
+
