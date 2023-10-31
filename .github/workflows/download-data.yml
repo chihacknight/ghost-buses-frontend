@@ -25,11 +25,6 @@ jobs:
                     https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/schedule_vs_realtime_all_day_types_routes.json \
                     -O src/Routes/schedule_vs_realtime_all_day_types_routes.json
     
-    commit-changes:
-        needs: download-data-json
-        runs-on: macos-latest
-        steps:
-            - uses: actions/checkout@v3
             # Change the branch to main when ready to merge to main.
             - run: |
                 git config --local user.email "action@github.com"
