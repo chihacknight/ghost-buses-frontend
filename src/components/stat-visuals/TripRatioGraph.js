@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 
-import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes_2022-05-20_to_2023-07-02.json";
+import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes.json";
 
 function rollingAverage(values, windowSize) {
     const result = [];

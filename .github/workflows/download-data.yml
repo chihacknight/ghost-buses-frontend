@@ -1,0 +1,33 @@
+name: download-data
+
+on:
+    schedule:
+        # Run everyday at 2:00pm CST which is 7:00pm UTC
+        - cron: 0 19 * * *
+
+    # Allows the workflow to be run manually from the Actions tab
+    workflow_dispatch:
+
+jobs:
+    download-data-json:
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v3
+            - run: |
+                 wget https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/data.json \
+                    -O src/Routes/data.json
+                 wget \
+                    https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/schedule_vs_realtime_all_day_types_routes.json \
+                    -O src/Routes/schedule_vs_realtime_all_day_types_routes.json
+    
+            - run: |
+                git config --local user.email "action@github.com"
+                git config --local user.name "GitHub Action"
+                git add .
+                git diff-index --quiet HEAD || git commit -m "update data.json and schedule_vs_realtime_all_day_types_routes.json" -a
+                git push origin main:main
+
+        
+        
+        
+        
