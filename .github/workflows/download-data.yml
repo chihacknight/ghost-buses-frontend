@@ -30,7 +30,7 @@ jobs:
                 git config --local user.email "action@github.com"
                 git config --local user.name "GitHub Action"
                 git add .
-                git diff-index --quiet HEAD || git commit -m "{commit message}" -a
+                git diff-index --quiet HEAD || git commit -m "update data.json and schedule_vs_realtime_all_day_types_routes.json" -a
                 git push origin github-action:github-action
 
         
