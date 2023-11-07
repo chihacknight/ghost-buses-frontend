@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BusRouteDetails from "./BusRouteDetails";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export default function Modal({ selectedRoute, closeModal, }) {
+  const modalCloseRef = useRef(null);
 
-
+  useEffect(() => {
+    const modalCloseBtn = modalCloseRef.current;
+    if (modalCloseBtn) modalCloseBtn.focus();
+  }, [modalCloseRef]);
 
   // take all the ratios from the data and average out each line's mean bus reliablility
 
@@ -84,9 +89,9 @@ export default function Modal({ selectedRoute, closeModal, }) {
 
   const busFraction = calcBusFraction(totalAcc.toFixed(0))
   return (
-    <div className="modal" onClick={closeModal}>
+    <div className="modal" onClick={closeModal} >
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-        <button onClick={closeModal} className="close-btn">
+        <button onClick={closeModal} ref={modalCloseRef} className="close-btn" aria-label="Close">
           x
         </button>
         <BusRouteDetails

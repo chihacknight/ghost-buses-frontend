@@ -32,6 +32,8 @@
         cursor: pointer;
         border-radius: 50%;
         padding: 1em;
+        height: 3.25em;
+        width: 3.25em;
         @include transitionHover;
   
         &:hover {
