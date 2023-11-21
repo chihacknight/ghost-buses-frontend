@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import BusRouteDetails from "./BusRouteDetails";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
 
 export default function Modal({ selectedRoute, closeModal, }) {
   const modalCloseRef = useRef(null);
