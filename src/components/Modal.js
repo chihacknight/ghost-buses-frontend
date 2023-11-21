@@ -88,7 +88,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
 
   const busFraction = calcBusFraction(totalAcc.toFixed(0))
   return (
-    <div className="modal" onClick={closeModal} >
+    <div className="modal" onClick={closeModal}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         <button onClick={closeModal} ref={modalCloseRef} className="close-btn" aria-label="Close">
           x
