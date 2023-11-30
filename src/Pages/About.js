@@ -55,7 +55,7 @@ const About = () => {
               href="https://twitter.com/ctaaction"
               target="_blank"
               rel="noreferrer">Commuters Take Action
-            </a> compared scheduled train arrivals with actual run trains.
+            </a> compared scheduled train arrivals with actual run trains, then posted the percentage breakdown of each train line.
           </li>
           <li>
             <a
@@ -64,9 +64,14 @@ const About = () => {
               rel="noreferrer">Active Transportation Alliance
             </a> advocated for commuters by revealing ghost buses along specific routes.
           </li>
+          <li>
+            <a
+              href="https://www.equiticity.org/"
+              target="_blank"
+              rel="noreferrer">Equiticity
+            </a> examined bus reliability in North Lawndale."</li>
           <li>Ethan A. composed a data analysis paper.</li>
           <li>Kristen H. analyzed actual and scheduled headways as a learning exercise.</li>
-          <li>Guy who DM'd on Twitter</li>
         </ul>
       </div>
     </div>
