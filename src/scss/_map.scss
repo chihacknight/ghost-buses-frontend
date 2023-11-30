@@ -5,7 +5,7 @@
   .search-container {
       position: absolute;
       right: 15px;
-      top: 15px;
+      top: 40px;
       z-index: 150;
   }
 }
@@ -29,4 +29,10 @@
     font-weight: 700;
     min-width: 250px;
   }
+}
+
+.map-title {
+  font-weight: 900;
+  font-size: 15px; 
+  z-index: 1;
 }

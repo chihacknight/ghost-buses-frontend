@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import mapRoutes from "../Routes/bus_route_shapes_simplified_linestring.json";
-import resultsData from "../Routes/data.json";
 import Search from "./Search";
 import Modal from "./Modal";
 import Filter from "./Filter";
 import findPercentileIndex from "../utils/percentileKeys";
 
+import {useResults} from "./Context";
+
 export default function Map() {
+  const { resultsData } = useResults();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRoute, setSelectedRoute] = useState();
 
@@ -202,23 +204,22 @@ export default function Map() {
       {selectedRoute && (
         <Modal selectedRoute={selectedRoute} closeModal={closeModal} />
       )}
+      <Filter
+        filterOpen={filterOpen}
+        setFilterOpen={setFilterOpen}
+        currentFilters={currentFilters}
+        setCurrentFilters={setCurrentFilters}
+      />
+      <Search
+        onChangeSearch={onChangeSearch}
+        searchTerm={searchTerm}
+        searchResultsElements={searchResultsElements}
+      />
       <MapContainer
         center={[41.881832, -87.691916]}
         zoom={11}
         scrollWheelZoom={false}
       >
-        <Filter
-          filterOpen={filterOpen}
-          setFilterOpen={setFilterOpen}
-          currentFilters={currentFilters}
-          setCurrentFilters={setCurrentFilters}
-        />
-        <Search
-          onChangeSearch={onChangeSearch}
-          searchTerm={searchTerm}
-          searchResultsElements={searchResultsElements}
-        />
-
         <TileLayer
           attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"

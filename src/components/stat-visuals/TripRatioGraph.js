@@ -1,8 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 
-import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes_2022-05-20_to_2023-07-02.json";
-
+import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes.json";
 
 function rollingAverage(values, windowSize) {
     const result = [];
@@ -23,10 +22,11 @@ function isWeekday(dateString) {
     const dayOfWeek = date.getDay();
     return dayOfWeek >= 1 && dayOfWeek <= 5;
 }
-
-function isWeekend(dateString) {
-    return !isWeekday(dateString);
-}
+// This has been commented out because it is not used in the current version of the app. But I do not know if it will 
+// be needed in the future, so I am leaving it here for now.
+// function isWeekend(dateString) {
+//     return !isWeekday(dateString);
+// }
 
 function isSaturday(dateString) {
     const date = new Date(dateString + 'T00:00:00');
@@ -148,11 +148,18 @@ function TripRatioGraph({ route_id }) {
 
     const layout_trips = {
         responsive: true,
+        showLegend: false,
         autosize: true,
         title: 'Actual vs. Scheduled Trips',
+        legend: {
+            xanchor: 'right',
+            x: 1,
+            y: 1.15
+        },
         yaxis: {
             title: "Trips"
         },
+        
         annotations: [
             {
                 x: "2022-11-01",
@@ -181,6 +188,11 @@ function TripRatioGraph({ route_id }) {
         responsive: true,
         autosize: true,
         showlegend: true,
+        legend: {
+            xanchor: 'right',
+            x: 1,
+            y: 1.15
+        },
         title: 'Schedule Attainment',
         yaxis: {
             title: 'Ratio of Actual vs. Scheduled Trips',
@@ -236,12 +248,14 @@ function TripRatioGraph({ route_id }) {
                 data={data_ratio}
                 layout={layout_ratio}
                 config={{ displayModeBar: false }}
+                useResizeHandler={true}
             />
 
             <Plot
                 data={data_trips}
                 layout={layout_trips}
                 config={{ displayModeBar: false }}
+                useResizeHandler={true}
             />
         </div>
     );
