@@ -55,14 +55,14 @@ const About = () => {
               href="https://twitter.com/ctaaction"
               target="_blank"
               rel="noreferrer">Commuters Take Action
-            </a> used data to compare scheduled train arrivals with actual run trains.
+            </a> compared scheduled train arrivals with actual run trains.
           </li>
           <li>
             <a
               href="https://twitter.com/activetrans"
               target="_blank"
               rel="noreferrer">Active Transportation Alliance
-            </a> advocated for communters by revealing ghost buses along specific routes.
+            </a> advocated for commuters by revealing ghost buses along specific routes.
           </li>
           <li>Ethan A. composed a data analysis paper.</li>
           <li>Kristen H. analyzed actual and scheduled headways as a learning exercise.</li>
