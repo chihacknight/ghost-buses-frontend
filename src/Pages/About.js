@@ -50,19 +50,19 @@ const About = () => {
           Throughout the time Ghost Buses has existed, we've been open to providing people and organizations access to our data to aid others with their causes or purposes. Some towards a more informed and improved Chicago transit system, others towards learning and growth using relatable data. Some of them include:
         </p>
         <ul>
-          <li>Commuters Take Action hosted a stickering campaign to highlight the
+          <li>
             <a
-              href="https://twitter.com/ctaaction/status/1615451583117942796?s=20"
+              href="https://twitter.com/ctaaction"
               target="_blank"
-              rel="noreferrer"> least reliable bus routes.
-            </a>
+              rel="noreferrer">Commuters Take Action
+            </a> used data to compare scheduled train arrivals with actual run trains.
           </li>
-          <li>Active Transportation Alliance advocated for communters by revealing ghost buses along
+          <li>
             <a
-              href="https://twitter.com/activetrans/status/1587115639516323842?s=20"
+              href="https://twitter.com/activetrans"
               target="_blank"
-              rel="noreferrer"> specific routes.
-            </a>
+              rel="noreferrer">Active Transportation Alliance
+            </a> advocated for communters by revealing ghost buses along specific routes.
           </li>
           <li>Ethan A. composed a data analysis paper.</li>
           <li>Kristen H. analyzed actual and scheduled headways as a learning exercise.</li>
