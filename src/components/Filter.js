@@ -74,7 +74,7 @@ const Filter = ({
           onClick={() => setFilterOpen((prevFilterOpen) => !prevFilterOpen)}
           aria-label="Open map filtering options"
         >
-          <i aria-hidden="true" class="fa-solid fa-filter"></i>
+          <i aria-hidden="true" className="fa-solid fa-filter"></i>
         </button>
       </div>
       {currentFilters.color && (
