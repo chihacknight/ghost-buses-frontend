@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 
 import tripData from "../../Routes/schedule_vs_realtime_all_day_types_routes.json";
+import { subtractOneYear } from '../../utils/dateUtils';
 
 function rollingAverage(values, windowSize) {
     const result = [];
@@ -146,6 +147,13 @@ function TripRatioGraph({ route_id }) {
         },
     ];
 
+    let xaxis_range = [];
+    if (data_ratio && data_ratio[1] && data_ratio[1].x.length > 0 && window.screen.width < 500) {
+        const x_values = data_ratio[1].x;
+        const last_date = x_values[x_values.length - 1];
+        xaxis_range = [subtractOneYear(last_date), last_date]
+    }
+
     const layout_trips = {
         responsive: true,
         showLegend: false,
@@ -159,11 +167,13 @@ function TripRatioGraph({ route_id }) {
         yaxis: {
             title: "Trips"
         },
-        
+        xaxis: {
+            range: xaxis_range
+        },
         annotations: [
             {
-                x: "2022-11-01",
-                y: 20,
+                x: "2023-05-01",
+                y: 75,
                 xref: "x",
                 yref: "y",
                 showarrow: false,
@@ -197,11 +207,15 @@ function TripRatioGraph({ route_id }) {
         yaxis: {
             title: 'Ratio of Actual vs. Scheduled Trips',
             range: [0.0, 1.2],
-            zeroline: false
+            zeroline: false,
+            tickformat: ',.0%'
+        },
+        xaxis: {
+            range: xaxis_range
         },
         annotations: [
             {
-                x: "2022-11-01",
+                x: "2023-05-01",
                 y: 0.3,
                 xref: "x",
                 yref: "y",
