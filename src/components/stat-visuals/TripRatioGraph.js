@@ -147,6 +147,9 @@ function TripRatioGraph({ route_id }) {
         },
     ];
 
+    // this modifies the axis if there is data and the screen is small
+    // it applies the same axis to both charts assuming that their data ranges are the same
+    // it takes the most recent date and subtracts a year from it to show the last 12 months
     let xaxis_range = [];
     if (data_ratio && data_ratio[1] && data_ratio[1].x.length > 0 && window.screen.width < 500) {
         const x_values = data_ratio[1].x;
