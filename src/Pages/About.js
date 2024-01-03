@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="page-container about">
       <div className="chn-details">
-        <h2> About Chi Hack Night</h2>
+        <h2>About Chi Hack Night</h2>
         <p>
           Chi Hack Night is a free, weekly event in Chicago to build, share, and
           learn about tools to serve the public good. Chi Hack Night relies on
@@ -43,6 +43,36 @@ const About = () => {
             <strong>Get Involved</strong> with <strong>Ghost Bus</strong>
           </button>
         </a>
+      </div>
+      <div className="gb-impact">
+        <h2>About Our Impact</h2>
+        <p>
+          Throughout the time Ghost Buses has existed, we've been open to providing people and organizations access to our data to aid others with their causes or purposes. Some towards a more informed and improved Chicago transit system, others towards learning and growth using relatable data. Some of them include:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://twitter.com/ctaaction"
+              target="_blank"
+              rel="noreferrer">Commuters Take Action
+            </a> compared scheduled train arrivals with actual run trains, then posted the percentage breakdown of each train line.
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/activetrans"
+              target="_blank"
+              rel="noreferrer">Active Transportation Alliance
+            </a> advocated for commuters by revealing ghost buses along specific routes.
+          </li>
+          <li>
+            <a
+              href="https://www.equiticity.org/"
+              target="_blank"
+              rel="noreferrer">Equiticity
+            </a> examined bus reliability in North Lawndale.</li>
+          <li>Ethan A. composed a data analysis paper.</li>
+          <li>Kristen H. analyzed actual and scheduled headways as a learning exercise.</li>
+        </ul>
       </div>
     </div>
   );
