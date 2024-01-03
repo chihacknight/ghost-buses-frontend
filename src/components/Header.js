@@ -11,13 +11,12 @@ export default function Header() {
       <div className="mobile-bar"></div>
       <div className="h1-container">
         <h1>Ghost Bus</h1>
-        <img src={ghostBusLogo} alt="ghost bus logo" />
+        <a href="/"><img src={ghostBusLogo} alt="ghost bus logo" /></a>
         <div className="subtitle-container">
           <p className="subtitle">powered by</p>
           <img src={chiHackLogo} alt="ChiHackNight logo" />
         </div>
       </div>
-
       <div className="svg-container"></div>
       <div className="bus-stop-container">
         <p>?</p>
