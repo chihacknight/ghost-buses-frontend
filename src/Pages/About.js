@@ -69,7 +69,7 @@ const About = () => {
               href="https://www.equiticity.org/"
               target="_blank"
               rel="noreferrer">Equiticity
-            </a> examined bus reliability in North Lawndale."</li>
+            </a> examined bus reliability in North Lawndale.</li>
           <li>Ethan A. composed a data analysis paper.</li>
           <li>Kristen H. analyzed actual and scheduled headways as a learning exercise.</li>
         </ul>
