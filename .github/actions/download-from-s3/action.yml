@@ -1,0 +1,16 @@
+name: download-from-s3
+description: "Downloads files from s3"
+inputs:
+  file-path: 
+    description: "Path to test script"
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    - name: download s3 file
+      shell: bash
+      run: |
+        wget https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/${{inputs.file-path}} \
+        -O src/Routes/${{inputs.file-path}}

@@ -10,24 +10,14 @@ on:
 
 jobs:
     download-data-json:
-        runs-on: macos-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - run: |
-                 wget https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/data.json \
-                    -O src/Routes/data.json
-                 wget \
-                    https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/schedule_vs_realtime_all_day_types_routes.json \
-                    -O src/Routes/schedule_vs_realtime_all_day_types_routes.json
-    
-            - run: |
-                git config --local user.email "action@github.com"
-                git config --local user.name "GitHub Action"
-                git add .
-                git diff-index --quiet HEAD || git commit -m "update data.json and schedule_vs_realtime_all_day_types_routes.json" -a
-                git push origin main:main
-
-        
-        
-        
-        
+            - name: download data
+              uses: ./.github/actions/download-from-s3
+              with:
+                file-path: data.json
+            - name: download schedule vs realtime
+              uses: ./.github/actions/download-from-s3
+              with:
+                file-path: schedule_vs_realtime_all_day_types_routes.json
