@@ -196,7 +196,7 @@ function TripRatioGraph({ route_id }) {
         title: 'Schedule Attainment',
         yaxis: {
             title: 'Ratio of Actual vs. Scheduled Trips',
-            range: [0.0, 1.2],
+            autorange: true,
             zeroline: false
         },
         annotations: [
@@ -222,7 +222,7 @@ function TripRatioGraph({ route_id }) {
             }
         ]
     };
-
+    
     return (
         <div className="trip-performance-graph">
 
