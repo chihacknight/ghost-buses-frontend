@@ -70,6 +70,12 @@ const About = () => {
               target="_blank"
               rel="noreferrer">Equiticity
             </a> examined bus reliability in North Lawndale.</li>
+          <li>
+            <a
+              href="https://southsideweekly.com/op-ed-chicagos-transportation-system-reinforces-insularity-and-inequity/"
+              target="_blank"
+              rel="noreferrer">South Side Weekly 
+              </a> mentioned the project in an op-ed on inequity in Chicago public transit.</li>
           <li>Ethan A. composed a data analysis paper.</li>
           <li>Kristen H. analyzed actual and scheduled headways as a learning exercise.</li>
         </ul>
