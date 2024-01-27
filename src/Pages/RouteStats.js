@@ -108,7 +108,7 @@ const RouteStats = () => {
   const totalAcc = (selectedRoute[0].properties.ratio) * 100;
   const busFraction = calcBusFraction(totalAcc.toFixed(0))
 
-  const selectedRouteRidership = ridershipData.filter(
+  const selectedRouteRidership = ridershipData.data.filter(
     (x) => x.route_id === selectedRoute[0].properties.route_id
   );
 
