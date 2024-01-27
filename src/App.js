@@ -21,7 +21,7 @@ import RouteStats from "./Pages/RouteStats";
 //use a context provider to pass the data to the other components that need it.
 //In our case, these will be children of MapContainer and Modal.
 import resultsData from "./Routes/data.json";
-import ridershipData from "./Routes/july2022_cta_ridership_data_day_type_summary.json";
+import ridershipData from "./Routes/cta_ridership_data_day_type_summary.json";
 
 
 
