@@ -26,8 +26,8 @@ export default function Header() {
         <img src={bus} alt="" />
       </div>
       <button onClick={() => setPauseAnimation(prevPauseAnimation => !prevPauseAnimation)}  aria-label="pause/play bus animation" title="pause/play bus animation" >
-        {!pauseAnimation && <i class="fa-solid fa-pause"></i>}
-        {pauseAnimation && <i class="fa-solid fa-play"></i>}
+        {!pauseAnimation && <i className="fa-solid fa-pause"></i>}
+        {pauseAnimation && <i className="fa-solid fa-play"></i>}
       </button>
     </header>
   );
