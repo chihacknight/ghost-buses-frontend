@@ -116,9 +116,9 @@ export default function Modal({ selectedRoute, closeModal, }) {
             target="_blank"
             href="https://www.transitchicago.com/assets/1/6/Monthly_Ridership_2022-7(Final).pdf"
           >
-            CTA Ridership Report.
+            CTA Ridership Report
           </a>{" "}
-          Updated periodically.
+          . Updated periodically.
         </p>
 
 
