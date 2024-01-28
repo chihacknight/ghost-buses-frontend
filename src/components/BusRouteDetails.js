@@ -10,7 +10,7 @@ import ReliabilityRankGraphic from "./stat-visuals/ReliabilityRankGraphic";
 
 function BusRouteDetails({ selectedRoute, busFraction }) {
   const { ridershipData } = useRidership();
-  const selectedRouteRidership = ridershipData.filter(
+  const selectedRouteRidership = ridershipData.data.filter(
     (x) => x.route_id === selectedRoute[0].properties.route_id
   );
 

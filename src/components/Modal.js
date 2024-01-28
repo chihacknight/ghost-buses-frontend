@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import BusRouteDetails from "./BusRouteDetails";
 import { Link } from "react-router-dom";
+import { useRidership } from "./Context";
 
 export default function Modal({ selectedRoute, closeModal, }) {
   const modalCloseRef = useRef(null);
@@ -85,6 +86,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
 
     return fraction
   }
+  const { ridershipData } = useRidership()
 
   const busFraction = calcBusFraction(totalAcc.toFixed(0))
   return (
@@ -108,7 +110,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
         </div>
 
         <p className="modal-footnote">
-          * = weekday ridership taken from{" "}
+          * = {ridershipData.date} weekday ridership taken from{" "}
           <a
             rel="noreferrer"
             target="_blank"
@@ -116,6 +118,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
           >
             CTA Ridership Report
           </a>{" "}
+          . Updated periodically.
         </p>
 
 
