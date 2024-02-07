@@ -14,3 +14,9 @@ runs:
       run: |
         wget https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/${{inputs.file-path}} \
         -O src/Routes/${{inputs.file-path}}
+    - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+      with:
+        token: '${{ secrets.GITHUB_TOKEN }}'
+    - run: |
+        git add .
+        git commit -m 'Add downloaded file'
