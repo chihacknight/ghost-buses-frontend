@@ -1,12 +1,8 @@
 name: download-data
-
 on:
-    schedule:
-        # Run everyday at 2:00pm CST which is 7:00pm UTC
-        - cron: 0 19 * * *
-
-    # Allows the workflow to be run manually from the Actions tab
-    workflow_dispatch:
+  push:
+    branches:
+      - test_commit_routes
 
 jobs:
     download-data-json:
@@ -19,15 +15,10 @@ jobs:
                  wget \
                     https://chn-ghost-buses-public.s3.us-east-2.amazonaws.com/frontend_data_files/schedule_vs_realtime_all_day_types_routes.json \
                     -O src/Routes/schedule_vs_realtime_all_day_types_routes.json
-    
-            - run: |
-                git config --local user.email "action@github.com"
-                git config --local user.name "GitHub Action"
-                git add .
-                git diff-index --quiet HEAD || git commit -m "update data.json and schedule_vs_realtime_all_day_types_routes.json" -a
-                git push origin main:main
 
-        
-        
-        
-        
+            - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+              with:
+                token: '${{ secrets.GITHUB_TOKEN }}'
+            - run: |
+                git add .
+                git commit -m 'Add downloaded file'
