@@ -1,12 +1,9 @@
 name: download-data
 
 on:
-    schedule:
-        # Run everyday at 2:00pm CST which is 7:00pm UTC
-        - cron: 0 19 * * *
-
-    # Allows the workflow to be run manually from the Actions tab
-    workflow_dispatch:
+  push:
+    branches:
+      - reusable-s3-download-action
 
 jobs:
     download-data-json:
