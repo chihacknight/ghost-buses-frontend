@@ -21,3 +21,10 @@ jobs:
               uses: ./.github/actions/download-from-s3
               with:
                 file-path: schedule_vs_realtime_all_day_types_routes.json
+            - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+              with:
+                token: '${{ secrets.GITHUB_TOKEN }}'
+            - run: |
+                git add .
+                git commit -m 'Add updated route data that was downloaded from s3'
+                git push origin save_downloaded_files
