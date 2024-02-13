@@ -4,10 +4,7 @@ on:
     schedule:
         # Run monthly at 2:00pm CST which is 7:00pm UTC
         - cron: 30 19 1 * *
-    push:
-        branches:
-            - save-ridership-file
-
+    
     # Allows the workflow to be run manually from the Actions tab
     workflow_dispatch:
 
@@ -27,4 +24,4 @@ jobs:
             - run: |
                 git add .
                 git commit -m 'Add updated ridership data that was downloaded from s3'
-                git push origin save-ridership-file
+                git push origin main
