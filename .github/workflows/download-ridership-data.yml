@@ -27,4 +27,4 @@ jobs:
             - run: |
                 git add .
                 git commit -m 'Add updated ridership data that was downloaded from s3'
-                git push origin save_downloaded_files
+                git push origin save-ridership-file
