@@ -14,22 +14,6 @@
     }
 }
 
-.stats-list {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15vh;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-
-    * {
-        flex: 1 auto;
-        margin: 5px;
-    }
-
-}
-
 .footnote {
     font-weight: 400;
     font-size: 12px;

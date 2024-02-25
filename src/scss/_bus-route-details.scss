@@ -1,14 +1,14 @@
 .bus-route-details {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
-    div.grid-square {
+    > div {
+      border-bottom: 1px $text-color solid;
+      flex: 40%;
       height: 200px;
       padding: 4em 2em;
-      align-content: center;
       
       &.percentile {
         @include flex-center;
@@ -18,15 +18,13 @@
       }
       
     }
-  }
 }
 
-@media (min-width: $desktop-bp) {
+@media (min-width: 650px) {
   .bus-route-details {
-    .grid {
-      grid-template-columns: 1fr 1fr;
 
-      div.grid-square {
+      > div {
+        border-bottom: none;
         padding: 2em;
         &:first-child {
           border-right: 1px $text-color solid;
@@ -40,5 +38,4 @@
         }
       }
     }
-  }
 }

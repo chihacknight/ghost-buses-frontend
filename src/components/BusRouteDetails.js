@@ -21,30 +21,30 @@ function BusRouteDetails({ selectedRoute, busFraction }) {
   const percentileIndex = findPercentileIndex(selectedRoute[0]);
 
   return (
-    <div className="bus-route-details">
+    <div>
       <h3>
         <span className="bus-number">
           {selectedRoute[0].properties.route_id}
         </span>{" "}
         {selectedRoute[0].properties.route_long_name}
       </h3>
-      <div className="grid">
+      <div className="bus-route-details">
 
-        <div className="grid-square ridership">
+        <div className='flex-center'>
           <RidershipGraphic
             ridershipCount={averageRidershipPerWeekday.avg_riders}
             intervalName="weekday" />
         </div>
 
-        <div className="grid-square percentile">
+        <div className="percentile">
           <PercentileGraphic percentileIndex={percentileIndex} />
         </div>
 
-        <div className="grid-square bus-graphic">
+        <div>
           <GhostingGraphic busFraction={busFraction} />
         </div>
 
-        <div className="grid-square fraction">
+        <div className="fraction">
           <ReliabilityRankGraphic rank={selectedRoute[0].properties.ratio_ranking} />
         </div>
 
