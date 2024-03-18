@@ -1,0 +1,21 @@
+name: create-quarto
+
+on:
+  push:
+    branches:
+      - create_quarto
+
+jobs:
+    create_quarto:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: |
+                wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.551/quarto-1.4.551-linux-amd64.tar.gz
+                mkdir ~/opt
+                tar -C ~/opt -xvzf quarto-1.4.551-linux-amd64.tar.gz
+                mkdir ~/bin
+                ln -s ~/opt/quarto-1.4.551/bin/quarto ~/bin/quarto
+                ( echo ""; echo 'export PATH=$PATH:~/bin\n' ; echo "" ) >> ~/.profile
+                source ~/.profile
+                quarto check
