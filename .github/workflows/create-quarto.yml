@@ -19,3 +19,7 @@ jobs:
                 ( echo ""; echo 'export PATH=$PATH:~/bin\n' ; echo "" ) >> ~/.profile
                 source ~/.profile
                 quarto check
+                cd .github/workflows
+                pip install nbformat nbclient
+                pip install jupyter matplotlib plotly
+                quarto render quarto_test.qmd
