@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "Ghost Buses Blog"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/chihacknight/ghost-buses-frontend
+      - icon: twitter
+        href: https://twitter.com/ghostbuses
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+
