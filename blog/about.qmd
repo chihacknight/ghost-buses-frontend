@@ -1,0 +1,16 @@
+---
+title: "About"
+image: bus-map.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/ghostbuses
+    - icon: github
+      text: Github
+      href: https://github.com/chihacknight/ghost-buses-frontend
+    
+---
+
+A blog about the Chicago Transit Authority bus system.
