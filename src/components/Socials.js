@@ -6,6 +6,7 @@ export default function Socials() {
       <a
         href="https://twitter.com/ghostbuses"
         aria-label="Ghost Buses Twitter link"
+        title="Twitter"
       >
         <div className="social-icon twitter">
           <i className="fa-brands fa-twitter"></i>
@@ -14,6 +15,7 @@ export default function Socials() {
       <a
         href="https://github.com/chihacknight/chn-ghost-buses"
         aria-label="Ghost Buses GitHub link"
+        title="GitHub"
       >
         <div className="social-icon github">
           <i className="fa-brands fa-github"></i>
@@ -22,6 +24,7 @@ export default function Socials() {
       <a
         href="https://chihacknight.org/"
         aria-label="Chi Hack Night website link"
+        title="Chi Hack Night"
       >
         <div className="social-icon chn">
           <svg
