@@ -15,6 +15,11 @@ export default function Footer() {
                 GitHub
               </a>
             </li>
+            <li>
+              <a href="/blog">
+                Blog
+              </a>
+            </li>
           </ul>
         </div>
         <div className="footer-attributions">
