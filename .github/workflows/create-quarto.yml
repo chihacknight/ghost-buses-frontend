@@ -23,3 +23,4 @@ jobs:
                 pip install nbformat nbclient
                 pip install jupyter matplotlib plotly
                 quarto render quarto_test.qmd
+                cp quarto_test_files/figure-html/fig-polar-output-1.png ../../src/assets/
