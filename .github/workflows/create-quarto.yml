@@ -10,6 +10,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
+            - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+              with:
+                token: '${{ secrets.GITHUB_TOKEN }}'
             - run: |
                 wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.551/quarto-1.4.551-linux-amd64.tar.gz
                 mkdir ~/opt
@@ -24,3 +27,6 @@ jobs:
                 pip install jupyter matplotlib plotly
                 quarto render quarto_test.qmd
                 cp quarto_test_files/figure-html/fig-polar-output-1.png ../../src/assets/
+                git add ../../src/assets/fig-polar-output-1.png
+                git commit -m 'Update graph for blog'
+                git push origin HEAD
