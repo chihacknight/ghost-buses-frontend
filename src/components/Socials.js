@@ -24,7 +24,7 @@ export default function Socials() {
       <a
         href="https://chihacknight.org/"
         aria-label="Chi Hack Night website link"
-        title="Chi Hack Night"
+        title="Chi Hack Night Website"
       >
         <div className="social-icon chn">
           <svg
