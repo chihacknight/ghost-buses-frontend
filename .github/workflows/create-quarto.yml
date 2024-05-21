@@ -25,8 +25,8 @@ jobs:
                 cd .github/workflows
                 pip install nbformat nbclient
                 pip install jupyter matplotlib plotly
-                quarto render quarto_test.qmd
-                cp quarto_test_files/figure-html/fig-polar-output-1.png ../../src/assets/
-                git add ../../src/assets/fig-polar-output-1.png
+                quarto render quarto_visual_template.qmd
+                cp quarto_visual_template_files/figure-html/template-visual-output-1.png ../../src/assets/
+                git add ../../src/assets/template-visual-output-1.png
                 git commit -m 'Update graph for blog'
                 git push origin HEAD

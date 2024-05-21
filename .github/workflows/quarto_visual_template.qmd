@@ -1,15 +1,15 @@
 ---
-title: "Quarto Basics"
+title: "Quarto diagram template"
 format:
   html:
     code-fold: true
 jupyter: python3
 ---
 
-For a demonstration of a line plot on a polar axis, see @fig-polar.
+For a demonstration of a line plot on a polar axis, see @template-visual.
 
 ```{python}
-#| label: fig-polar
+#| label: template-visual
 #| fig-cap: "A line plot on a polar axis"
 
 import numpy as np
