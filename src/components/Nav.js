@@ -13,6 +13,7 @@ const Nav = () => {
     { title: "Methods", link: "/methods" },
     { title: "Further Readings", link: "/further-reading" },
     { title: "How To Help", link: "/how-to-help" },
+    { title: "Blog", link: "/blog" },
   ];
   function toggle() {
     setNavOpen((prevNavOpen) => !prevNavOpen);

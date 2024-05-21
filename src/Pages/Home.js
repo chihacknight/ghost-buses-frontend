@@ -52,6 +52,11 @@ const Home = () => {
             Want to help? <strong>Here’s what to do next</strong>
           </button>
         </Link>
+        <Link to="/blog">
+          <button className="action-btn">
+            Learn more <strong>in our blog posts</strong>
+          </button>
+        </Link>
       </div>
     </div>
   );
