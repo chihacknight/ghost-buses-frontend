@@ -5,7 +5,7 @@ const Blog = () => {
     <div>
       <h1>Blog heading</h1>
       <div>Blog text</div>
-      <img src={require('../assets/fig-polar-output-1.png')} />
+      <img src={require('../assets/template-visual-output-1.png')} />
     </div>
   );
 };
