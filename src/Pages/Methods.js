@@ -8,7 +8,6 @@ const Methods = () => {
       <p>
         At a high level, this project compares real-time data (data that indicates which bus trips 
         actually happened) with schedule data (the trips that the CTA said in advance would happen). 
-        Currently, the information shown on the website reflects data collected from May 20 to November 5, 2022.
       </p>
 
       <p>
