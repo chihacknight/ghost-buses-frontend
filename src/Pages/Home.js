@@ -16,7 +16,7 @@ const Home = () => {
           CTA service has become <span>unacceptably unreliable</span>"
         </p>
         <a href="https://chi.streetsblog.org/2022/06/22/alderperons-turn-up-the-heat-on-cta-to-explain-how-the-agency-will-fix-service-gaps/">
-          -- Streetsblog Chicago, Jun 22nd, 2022
+          -- Streetsblog Chicago, June 22nd, 2022
         </a>
       </div>
       <p>
