@@ -18,7 +18,7 @@ const HowToHelp = () => {
         <a href="https://www.ctaction.org/" target="_blank" rel="noreferrer">
           Commuters Take Action
         </a>
-        {" "} have a petition calling upon Mayor Lori Lightfoot, CTA President Dorval
+        {" "} have a petition calling upon Mayor Brandon Johnson, CTA President Dorval
         Carter, and the Chicago Transit Board to be accountable to the people of
         Chicago and take immediate action to improve Chicago transit service and
         reliability. 
@@ -41,42 +41,46 @@ const HowToHelp = () => {
           <a href="https://www.ctaction.org/" target="_blank" rel="noreferrer">
             Commuters Take Action
           </a>{" "}
-          is a transit advocacy organization in Chicago. CTAction is a place
-          where commuters make their voices heard. CTAction makes it easy to
-          submit public comments to the CTA board. You can{" "}
+          is a transit advocacy organization in Chicago where commuters make their voices heard. CTAction makes it easy to
+          submit public comments to the CTA board.{" "}
           <a
             href="https://docs.google.com/document/d/1Ugyly5ensRjcCuBR4D0sbdPWqLX1qVG5v_ljniI6G2w/edit"
             target="_blank"
             rel="noreferrer"
           >
-            submit your comment to the board here
+            Submit your comment to the board
           </a>
           .
         </p>
       </section>
       <section>
-        <h3>Transit4All Petition</h3>
+        <h3>Volunteer to support better bus lanes</h3>
         <p>
           <a
             href="https://www.transit4all.org/"
             target="_blank"
             rel="noreferrer"
           >
-            Transit4All
-          </a>{" "}
-          is a transit campaign in Chicago. Transit4All has created a
-          petition to demand that the CTA spend their $118 million funds more
-          effectively to improve Chicago transit. Long term, Transit4All is
-          organizing to establish a transit rider union that represents all of
-          Chicago working with advocates, unions, community organizations, and
-          policymakers. {" "}
+            <a
+            href="https://www.betterstreetschicago.org/"
+            target="_blank"
+            rel="noreferrer"
+          >Better Streets Chicago</a> is a transit advocacy organization that works to make Chicago more livable, equitable, and safe. They advocate for better walking, biking, and transit infrastructure. Their Better Bus Lane project is seeking volunteers to collect data about bus delays and lane obstructions for three of the city’s newest bus routes.
+ {" "}
           <a
-            href="https://www.transit4all.org/petition_en"
+            href="https://www.betterstreetschicago.org/better-bus-lanes"
             target="_blank"
             rel="noreferrer"
           >
-            Sign the Transit4All petition here
-          </a>.
+            Volunteer to collect bus data
+          </a>
+                <a
+            href="https://www.betterstreetschicago.org/getinvolved"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Get involved with Better Streets Chicago
+          </a>
         </p>
       </section>
     </div>
