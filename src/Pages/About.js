@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="page-container about">
       <div className="chn-details">
-        <h2>About Chi Hack Night</h2>
+        <h2>About Chi Hack Night and the Ghost Bus team</h2>
         <p>
           Chi Hack Night is a free, weekly event in Chicago to build, share, and
           learn about tools to serve the public good. Chi Hack Night relies on
@@ -13,6 +13,8 @@ const About = () => {
           technology. Chi Hack Night is registered as a not-for-profit 501(c)(3)
           charitable organization.
         </p>
+<p>
+The Ghost Bus project has been run by volunteer Chicagoans who have an interest in making Chicago better through data and technology. Although we’re winding down active development and we don't plan to add new features at this time, there are still many opportunities to get involved with other breakout groups at Chi Hack Night. CHN welcomes contributions from folks of any background whether in technology like data science, front- or back-end software engineering, and web-development, or backgrounds in journalism, policy, copywriting, community organizing and activism. Come join us!  </p>
       </div>
 
       <div className="btn-container">
@@ -22,34 +24,18 @@ const About = () => {
           </button>
         </a>
       </div>
-      <div className="gb-details">
-        <h2>About the Ghost Bus team</h2>
-        <p>
-          The Ghost Bus project is run by volunteer Chicagoans who have an
-          interest in making Chicago better through data and technology. The
-          group welcomes contributions from folks of any background whether in
-          technology like data science, front- or back-end software engineering,
-          and web-development, or backgrounds in journalism, policy,
-          copywriting, community organizing and activism. Come join us!
-        </p>
-      </div>
-      <div className="btn-container">
-        <a
-          href="https://github.com/chihacknight/breakout-groups/issues/217"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="action-btn">
-            <strong>Get Involved</strong> with <strong>Ghost Bus</strong>
-          </button>
-        </a>
-      </div>
       <div className="gb-impact">
         <h2>About Our Impact</h2>
         <p>
-          Throughout the time Ghost Buses has existed, we've been open to providing people and organizations access to our data to aid others with their causes or purposes. Some towards a more informed and improved Chicago transit system, others towards learning and growth using relatable data. Some of them include:
+          The Ghost Bus project is always open to providing people and organizations access to our data to aid others with their causes or purposes——whether towards a more informed and improved Chicago transit system or towards learning and growth using relatable data. Some examples of how our data has been used include:
         </p>
-        <ul>
+<ul>
+<li>
+ <a
+    href="https://blockclubchicago.org/2024/04/17/death-behind-the-wheel-how-the-cta-failed-a-driver-in-crisis/"
+              target="_blank"
+              rel="noreferrer">Block Club Chicago</a> used Ghost Bus data in their reporting on a CTA bus driver whose death behind the wheel went unnoticed for an hour.   
+            </li>
           <li>
             <a
               href="https://twitter.com/ctaaction"
