@@ -13,8 +13,16 @@ const About = () => {
           technology. Chi Hack Night is registered as a not-for-profit 501(c)(3)
           charitable organization.
         </p>
-<p>
-The Ghost Bus project has been run by volunteer Chicagoans who have an interest in making Chicago better through data and technology. Although we’re winding down active development and we don't plan to add new features at this time, there are still many opportunities to get involved with other breakout groups at Chi Hack Night. CHN welcomes contributions from folks of any background whether in technology like data science, front- or back-end software engineering, and web-development, or backgrounds in journalism, policy, copywriting, community organizing and activism. Come join us!  </p>
+        <p>
+          The Ghost Bus project has been run by volunteer Chicagoans who have an 
+          interest in making Chicago better through data and technology. Although 
+          we’re winding down active development and we don't plan to add new features 
+          at this time, there are still many opportunities to get involved with other 
+          breakout groups at Chi Hack Night. CHN welcomes contributions from folks of 
+          any background whether in technology like data science, front- or back-end 
+          software engineering, and web-development, or backgrounds in journalism, 
+          policy, copywriting, community organizing and activism. Come join us!
+        </p>
       </div>
 
       <div className="btn-container">
@@ -29,13 +37,14 @@ The Ghost Bus project has been run by volunteer Chicagoans who have an interest 
         <p>
           The Ghost Bus project is always open to providing people and organizations access to our data to aid others with their causes or purposes——whether towards a more informed and improved Chicago transit system or towards learning and growth using relatable data. Some examples of how our data has been used include:
         </p>
-<ul>
-<li>
- <a
-    href="https://blockclubchicago.org/2024/04/17/death-behind-the-wheel-how-the-cta-failed-a-driver-in-crisis/"
+        <ul>
+          <li>
+            <a
+              href="https://blockclubchicago.org/2024/04/17/death-behind-the-wheel-how-the-cta-failed-a-driver-in-crisis/"
               target="_blank"
-              rel="noreferrer">Block Club Chicago</a> used Ghost Bus data in their reporting on a CTA bus driver whose death behind the wheel went unnoticed for an hour.   
-            </li>
+              rel="noreferrer">Block Club Chicago
+            </a> used Ghost Bus data in their reporting on a CTA bus driver whose death behind the wheel went unnoticed for an hour.   
+          </li>
           <li>
             <a
               href="https://twitter.com/ctaaction"
