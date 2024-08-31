@@ -56,17 +56,19 @@ const HowToHelp = () => {
       <section>
         <h3>Volunteer to support better bus lanes</h3>
         <p>
-          <a
+          
+           <a
             href="https://www.transit4all.org/"
             target="_blank"
             rel="noreferrer"
-          >
+          >Transit 4 all</a>
+
             <a
             href="https://www.betterstreetschicago.org/"
             target="_blank"
             rel="noreferrer"
           >Better Streets Chicago</a> is a transit advocacy organization that works to make Chicago more livable, equitable, and safe. They advocate for better walking, biking, and transit infrastructure. Their Better Bus Lane project is seeking volunteers to collect data about bus delays and lane obstructions for three of the city’s newest bus routes.
- {" "}
+
           <a
             href="https://www.betterstreetschicago.org/better-bus-lanes"
             target="_blank"
