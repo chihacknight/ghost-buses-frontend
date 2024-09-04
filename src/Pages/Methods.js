@@ -8,7 +8,6 @@ const Methods = () => {
       <p>
         At a high level, this project compares real-time data (data that indicates which bus trips 
         actually happened) with schedule data (the trips that the CTA said in advance would happen). 
-        Currently, the information shown on the website reflects data collected from May 20 to November 5, 2022.
       </p>
 
       <p>
@@ -35,8 +34,7 @@ const Methods = () => {
       </p>
       <p>
         Schedule data is collected from the CTA General Transit Feed Specification (GTFS) feed data. 
-        A list of schedule versions starting from the beginning of data collection on 20 May 2022 up to 
-        5 November 2022 is compiled from{" "}
+        A list of schedule versions is compiled from{" "}
         <a
           href="https://transitfeeds.com/p/chicago-transit-authority/165"
           target="_blank"
@@ -83,8 +81,7 @@ const Methods = () => {
           >
             documentation on our GitHub repo
           </a>. 
-        Our S3 bucket is public and updates continuously, while data on the website 
-        is currently fixed for the period May 20 - November 5, 2022. 
+        Our S3 bucket is public and updates continuously. 
 
         Our {" "}
         <a
@@ -124,7 +121,7 @@ const Methods = () => {
       <h2>Data notes and limitations</h2>
       <p>
         It is important to acknowledge that real-time data is not perfect. GPS devices can fail or break, 
-        for example, and so it’s possible that there are bus trips that did happen but are not captured in 
+        for example, so it’s possible that there are bus trips that did happen but are not captured in 
         the real-time data. 
       </p>
       <p>
@@ -145,17 +142,6 @@ const Methods = () => {
         we investigated further and realized that the data issue is common enough for the #74 that it made
         our display inaccurate. We have removed the #74 bus for the time being; we are not sure whether we 
         will find a valid method to overcome the issue to reinstate the #74 bus on our map. 
-      </p>
-      <p>
-        If you would like to help us improve our data cleaning, we would love to have you! 
-        You can find out how to{" "}
-        <a
-          href="https://github.com/chihacknight/breakout-groups/issues/217"
-          target="_blank"
-          rel="noreferrer"
-        >
-          join the breakout group here
-        </a>. 
       </p>
     </div>
   );
