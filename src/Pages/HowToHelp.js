@@ -75,13 +75,12 @@ const HowToHelp = () => {
             rel="noreferrer"
           >
             Volunteer to collect bus data
-          </a>
-                <a
+          </a> or <a
             href="https://www.betterstreetschicago.org/getinvolved"
             target="_blank"
             rel="noreferrer"
           >
-            Get involved with Better Streets Chicago
+            get involved with Better Streets Chicago
           </a>
         </p>
       </section>
