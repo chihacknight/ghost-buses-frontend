@@ -64,12 +64,12 @@ const InteractiveMap = () => {
           <button className="action-btn">Frontend Repository</button>
         </a>
         <a
-          href="https://github.com/chihacknight/ghost-buses-backend"
+          href="https://github.com/chihacknight/chn-ghost-buses/"
           target="_blank"
           rel="noreferrer"
-          aria-label="Backend Repository"
+          aria-label="Data Repository"
         >
-          <button className="action-btn">Backend Repository</button>
+          <button className="action-btn">Data Repository</button>
         </a>
       </div>
       <p>
