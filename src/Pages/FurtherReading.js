@@ -8,8 +8,8 @@ const FurtherReading = () => {
         The ghost bus challenge continues to receive regular coverage in Chicago local news. Here’s a selection of recent articles for further reading.
       </p>
       <ul>
-        <ul>
-          <b>2024</b><br></br>
+          <li> <b>2024</b><br></br></li>
+          <ul>
             <li>
               <a href="https://chicagoreader.com/news-politics/cta-ridership-recovery/" target="blank">“The CTA’s missing riders” - Chicago Reader,</a> 7/4/24
             </li>
@@ -20,8 +20,9 @@ const FurtherReading = () => {
               <a href="https://www.wbez.org/reset-with-sasha-ann-simons/2024/01/17/chicago-has-a-plan-to-improve-cta-buses-but-some-advocates-want-more" target="blank">“Chicago has a plan to improve CTA buses, but some advocates want more”</a> - WBEZ Chicago, 1/17/24
             </li>
         </ul>
-        <ul>
-          <b>2023</b><br></br>
+        
+          <li><b>2023</b><br></br></li>
+          <ul>
           <li>
             <a href="https://abc7chicago.com/cta-bus-tracker-app-estimated-arrival-times-chicago/13995684/" target="blank">“CTA bus tracker 'ghosts' are frequent issue for riders, agency says it's caused by staffing shortage”</a> - ABC7 Chicago, 10/31/23
           </li>
@@ -41,10 +42,10 @@ const FurtherReading = () => {
             <a href="https://www.nbcchicago.com/news/local/cta-makes-more-changes-to-tackle-ghost-bus-problem/3043139/" target="blank">“CTA makes more changes to tackle ‘ghost bus' problem”</a> - NBC5 Chicago, 1/11/23
           </li>
         </ul>
-      </ul>
-      <ul>
-      <b>2022</b><br></br>
-        <a
+      
+    <li> <b>2022</b><br></br></li>
+    <ul>
+        <li> <a
           href="https://chicago.suntimes.com/2022/9/14/23351803/kam-buckner-lightfoot-transportation-plan-ghost-buses-trains-cta-chicago-mayor-election-2023"
           target="_blank"
           rel="noreferrer"
@@ -52,7 +53,7 @@ const FurtherReading = () => {
           "After experiencing 'ghost' buses firsthand, mayoral challenger Kam
           Buckner unveils transportation plan"
         </a>{" "}
-        - Chicago Sun Times, 9/14/22
+        - Chicago Sun Times, 9/14/22 </li>
         <li>
             <a
             href="https://blockclubchicago.org/2022/09/14/cta-trains-seeing-more-delays-during-weekends-and-more-staff-desperately-needed-to-make-it-better-employees-say/"
@@ -117,6 +118,7 @@ const FurtherReading = () => {
             </a>{" "}
             - Streetsblog Chicago, 8/24/22
           </li>
+      </ul>
       </ul>
     </div>
   );
