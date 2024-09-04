@@ -11,7 +11,7 @@ const FurtherReading = () => {
           <li> <b>2024</b><br></br></li>
           <ul>
             <li>
-              <a href="https://chicagoreader.com/news-politics/cta-ridership-recovery/" target="blank">“The CTA’s missing riders” - Chicago Reader,</a> 7/4/24
+              <a href="https://chicagoreader.com/news-politics/cta-ridership-recovery/" target="blank">“The CTA’s missing riders”</a>  - Chicago Reader, 7/4/24
             </li>
             <li>
               <a href="https://www.facebook.com/thecta/videos/want-to-know-whats-up-with-ghost-buses-and-trains-youre-not-alone-in-our-first-i/1612666616134566/" target="blank">“Want to know what’s up with ‘ghost’ buses and trains? You’re not alone.”</a> - Ask CTA at Chicago Transit Authority, 3/20/24
