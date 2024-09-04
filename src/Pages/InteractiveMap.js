@@ -54,7 +54,7 @@ const InteractiveMap = () => {
         For a list of planned upcoming additions to this project, please visit
         our GitHub pages.
       </p>
-
+      <div className="btn-container">
          <a
           href="https://github.com/chihacknight/ghost-buses-frontend"
           target="_blank"
@@ -63,7 +63,7 @@ const InteractiveMap = () => {
         >
           <button className="action-btn">Frontend Repository</button>
         </a>
-     <a
+        <a
           href="https://github.com/chihacknight/ghost-buses-backend"
           target="_blank"
           rel="noreferrer"
@@ -71,12 +71,12 @@ const InteractiveMap = () => {
         >
           <button className="action-btn">Backend Repository</button>
         </a>
+      </div>
       <p>
         Finally, if you have feedback for us on this project, you can always
         reach out to us on Twitter!
       </p>
       <div className="btn-container">
-    
         <a
           href="https://twitter.com/ghostbuses"
           target="_blank"
