@@ -71,6 +71,10 @@ We (usually) meet in a zoom call as part of the weekly Chi Hack Night event. Thi
 
 You can also get in touch with us by emailing ghostbuseschicago@gmail.com or messaging us on Twitter at @ghostbuses.
 
+## Blogging
+
+To contribute to the blog section of the site, edit the jsx in the Blog.js page. To use Quarto to update the visualizations, update the `quarto_visual_template.qmd` file according to the [quarto documentation](https://quarto.org/docs/get-started/computations/rstudio.html). As an alternative, you can place your own visualization in the assets directory and point to it via `<img src={require('../assets/<visual_name>.png')} />`.
+
 ## Summary
 
 Thank you for your interest in the Ghost Buses project! Again, keep in mind that we're a volunteer-run project and appreciate your patience as we review and integrate your contributions.

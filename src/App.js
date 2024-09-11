@@ -15,6 +15,9 @@ import FurtherReading from "./Pages/FurtherReading";
 import Methods from "./Pages/Methods";
 import HowToHelp from "./Pages/HowToHelp";
 import RouteStats from "./Pages/RouteStats";
+import { Navigate } from 'react-router-dom';
+import Blog from "./Pages/Blog";
+
 
 //These two files are currently coupled in various components directly to the data.
 //The first step in decoupling them is to move them into the Map component and then
@@ -37,7 +40,8 @@ const App = () => {
           <RidershipProvider value={{ ridershipData }}>
             <ResultsProvider value={{ resultsData }}>
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route exact path="/blog" element={<Blog/>}/>
+                <Route exact path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/map" element={<InteractiveMap />} />
                 <Route path="/further-reading" element={<FurtherReading />} />
