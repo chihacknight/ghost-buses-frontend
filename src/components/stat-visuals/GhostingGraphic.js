@@ -16,12 +16,12 @@ function GhostingGraphic({ busFraction }) {
                         </p>
                     </div>
                     <div className="bus-ghost-container">
-                        {[...Array(busFraction[1] - busFraction[0])].map((x) => (
-                            <img src={busIcon} alt="representation of CTA bus" />
+                        {[...Array(busFraction[1] - busFraction[0])].map((x, i) => (
+                            <img key={`ghost-${i}`} src={busIcon} alt="representation of CTA bus" />
                         ))}
 
-                        {[...Array(busFraction[0])].map((x) => (
-                            <img src={ghostIcon} alt="representation of CTA bus" />
+                        {[...Array(busFraction[0])].map((x, i) => (
+                            <img key={`ghost-${i}`} src={ghostIcon} alt="representation of CTA bus" />
                         ))}
                     </div>
                 </div>

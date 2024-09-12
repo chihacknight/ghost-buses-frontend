@@ -1,5 +1,5 @@
-import { useResults } from  "../components/Context.js"
-import { useRidership } from "../components/Context.js"
+import { useResults } from "../components/Context.js";
+import { useRidership } from "../components/Context.js";
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import findPercentileIndex from "../utils/percentileKeys";
@@ -10,23 +10,21 @@ import GhostingGraphic from "../components/stat-visuals/GhostingGraphic";
 import ReliabilityRankGraphic from "../components/stat-visuals/ReliabilityRankGraphic";
 import PercentileGraphic from "../components/stat-visuals/PercentileGraphic";
 import TripRatioGraph from "../components/stat-visuals/TripRatioGraph";
-
-
-
+import BusRouteDetails from "../components/BusRouteDetails.js";
 
 //copy-pasted from modal component; need to refactor
 const calcBusFraction = (acc) => {
-  let fraction
+  let fraction;
   if (acc > 22 && acc < 27) {
-    fraction = [3, 4]
+    fraction = [3, 4];
   } else if (acc > 72 && acc < 77) {
-    fraction = [1, 4]
+    fraction = [1, 4];
   } else {
-    fraction = reduce((100 - round10(Math.round(acc))), 100);
+    fraction = reduce(100 - round10(Math.round(acc)), 100);
   }
 
-  return fraction
-}
+  return fraction;
+};
 
 function round10(x) {
   let digits = x.toString().split("");
@@ -47,14 +45,9 @@ function reduce(numerator, denominator) {
   return [numerator / gcd, denominator / gcd];
 }
 
-
-
-const RouteStats = () => {  
+const RouteStats = () => {
   const { resultsData } = useResults();
   const { ridershipData } = useRidership();
-
-
-  
 
   // Search functions (need to be refactored)
   const [searchTerm, setSearchTerm] = useState("");
@@ -79,13 +72,17 @@ const RouteStats = () => {
     })
     .filter((route) => {
       return route.properties.day_type === "wk";
-    });;
+    });
 
   const searchResultsElements = searchResults.map((result) => (
     <div
       key={result.properties.route_id}
       className="search-result"
-      onClick={() => navigate('/route-stats/' + result.properties.route_id, { replace: true })}
+      onClick={() =>
+        navigate("/route-stats/" + result.properties.route_id, {
+          replace: true,
+        })
+      }
     >
       <p>
         <span>{result.properties.route_id}</span>
@@ -96,17 +93,13 @@ const RouteStats = () => {
 
   // End of search code
 
-
-
   let { route } = useParams();
-
-
 
   let selectedRoute = resultsData.features.filter(
     (data) => String(data.properties.route_id) === route
-  )
-  const totalAcc = (selectedRoute[0].properties.ratio) * 100;
-  const busFraction = calcBusFraction(totalAcc.toFixed(0))
+  );
+  const totalAcc = selectedRoute[0].properties.ratio * 100;
+  const busFraction = calcBusFraction(totalAcc.toFixed(0));
 
   const selectedRouteRidership = ridershipData.data.filter(
     (x) => x.route_id === selectedRoute[0].properties.route_id
@@ -126,9 +119,7 @@ const RouteStats = () => {
             {selectedRoute[0].properties.route_id}
           </span>{" "}
         </h1>
-        <h2>
-          {selectedRoute[0].properties.route_long_name}
-        </h2>
+        <h2>{selectedRoute[0].properties.route_long_name}</h2>
         <Search
           onChangeSearch={onChangeSearch}
           searchTerm={searchTerm}
@@ -136,23 +127,28 @@ const RouteStats = () => {
         />
       </div>
 
-      <div className="stats-list">
-
+      <div>
         {/* TO DO: Add static map zoomed in on route. Grab route map off CTA website? */}
-        
-        <TripRatioGraph 
-          route_id={selectedRoute[0].properties.route_id}/>
 
-        <RidershipGraphic
-          ridershipCount={averageRidershipPerWeekday.avg_riders}
-          intervalName="weekday" />
-
-        <PercentileGraphic percentileIndex={percentileIndex} />
-
-        <GhostingGraphic busFraction={busFraction} />
-
-        <ReliabilityRankGraphic rank={selectedRoute[0].properties.ratio_ranking} />
-
+        <TripRatioGraph route_id={selectedRoute[0].properties.route_id} />
+        <h2 style={{ textAlign: "center" }}>Route stats</h2>
+        <div className="bus-route-details">
+          <div className='flex-center'>
+            <RidershipGraphic
+              ridershipCount={averageRidershipPerWeekday.avg_riders}
+              intervalName="weekday"
+            />
+          </div>
+          <div className="percentile">
+            <PercentileGraphic percentileIndex={percentileIndex} />
+          </div>
+          <GhostingGraphic busFraction={busFraction} />
+          <div className="fraction">
+            <ReliabilityRankGraphic
+              rank={selectedRoute[0].properties.ratio_ranking}
+            />
+          </div>{" "}
+        </div>
       </div>
 
       <p className="footnote">
@@ -165,8 +161,7 @@ const RouteStats = () => {
           CTA Ridership Report
         </a>{" "}
       </p>
-
-    </div >
+    </div>
   );
 };
 

@@ -124,4 +124,6 @@ code {
   }
 }
 
-
+.flex-center {
+  @include flex-center;
+}

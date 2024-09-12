@@ -83,25 +83,21 @@
     }
   }
 
-  .bus-ghost-container {
-    border: 0;
-    padding: 0;
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 40px);
-    grid-auto-rows: 1fr min-content;
-    grid-gap: 5px;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
+}
 
-    img {
-      width: 30px;
-      align-self: center;
-      padding: 7px 0;
-    }
+.bus-ghost-container {
+  border: 0 ;
+  padding: 0 40px;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  flex-wrap: wrap;
+  img {
+    align-self: center;
+    padding: 7px 0;
+    width: 30px
   }
-
 }
 
 .trip-performance-graph {
