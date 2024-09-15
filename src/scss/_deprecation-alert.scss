@@ -1,0 +1,17 @@
+.deprecation-alert {
+  background-color: yellow;
+  text-align: center;
+  p {
+    font-size: 1.4rem;
+    font-weight: 900;
+  }
+
+}
+
+@media (min-width: $tablet-bp) {
+  .deprecation-alert {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
