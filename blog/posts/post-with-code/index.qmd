@@ -1,0 +1,9 @@
+---
+title: "Bus Ridership Changes 2019-2023"
+author: "Ghost Buses Team"
+date: "2024-03-26"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+A post about bus ridership changes from 2019 to 2023.

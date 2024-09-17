@@ -1,0 +1,12 @@
+---
+title: "Welcome To The Ghost Buses Blog"
+author: "Ghost Buses Team"
+date: "2024-03-23"
+categories: [news]
+---
+
+This is the first post in a Quarto blog. Welcome!
+
+![](ghost-bus-logo.jpg)
+
+Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
