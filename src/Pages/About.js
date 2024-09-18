@@ -14,7 +14,7 @@ const About = () => {
           charitable organization.
         </p>
         <p>
-          The Ghost Bus project was been run by volunteer Chicagoans who have an 
+          The Ghost Bus project was run by volunteer Chicagoans who have an 
           interest in making Chicago better through data and technology. Although 
           this project is no longer active, there are still many opportunities to get involved with other 
           breakout groups at Chi Hack Night. CHN welcomes contributions from folks of 
