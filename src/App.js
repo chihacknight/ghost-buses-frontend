@@ -33,8 +33,8 @@ const App = () => {
       <Nav />
       <div className="container">
         <Socials />
-        <DeprecationAlert />
         <Header />
+        <DeprecationAlert />
         <main id="main">
           <RidershipProvider value={{ ridershipData }}>
             <ResultsProvider value={{ resultsData }}>
