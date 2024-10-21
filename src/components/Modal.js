@@ -118,7 +118,7 @@ export default function Modal({ selectedRoute, closeModal, }) {
           >
             CTA Ridership Report
           </a>{" "}
-          . Updated periodically.
+          . Updated periodically. Until October 2024, a bug meant this was reporting overall (rather than weekday only) ridership.
         </p>
 
 
