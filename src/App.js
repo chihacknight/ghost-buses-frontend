@@ -4,6 +4,7 @@ import { RidershipProvider } from "./components/Context.js";
 import { ResultsProvider } from "./components/Context.js";
 
 import Header from "./components/Header";
+import DeprecationAlert from "./components/DeprecationAlert";
 import Footer from "./components/Footer";
 import Socials from "./components/Socials";
 import Nav from "./components/Nav";
@@ -33,6 +34,7 @@ const App = () => {
       <div className="container">
         <Socials />
         <Header />
+        <DeprecationAlert />
         <main id="main">
           <RidershipProvider value={{ ridershipData }}>
             <ResultsProvider value={{ resultsData }}>

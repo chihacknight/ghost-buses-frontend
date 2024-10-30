@@ -14,10 +14,9 @@ const About = () => {
           charitable organization.
         </p>
         <p>
-          The Ghost Bus project has been run by volunteer Chicagoans who have an 
+          The Ghost Bus project was run by volunteer Chicagoans who have an 
           interest in making Chicago better through data and technology. Although 
-          we’re winding down active development and we don't plan to add new features 
-          at this time, there are still many opportunities to get involved with other 
+          this project is no longer active, there are still many opportunities to get involved with other 
           breakout groups at Chi Hack Night. CHN welcomes contributions from folks of 
           any background whether in technology like data science, front- or back-end 
           software engineering, and web-development, or backgrounds in journalism, 
@@ -35,7 +34,7 @@ const About = () => {
       <div className="gb-impact">
         <h2>About Our Impact</h2>
         <p>
-          The Ghost Bus project is always open to providing people and organizations access to our data to aid others with their causes or purposes——whether towards a more informed and improved Chicago transit system or towards learning and growth using relatable data. Some examples of how our data has been used include:
+          Some examples of how our data has been used include:
         </p>
         <ul>
           <li>
