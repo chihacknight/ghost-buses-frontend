@@ -37,7 +37,7 @@ export default function Map() {
       !currentFilters.reliability.top10 || route.properties.ratio_ranking <= 10;
     const bottomTen =
       !currentFilters.reliability.bottom10 ||
-      route.properties.ratio_ranking >= 114;
+      route.properties.ratio_ranking >= 112;
 
     if (
       currentFilters.reliability.top10 &&
