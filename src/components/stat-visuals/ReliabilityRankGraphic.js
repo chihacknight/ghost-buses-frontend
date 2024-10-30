@@ -9,7 +9,7 @@ function ReliabilityRankGraphic({rank}) {
                 reliability
             </p>
             <p>
-                out of <span>124</span> Chicago Bus lines
+                out of <span>122</span> Chicago Bus lines
             </p>
         </div>
     );

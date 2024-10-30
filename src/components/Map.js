@@ -37,7 +37,7 @@ export default function Map() {
       !currentFilters.reliability.top10 || route.properties.ratio_ranking <= 10;
     const bottomTen =
       !currentFilters.reliability.bottom10 ||
-      route.properties.ratio_ranking >= 114;
+      route.properties.ratio_ranking >= 112;
 
     if (
       currentFilters.reliability.top10 &&
@@ -130,7 +130,7 @@ export default function Map() {
 
   function setColor(route) {
     const percentileIndex = findPercentileIndex(route);
-    if (percentileIndex === 0 || percentileIndex === 1) {
+    if ((percentileIndex === 0 || percentileIndex === 1) && route.properties.ratio_percentiles !== 1) {
       return heatmap[0];
     } else if (percentileIndex === 2 || percentileIndex === 3) {
       return heatmap[1];
